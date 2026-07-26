@@ -1,4 +1,4 @@
-def generate_exam_review(metadata: dict) -> str:
+clerdef generate_exam_review(metadata: dict) -> str:
     """Creates a high-level study guide based on the parsed philosophy text."""
 
     concepts = ", ".join(metadata.get("core_concepts", []))
