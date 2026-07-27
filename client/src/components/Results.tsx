@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { AnalysisResult } from '../types/api';
 import Tabs from './Tabs';
 
@@ -51,51 +52,54 @@ ${result.exam_study_guide}
     {
       id: 'history',
       label: 'Historical Context',
-      content: <div className="prose prose-sm whitespace-pre-wrap">{result.historical_context}</div>,
+      content: <div className="whitespace-pre-wrap leading-relaxed">{result.historical_context}</div>,
     },
     {
       id: 'guide',
       label: 'Study Guide',
-      content: <div className="prose prose-sm whitespace-pre-wrap">{result.exam_study_guide}</div>,
+      content: <div className="whitespace-pre-wrap leading-relaxed">{result.exam_study_guide}</div>,
     },
     {
       id: 'export',
       label: 'Export',
       content: (
         <div className="space-y-4">
-          <button
+          <motion.button
+            whileTap={{ scale: 0.97 }}
             onClick={exportAsJSON}
-            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+            className="w-full bg-ink-800 hover:bg-ink-900 dark:bg-surface-100 dark:hover:bg-surface-200 dark:text-ink-900 text-white py-2 rounded"
           >
             Download JSON
-          </button>
-          <button
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.97 }}
             onClick={exportAsMarkdown}
-            className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+            className="w-full bg-ink-800 hover:bg-ink-900 dark:bg-surface-100 dark:hover:bg-surface-200 dark:text-ink-900 text-white py-2 rounded"
           >
             Download Markdown
-          </button>
+          </motion.button>
         </div>
       ),
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+    <motion.div className="min-h-screen bg-surface-50 dark:bg-ink-900 p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
       <div className="max-w-4xl mx-auto">
-        <button
+        <motion.button
+          whileTap={{ scale: 0.97 }}
           onClick={onNew}
-          className="mb-6 bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
+          className="mb-6 bg-ink-800 hover:bg-ink-900 dark:bg-surface-100 dark:hover:bg-surface-200 dark:text-ink-900 text-white px-4 py-2 rounded"
         >
           ← New Analysis
-        </button>
+        </motion.button>
 
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">{result.metadata.work}</h1>
-        <p className="text-lg text-gray-600 mb-8">by {result.metadata.author}</p>
+        <motion.h1 initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-3xl font-bold font-serif text-ink-900 dark:text-surface-50 mb-2">{result.metadata.work}</motion.h1>
+        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="text-lg text-ink-800/70 dark:text-surface-100/70 mb-8">by {result.metadata.author}</motion.p>
 
         <Tabs tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -103,24 +107,24 @@ function MetadataTab({ result }: { result: AnalysisResult }) {
   return (
     <div className="space-y-4">
       <div>
-        <p className="text-gray-600 font-semibold">Author</p>
-        <p className="text-gray-900">{result.metadata.author}</p>
+        <p className="text-ink-800/70 dark:text-surface-100/70 font-semibold">Author</p>
+        <p className="text-ink-900 dark:text-surface-50">{result.metadata.author}</p>
       </div>
       <div>
-        <p className="text-gray-600 font-semibold">Period</p>
-        <p className="text-gray-900">{result.metadata.period}</p>
+        <p className="text-ink-800/70 dark:text-surface-100/70 font-semibold">Period</p>
+        <p className="text-ink-900 dark:text-surface-50">{result.metadata.period}</p>
       </div>
       <div>
-        <p className="text-gray-600 font-semibold">Location</p>
-        <p className="text-gray-900">{result.metadata.location}</p>
+        <p className="text-ink-800/70 dark:text-surface-100/70 font-semibold">Location</p>
+        <p className="text-ink-900 dark:text-surface-50">{result.metadata.location}</p>
       </div>
       <div>
-        <p className="text-gray-600 font-semibold">Key Concepts</p>
+        <p className="text-ink-800/70 dark:text-surface-100/70 font-semibold">Key Concepts</p>
         <div className="flex flex-wrap gap-2">
           {result.metadata.core_concepts.map((concept) => (
             <span
               key={concept}
-              className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+              className="bg-ink-800/10 text-ink-800 dark:bg-surface-50/10 dark:text-surface-50 px-3 py-1 rounded-full text-sm"
             >
               {concept}
             </span>

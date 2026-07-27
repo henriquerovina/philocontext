@@ -5,7 +5,7 @@ Upload a philosophy PDF → get rich context (metadata, historical background, s
 ## Setup
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -44,6 +44,6 @@ python main.py path/to/paper.pdf
 
 ## Deploy (Railway)
 
-1. Connect repo, set root to `PythonProject/`
+1. Connect repo, set root to `server/` (or the `philocontext` repo root with start command pointing at `server/api.py`)
 2. Set `GROQ_API_KEY` env var
 3. Start command: `uvicorn api:app --host 0.0.0.0 --port $PORT`

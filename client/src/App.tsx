@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { AnalysisResult } from './types/api';
 import Upload from './components/Upload';
 import Results from './components/Results';
+import ThemeToggle from './components/ThemeToggle';
 
 const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000';
 
@@ -35,12 +37,19 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {!result ? (
-        <Upload onAnalyze={handleAnalyze} loading={loading} error={error} />
-      ) : (
-        <Results result={result} onNew={() => setResult(null)} />
-      )}
+    <div className="min-h-screen bg-surface-50 dark:bg-ink-900">
+      <ThemeToggle />
+      <AnimatePresence mode="wait">
+        {!result ? (
+          <motion.div key="upload" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>
+            <Upload onAnalyze={handleAnalyze} loading={loading} error={error} />
+          </motion.div>
+        ) : (
+          <motion.div key="results" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>
+            <Results result={result} onNew={() => setResult(null)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

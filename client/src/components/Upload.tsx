@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface UploadProps {
   onAnalyze: (file: File) => void;
@@ -30,12 +31,21 @@ export default function Upload({ onAnalyze, loading, error }: UploadProps) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-md">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">Philocontext</h1>
-        <p className="text-lg text-gray-600 mb-8">Understand philosophy papers instantly</p>
+    <motion.div
+      className="min-h-screen flex items-center justify-center px-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+    >
+      <div className="w-full max-w-md space-y-6">
+        <motion.h1 initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl font-bold font-serif text-ink-900 dark:text-surface-50">
+          Philocontext
+        </motion.h1>
+        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="text-lg text-ink-800/70 dark:text-surface-100/70">
+          Understand philosophy papers instantly
+        </motion.p>
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
+        <motion.form onSubmit={handleSubmit} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-surface-50 dark:bg-ink-800 rounded-lg shadow-lg p-8">
           <div
             onDrop={handleDrop}
             onDragOver={(e) => {
@@ -44,7 +54,7 @@ export default function Upload({ onAnalyze, loading, error }: UploadProps) {
             }}
             onDragLeave={() => setIsDragging(false)}
             className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition ${
-              isDragging ? 'border-blue-500 bg-blue-50' : 'border-gray-300 hover:border-gray-400'
+              isDragging ? 'border-ink-800 dark:border-surface-50 bg-ink-800/10 dark:bg-surface-50/10' : 'border-ink-800/20 dark:border-surface-50/20 dark:hover:border-surface-50/40'
             }`}
           >
             <input
@@ -55,23 +65,33 @@ export default function Upload({ onAnalyze, loading, error }: UploadProps) {
               id="file-input"
             />
             <label htmlFor="file-input" className="block cursor-pointer">
-              <p className="text-gray-600">
+              <p className="text-ink-800/70 dark:text-surface-100/70">
                 {file ? file.name : 'Drag PDF here or click to select'}
               </p>
             </label>
           </div>
 
-          {error && <p className="text-red-600 mt-4">{error}</p>}
+          {error && <p className="text-red-500 mt-4">{error}</p>}
 
-          <button
+          <motion.button
+            whileTap={{ scale: 0.97 }}
             type="submit"
             disabled={!file || loading}
-            className="w-full mt-6 bg-blue-600 text-white py-2 rounded-lg font-semibold disabled:opacity-50 hover:bg-blue-700"
+            className="w-full mt-6 bg-ink-800 hover:bg-ink-900 dark:bg-surface-100 dark:hover:bg-surface-200 dark:text-ink-900 text-white py-2 rounded-lg font-semibold disabled:opacity-50"
           >
-            {loading ? 'Analyzing...' : 'Analyze'}
-          </button>
-        </form>
+            {loading ? (
+              <span className="flex items-center justify-center gap-1.5">
+                Analyzing
+                <span className="inline-flex gap-0.5">
+                  {[0, 0.2, 0.4].map((d) => (
+                    <span key={d} className="w-1.5 h-1.5 bg-current rounded-full animate-pulse-dot" style={{ animationDelay: `${d}s` }} />
+                  ))}
+                </span>
+              </span>
+            ) : 'Analyze'}
+          </motion.button>
+        </motion.form>
       </div>
-    </div>
+    </motion.div>
   );
 }
