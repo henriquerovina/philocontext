@@ -37,7 +37,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-surface-50 dark:bg-ink-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-maroon-900">
       <ThemeToggle />
       <AnimatePresence mode="wait">
         {!result ? (

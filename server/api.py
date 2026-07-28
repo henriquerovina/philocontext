@@ -17,10 +17,14 @@ app.add_middleware(
 analyzer = PhilosophyAnalyzer()
 
 
+ALLOWED_EXTENSIONS = (".pdf", ".png", ".jpg", ".jpeg", ".webp")
+
+
 @app.post("/api/analyze")
 async def analyze_pdf(file: UploadFile = File(...)):
-    if not file.filename.endswith(".pdf"):
-        raise HTTPException(status_code=400, detail="Only PDF files allowed")
+    filename_lower = file.filename.lower() if file.filename else ""
+    if not filename_lower.endswith(ALLOWED_EXTENSIONS):
+        raise HTTPException(status_code=400, detail="Only PDF and image files (.pdf, .png, .jpg, .jpeg, .webp) allowed")
 
     temp_path = f"temp_{file.filename.replace(' ', '_')}"
 

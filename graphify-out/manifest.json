@@ -1,227 +1,332 @@
 {
   ".claude/settings.json": {
-    "mtime": 1785097151.861438,
+    "mtime": 1785099698.323534,
     "ast_hash": "fa8fd99179e80feb007f6be785989705",
     "semantic_hash": "fa8fd99179e80feb007f6be785989705"
   },
-  "PythonProject/api.py": {
-    "mtime": 1785094328.6884975,
-    "ast_hash": "a3d6f8171d3b9668a7a894305459131d",
-    "semantic_hash": "a3d6f8171d3b9668a7a894305459131d"
-  },
-  "PythonProject/exam_agent.py": {
-    "mtime": 1785094336.689405,
-    "ast_hash": "5176d2c3e28d559f9cfebdf9d357b88f",
-    "semantic_hash": "5176d2c3e28d559f9cfebdf9d357b88f"
-  },
-  "PythonProject/history_agent.py": {
-    "mtime": 1775625702.9274874,
-    "ast_hash": "72eea7ef48fe1c852283ef3c82d3eb65",
-    "semantic_hash": "72eea7ef48fe1c852283ef3c82d3eb65"
-  },
-  "PythonProject/main.py": {
-    "mtime": 1785088516.081434,
-    "ast_hash": "1cec77ac5d08268c1598d5ba544b2b14",
-    "semantic_hash": "1cec77ac5d08268c1598d5ba544b2b14"
-  },
-  "PythonProject/philo-frontend/eslint.config.js": {
-    "mtime": 1775669784.4183517,
-    "ast_hash": "49c8473bcfcec3aef596a5fb04a6df06",
-    "semantic_hash": "49c8473bcfcec3aef596a5fb04a6df06"
-  },
-  "PythonProject/philo-frontend/package.json": {
-    "mtime": 1775698493.1308131,
-    "ast_hash": "80cd0419acdab309227c1101dd9c33c8",
-    "semantic_hash": "80cd0419acdab309227c1101dd9c33c8"
-  },
-  "PythonProject/philo-frontend/postcss.config.js": {
-    "mtime": 1775698520.4673092,
-    "ast_hash": "5c3f094005ec74bc5656e3d07fa71eef",
-    "semantic_hash": "5c3f094005ec74bc5656e3d07fa71eef"
-  },
-  "PythonProject/philo-frontend/src/App.jsx": {
-    "mtime": 1777395807.3421197,
-    "ast_hash": "46f5a2d92d57953ad43db192cce56446",
-    "semantic_hash": "46f5a2d92d57953ad43db192cce56446"
-  },
-  "PythonProject/philo-frontend/src/main.jsx": {
-    "mtime": 1775669784.4700975,
-    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
-    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
-  },
-  "PythonProject/philo-frontend/tailwind.config.js": {
-    "mtime": 1775670402.9808521,
-    "ast_hash": "35753ba94e1a6d3f500d3a94ebe04bd0",
-    "semantic_hash": "35753ba94e1a6d3f500d3a94ebe04bd0"
-  },
-  "PythonProject/philo-frontend/vite.config.js": {
-    "mtime": 1775669784.474206,
-    "ast_hash": "88439104b3c207f17d33ef3160e3b080",
-    "semantic_hash": "88439104b3c207f17d33ef3160e3b080"
-  },
-  "philo-frontend/eslint.config.js": {
-    "mtime": 1775669581.0041049,
-    "ast_hash": "49c8473bcfcec3aef596a5fb04a6df06",
-    "semantic_hash": "49c8473bcfcec3aef596a5fb04a6df06"
-  },
-  "philo-frontend/package.json": {
-    "mtime": 1775669581.0114107,
-    "ast_hash": "b64d8454e84f38032f50011141e50cb1",
-    "semantic_hash": "b64d8454e84f38032f50011141e50cb1"
-  },
-  "philo-frontend/src/App.jsx": {
-    "mtime": 1775669581.0077102,
-    "ast_hash": "b8cf249fae3917f3fd39b56601886e01",
-    "semantic_hash": "b8cf249fae3917f3fd39b56601886e01"
-  },
-  "philo-frontend/src/main.jsx": {
-    "mtime": 1775669581.010648,
-    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
-    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
-  },
-  "philo-frontend/vite.config.js": {
-    "mtime": 1775669581.0110095,
-    "ast_hash": "88439104b3c207f17d33ef3160e3b080",
-    "semantic_hash": "88439104b3c207f17d33ef3160e3b080"
-  },
   ".claude/CLAUDE.md": {
-    "mtime": 1785097151.8600473,
+    "mtime": 1785099698.3224292,
     "ast_hash": "9b31786b637be3c13978bec4c2330752",
     "semantic_hash": "9b31786b637be3c13978bec4c2330752"
   },
   ".claude/skills/graphify/SKILL.md": {
-    "mtime": 1785097151.8596668,
+    "mtime": 1785099698.325163,
     "ast_hash": "dfb0a6554c4af62df6effc61c6c7d245",
     "semantic_hash": "dfb0a6554c4af62df6effc61c6c7d245"
   },
   ".claude/skills/graphify/references/add-watch.md": {
-    "mtime": 1785097069.7704048,
+    "mtime": 1785099698.3264663,
     "ast_hash": "d59d027fe449f06aa03905a01184e779",
     "semantic_hash": "d59d027fe449f06aa03905a01184e779"
   },
   ".claude/skills/graphify/references/exports.md": {
-    "mtime": 1785097069.7705505,
+    "mtime": 1785099698.327257,
     "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
     "semantic_hash": "9da2a2152e60a22f07f05fed5158f287"
   },
   ".claude/skills/graphify/references/extraction-spec.md": {
-    "mtime": 1785097069.770756,
+    "mtime": 1785099698.3278744,
     "ast_hash": "42fef56a01698118f7fd722acdadea34",
     "semantic_hash": "42fef56a01698118f7fd722acdadea34"
   },
   ".claude/skills/graphify/references/github-and-merge.md": {
-    "mtime": 1785097069.7708857,
+    "mtime": 1785099698.3283105,
     "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
     "semantic_hash": "cde13df085e4c492aeb7ba298a996d0d"
   },
   ".claude/skills/graphify/references/hooks.md": {
-    "mtime": 1785097069.771003,
+    "mtime": 1785099698.3287222,
     "ast_hash": "3f545db6ce646650bb9de588f5512a27",
     "semantic_hash": "3f545db6ce646650bb9de588f5512a27"
   },
   ".claude/skills/graphify/references/query.md": {
-    "mtime": 1785097069.771248,
+    "mtime": 1785099698.329409,
     "ast_hash": "3c46f8ad006874260614ed8657d02307",
     "semantic_hash": "3c46f8ad006874260614ed8657d02307"
   },
   ".claude/skills/graphify/references/transcribe.md": {
-    "mtime": 1785097069.7738707,
+    "mtime": 1785099698.3297052,
     "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
     "semantic_hash": "67b6a5fa6c0974e18f60db9f8932fbd8"
   },
   ".claude/skills/graphify/references/update.md": {
-    "mtime": 1785097069.780473,
+    "mtime": 1785099698.330188,
     "ast_hash": "9378bd03d56baaf78bd738ab3848f142",
     "semantic_hash": "9378bd03d56baaf78bd738ab3848f142"
   },
   "CLAUDE.md": {
-    "mtime": 1785097151.8611305,
+    "mtime": 1785099698.330519,
     "ast_hash": "ff91186f9e9432c7d954e0589ec38035",
     "semantic_hash": "ff91186f9e9432c7d954e0589ec38035"
   },
-  "PythonProject/philo-frontend/README.md": {
-    "mtime": 1775669784.4145794,
-    "ast_hash": "a28dc4cb878325f3e9e5649f3e1469ac",
-    "semantic_hash": "a28dc4cb878325f3e9e5649f3e1469ac"
-  },
-  "PythonProject/philo-frontend/index.html": {
-    "mtime": 1775669784.4217794,
-    "ast_hash": "784f0a58aefc405de3d7bfda39f0523e",
-    "semantic_hash": "784f0a58aefc405de3d7bfda39f0523e"
-  },
   "docs/agents/domain.md": {
-    "mtime": 1785094931.909283,
+    "mtime": 1785099698.3308969,
     "ast_hash": "35089ed6a70a657c91fd100ade31b642",
     "semantic_hash": "35089ed6a70a657c91fd100ade31b642"
   },
   "docs/agents/issue-tracker.md": {
-    "mtime": 1785094950.6980467,
+    "mtime": 1785099698.331192,
     "ast_hash": "3cd8509285524d31a33279b8cb0870e5",
     "semantic_hash": "3cd8509285524d31a33279b8cb0870e5"
   },
   "docs/agents/triage-labels.md": {
-    "mtime": 1785094942.4763124,
+    "mtime": 1785099698.3314736,
     "ast_hash": "22add54cb98451c55b20e6b7992d4a85",
     "semantic_hash": "22add54cb98451c55b20e6b7992d4a85"
   },
-  "philo-frontend/README.md": {
-    "mtime": 1775669581.0029466,
+  ".opencode/opencode.json": {
+    "mtime": 1785197932.7794247,
+    "ast_hash": "e5f74d14a81702b55bdf53b33ec991d7",
+    "semantic_hash": ""
+  },
+  ".opencode/plugins/graphify.js": {
+    "mtime": 1785197932.7792594,
+    "ast_hash": "3ea725724bc8ebe483c9f13d6aa1124f",
+    "semantic_hash": ""
+  },
+  "client/eslint.config.js": {
+    "mtime": 1775669581.0041049,
+    "ast_hash": "49c8473bcfcec3aef596a5fb04a6df06",
+    "semantic_hash": ""
+  },
+  "client/package.json": {
+    "mtime": 1785108248.778587,
+    "ast_hash": "e3719a5e9deff4c51be3ede9b9acf5fb",
+    "semantic_hash": ""
+  },
+  "client/postcss.config.js": {
+    "mtime": 1785099702.0317204,
+    "ast_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0",
+    "semantic_hash": ""
+  },
+  "client/src/App.tsx": {
+    "mtime": 1785198698.3426745,
+    "ast_hash": "9661f14a3f82d60ad39924c79429908a",
+    "semantic_hash": ""
+  },
+  "client/src/components/Results.tsx": {
+    "mtime": 1785198864.5378137,
+    "ast_hash": "5ca9b7c90a2a355e53a06965387547c8",
+    "semantic_hash": ""
+  },
+  "client/src/components/Tabs.tsx": {
+    "mtime": 1785198678.5290322,
+    "ast_hash": "c3b226ea0fda10ecc76236753ff103af",
+    "semantic_hash": ""
+  },
+  "client/src/components/ThemeToggle.tsx": {
+    "mtime": 1785198695.5466595,
+    "ast_hash": "0dddbb58592fb8a7024bea1d9ac33f24",
+    "semantic_hash": ""
+  },
+  "client/src/components/Upload.tsx": {
+    "mtime": 1785198755.9296525,
+    "ast_hash": "d97e2cca86be713bd72c55794d48cf77",
+    "semantic_hash": ""
+  },
+  "client/src/main.tsx": {
+    "mtime": 1785108260.4269762,
+    "ast_hash": "751d36d1e0ffd615ea678b3b7a1df616",
+    "semantic_hash": ""
+  },
+  "client/src/types/api.ts": {
+    "mtime": 1785198821.107583,
+    "ast_hash": "23cd4b1f432adfa5955994a84b76ec7d",
+    "semantic_hash": ""
+  },
+  "client/src/vite-env.d.ts": {
+    "mtime": 1785108265.596337,
+    "ast_hash": "0352474ba2918efe13895edbc3780d94",
+    "semantic_hash": ""
+  },
+  "client/tailwind.config.js": {
+    "mtime": 1785198664.6154394,
+    "ast_hash": "70e2dd4b1a73d569039347c5c7d67a05",
+    "semantic_hash": ""
+  },
+  "client/tsconfig.json": {
+    "mtime": 1785099702.0347786,
+    "ast_hash": "f6d52f8fd6dba2a9912f8c99249d380e",
+    "semantic_hash": ""
+  },
+  "client/vite.config.js": {
+    "mtime": 1785099702.0351863,
+    "ast_hash": "63ab95d1715e9d4a0858a9e9aeaf9b11",
+    "semantic_hash": ""
+  },
+  "server/agents/__init__.py": {
+    "mtime": 1785099702.0267591,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "server/agents/base_agent.py": {
+    "mtime": 1785099702.0269926,
+    "ast_hash": "27bf82c3f5b374dabcc736e6a46902bc",
+    "semantic_hash": ""
+  },
+  "server/agents/exam_agent.py": {
+    "mtime": 1785099702.0271745,
+    "ast_hash": "60a7abf7cd15fabdbc7b5c43e743fdce",
+    "semantic_hash": ""
+  },
+  "server/agents/history_agent.py": {
+    "mtime": 1785099702.02734,
+    "ast_hash": "c319c2cdc570ee736ab1190f43224981",
+    "semantic_hash": ""
+  },
+  "server/agents/metadata_agent.py": {
+    "mtime": 1785099702.0275033,
+    "ast_hash": "5d1471cf9c2d011b53c1e0da2e598c61",
+    "semantic_hash": ""
+  },
+  "server/api.py": {
+    "mtime": 1785198739.0608172,
+    "ast_hash": "7ce22d5448b57aadafbbec5fca71d713",
+    "semantic_hash": ""
+  },
+  "server/config.py": {
+    "mtime": 1785198785.5287762,
+    "ast_hash": "9bfc7662d56da66d92ca5e63ef0cb8a7",
+    "semantic_hash": ""
+  },
+  "server/extractors/__init__.py": {
+    "mtime": 1785099702.0280554,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "server/extractors/pdf_extractor.py": {
+    "mtime": 1785099702.0283809,
+    "ast_hash": "6cdfb70e0ae35e8b38dd2aa95162d094",
+    "semantic_hash": ""
+  },
+  "server/main.py": {
+    "mtime": 1785099702.0291476,
+    "ast_hash": "2d0ce9fb302610027fb875ca93853a4c",
+    "semantic_hash": ""
+  },
+  "server/models.py": {
+    "mtime": 1785198793.0000346,
+    "ast_hash": "ccfafada38aa7bcb8c78e244ff6011bc",
+    "semantic_hash": ""
+  },
+  "server/orchestrator.py": {
+    "mtime": 1785198808.3497849,
+    "ast_hash": "24ff22b996bfc7745305d8786f2a0939",
+    "semantic_hash": ""
+  },
+  "server/philo-frontend/eslint.config.js": {
+    "mtime": 1785107628.8979275,
+    "ast_hash": "49c8473bcfcec3aef596a5fb04a6df06",
+    "semantic_hash": ""
+  },
+  "server/philo-frontend/package.json": {
+    "mtime": 1785107635.664316,
+    "ast_hash": "80cd0419acdab309227c1101dd9c33c8",
+    "semantic_hash": ""
+  },
+  "server/philo-frontend/postcss.config.js": {
+    "mtime": 1785107638.0434816,
+    "ast_hash": "5c3f094005ec74bc5656e3d07fa71eef",
+    "semantic_hash": ""
+  },
+  "server/philo-frontend/src/App.jsx": {
+    "mtime": 1785107656.8456864,
+    "ast_hash": "46f5a2d92d57953ad43db192cce56446",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785113050.6381748,
+    "ast_hash": "e08aacf7836335aaa3c931d72ad66db8",
+    "semantic_hash": ""
+  },
+  "client/README.md": {
+    "mtime": 1785112149.5985672,
+    "ast_hash": "83a0c3f0b9df0522c6be7ff165dd9915",
+    "semantic_hash": ""
+  },
+  "client/index.html": {
+    "mtime": 1785099702.0299811,
+    "ast_hash": "f85f516ef09c0b941a5b68bc351d35b2",
+    "semantic_hash": ""
+  },
+  "server/README.md": {
+    "mtime": 1785112146.85651,
+    "ast_hash": "8fba23f8dfed0356dd48a29a4184fec4",
+    "semantic_hash": ""
+  },
+  "server/philo-frontend/README.md": {
+    "mtime": 1785107627.7968128,
     "ast_hash": "a28dc4cb878325f3e9e5649f3e1469ac",
-    "semantic_hash": "a28dc4cb878325f3e9e5649f3e1469ac"
+    "semantic_hash": ""
   },
-  "philo-frontend/index.html": {
-    "mtime": 1775669581.0049212,
+  "server/philo-frontend/index.html": {
+    "mtime": 1785107630.762331,
     "ast_hash": "784f0a58aefc405de3d7bfda39f0523e",
-    "semantic_hash": "784f0a58aefc405de3d7bfda39f0523e"
+    "semantic_hash": ""
   },
-  "PythonProject/philo-frontend/public/favicon.svg": {
-    "mtime": 1775669784.4271035,
-    "ast_hash": "7e840862161341271697daa99a40d76b",
-    "semantic_hash": "7e840862161341271697daa99a40d76b"
+  "server/requirements.txt": {
+    "mtime": 1785198734.6658714,
+    "ast_hash": "a86e9218430ed3dce9b7980100d4a137",
+    "semantic_hash": ""
   },
-  "PythonProject/philo-frontend/public/icons.svg": {
-    "mtime": 1775669784.430839,
-    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
-    "semantic_hash": "3b4fcfcf393eca4d264dca4a4663bc37"
-  },
-  "PythonProject/philo-frontend/src/assets/hero.png": {
-    "mtime": 1775669784.4535716,
-    "ast_hash": "5cf2b0762834cdddc0dd3ec1397b5011",
-    "semantic_hash": "5cf2b0762834cdddc0dd3ec1397b5011"
-  },
-  "PythonProject/philo-frontend/src/assets/react.svg": {
-    "mtime": 1775669784.4576614,
-    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
-    "semantic_hash": "f0402b67b6ce880f65666bb49e841696"
-  },
-  "PythonProject/philo-frontend/src/assets/vite.svg": {
-    "mtime": 1775669784.4621532,
-    "ast_hash": "9960a24288958394ac50e57ff638b036",
-    "semantic_hash": "9960a24288958394ac50e57ff638b036"
-  },
-  "philo-frontend/public/favicon.svg": {
+  "client/public/favicon.svg": {
     "mtime": 1775669581.0059316,
     "ast_hash": "7e840862161341271697daa99a40d76b",
-    "semantic_hash": "7e840862161341271697daa99a40d76b"
+    "semantic_hash": ""
   },
-  "philo-frontend/public/icons.svg": {
+  "client/public/icons.svg": {
     "mtime": 1775669581.0067222,
     "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
-    "semantic_hash": "3b4fcfcf393eca4d264dca4a4663bc37"
+    "semantic_hash": ""
   },
-  "philo-frontend/src/assets/hero.png": {
-    "mtime": 1775669581.0089703,
-    "ast_hash": "5cf2b0762834cdddc0dd3ec1397b5011",
-    "semantic_hash": "5cf2b0762834cdddc0dd3ec1397b5011"
+  "server/philo-frontend/public/favicon.svg": {
+    "mtime": 1785107640.268924,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
   },
-  "philo-frontend/src/assets/react.svg": {
-    "mtime": 1775669581.0094056,
-    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
-    "semantic_hash": "f0402b67b6ce880f65666bb49e841696"
+  "server/philo-frontend/public/icons.svg": {
+    "mtime": 1785107642.624529,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
   },
-  "philo-frontend/src/assets/vite.svg": {
-    "mtime": 1775669581.0098605,
-    "ast_hash": "9960a24288958394ac50e57ff638b036",
-    "semantic_hash": "9960a24288958394ac50e57ff638b036"
+  "server/philo-frontend/src/assets/hero.png": {
+    "mtime": 1785107656.846132,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "uwlax-pallete/UWLAX Image.jpg": {
+    "mtime": 1785196969.6763043,
+    "ast_hash": "d384884dd9813cc07e13bda8dcb8aa97",
+    "semantic_hash": ""
+  },
+  "uwlax-pallete/Uwlax Colors (1).png": {
+    "mtime": 1785197057.8233407,
+    "ast_hash": "a68ccd112c4f9f3e1bbdc30a1b4774ba",
+    "semantic_hash": ""
+  },
+  "uwlax-pallete/Uwlax Colors.png": {
+    "mtime": 1785197057.8340693,
+    "ast_hash": "d504e66a7ec2c8287ff504d0f22e29ca",
+    "semantic_hash": ""
+  },
+  "uwlax-pallete/p.png": {
+    "mtime": 1785196997.1455805,
+    "ast_hash": "c9dc831dc04ba5a205efce42e1e39cd6",
+    "semantic_hash": ""
+  },
+  "server/extractors/image_extractor.py": {
+    "mtime": 1785198729.9326935,
+    "ast_hash": "7f26642e20813276082bc2a2de9b6ac4",
+    "semantic_hash": ""
+  },
+  "server/agents/argument_agent.py": {
+    "mtime": 1785198798.6642373,
+    "ast_hash": "c8f696e66ec9382424d093463b350859",
+    "semantic_hash": ""
+  },
+  "client/src/components/ArgumentTab.tsx": {
+    "mtime": 1785198837.6838374,
+    "ast_hash": "a2c9ff3415ed4d115397c5ee7048e925",
+    "semantic_hash": ""
   }
 }
