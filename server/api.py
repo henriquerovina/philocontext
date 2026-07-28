@@ -3,6 +3,7 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from orchestrator import PhilosophyAnalyzer
+from models import IdentifyPaperRequest, AnalyzeCandidateRequest
 
 app = FastAPI()
 
@@ -44,6 +45,35 @@ async def analyze_pdf(file: UploadFile = File(...)):
     finally:
         if os.path.exists(temp_path):
             os.remove(temp_path)
+
+
+@app.post("/api/identify-paper")
+async def identify_paper(req: IdentifyPaperRequest):
+    try:
+        if not req.description.strip():
+            return JSONResponse(
+                status_code=400,
+                content={"error": "Please provide a description of the paper."}
+            )
+        res = await analyzer.identify_paper(req.description)
+        return res
+    except Exception as e:
+        return JSONResponse(
+            status_code=500,
+            content={"error": str(e)}
+        )
+
+
+@app.post("/api/analyze-identified")
+async def analyze_identified(req: AnalyzeCandidateRequest):
+    try:
+        packet = await analyzer.analyze_identified_paper(req.author, req.work, req.period)
+        return packet.model_dump()
+    except Exception as e:
+        return JSONResponse(
+            status_code=500,
+            content={"error": str(e)}
+        )
 
 
 @app.get("/api/health")

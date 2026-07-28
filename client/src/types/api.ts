@@ -51,9 +51,45 @@ export interface ArgumentAnalysis {
   objections: Objection[];
 }
 
+export interface HistoricalSection {
+  title: string;
+  content: string;
+  source_quotes: string[];
+}
+
+export interface HistoricalContext {
+  sections: HistoricalSection[];
+  timeline?: { date: string; event: string }[];
+}
+
+export interface ConceptGuide {
+  concept: string;
+  definition: string;
+  stakes: string;
+  exam_trap: string;
+  source_quotes: string[];
+}
+
+export interface StudyGuide {
+  concepts: ConceptGuide[];
+}
+
 export interface AnalysisResult {
   metadata: PhilosophyMetadata;
-  historical_context: string;
-  exam_study_guide: string;
+  historical_context: HistoricalContext | null;
+  exam_study_guide: StudyGuide | null;
   argument: ArgumentAnalysis;
+}
+
+export interface PaperCandidate {
+  author: string;
+  work: string;
+  period: string;
+  confidence: number;
+  reasoning: string;
+}
+
+export interface IdentifyCandidatesResponse {
+  candidates: PaperCandidate[];
+  error?: string;
 }

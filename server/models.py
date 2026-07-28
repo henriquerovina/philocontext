@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
 
 class PhilosophyMetadata(BaseModel):
@@ -55,10 +55,33 @@ class ArgumentAnalysis(BaseModel):
     objections: List[Objection]
 
 
+class HistoricalSection(BaseModel):
+    title: str
+    content: str
+    source_quotes: List[str]
+
+
+class HistoricalContext(BaseModel):
+    sections: List[HistoricalSection]
+    timeline: Optional[List[Dict[str, str]]] = None
+
+
+class ConceptGuide(BaseModel):
+    concept: str
+    definition: str
+    stakes: str
+    exam_trap: str
+    source_quotes: List[str]
+
+
+class StudyGuide(BaseModel):
+    concepts: List[ConceptGuide]
+
+
 class AnalysisResult(BaseModel):
     metadata: Dict[str, Any]
-    historical_context: str
-    exam_study_guide: str
+    historical_context: HistoricalContext | None = None
+    exam_study_guide: StudyGuide | None = None
     argument: ArgumentAnalysis | None = None
 
 
@@ -69,6 +92,28 @@ class AnalysisRequest(BaseModel):
 
 class ResearchPacket(BaseModel):
     metadata: Dict[str, Any]
-    historical_context: str
-    exam_study_guide: str
-    argument: ArgumentAnalysis
+    historical_context: HistoricalContext | None = None
+    exam_study_guide: StudyGuide | None = None
+    argument: ArgumentAnalysis | None = None
+
+
+class IdentifyPaperRequest(BaseModel):
+    description: str
+
+
+class PaperCandidate(BaseModel):
+    author: str
+    work: str
+    period: str
+    confidence: int
+    reasoning: str
+
+
+class IdentifyCandidatesResponse(BaseModel):
+    candidates: List[PaperCandidate]
+
+
+class AnalyzeCandidateRequest(BaseModel):
+    author: str
+    work: str
+    period: str

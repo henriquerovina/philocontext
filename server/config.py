@@ -31,13 +31,43 @@ You are a historian specializing in intellectual and political history.
 
 A student is reading "{work}" by {author} ({period}) from {location}.
 
-Provide a professional historical summary that includes:
-1. The specific political/social conflicts or movements of the time
-2. What intellectual problems or debates the author was responding to
-3. How the historical moment made this work revolutionary, controversial, or significant
-4. Any relevant historical events that shaped the author's thinking
+Below is an excerpt from the text to ground your analysis in the author's actual writing:
 
-Be concise, cite specific examples, and explain why this context matters for understanding the work.
+---BEGIN EXCERPT---
+{text}
+---END EXCERPT---
+
+Return ONLY valid JSON with this structure:
+{{
+  "sections": [
+    {{
+      "title": "Political & Social Context",
+      "content": "concise analysis with specific examples",
+      "source_quotes": ["relevant quote from excerpt above"]
+    }},
+    {{
+      "title": "Intellectual Debates",
+      "content": "what problems or debates the author was responding to",
+      "source_quotes": ["relevant quote"]
+    }},
+    {{
+      "title": "Significance",
+      "content": "why this work was revolutionary, controversial, or significant",
+      "source_quotes": ["relevant quote"]
+    }},
+    {{
+      "title": "Key Historical Events",
+      "content": "events that shaped the author's thinking",
+      "source_quotes": ["relevant quote"]
+    }}
+  ],
+  "timeline": [
+    {{ "date": "Year", "event": "Description" }}
+  ]
+}}
+
+Be concise, cite specific passages from the excerpt, and explain why this context matters for understanding the work.
+If no relevant quote exists for a section, use an empty array for source_quotes.
 """
 
 EXAM_PROMPT_TEMPLATE = """
@@ -46,12 +76,28 @@ You are a Philosophy Professor preparing students for exams.
 Based on {work} by {author}, create a study guide for these core concepts:
 {concepts}
 
-For EACH concept, provide:
-1. Classroom Definition (1 clear sentence)
-2. Philosophical Stakes (why it matters, what problem does it solve?)
-3. Exam Trap (what do students commonly misunderstand?)
+Below is an excerpt from the text to ground your explanations:
 
-Format clearly with headers. Make it accessible to undergraduates studying for a midterm.
+---BEGIN EXCERPT---
+{text}
+---END EXCERPT---
+
+Return ONLY valid JSON with this structure:
+{{
+  "concepts": [
+    {{
+      "concept": "Concept Name",
+      "definition": "One clear sentence defining this concept as it appears in {work}",
+      "stakes": "Why this matters philosophically — what problem does it solve?",
+      "exam_trap": "What do students commonly misunderstand?",
+      "source_quotes": ["direct quote from excerpt supporting this concept"]
+    }}
+  ]
+}}
+
+Make each concept accessible to undergraduates studying for a midterm.
+Ensure every concept includes at least one source quote from the excerpt when possible.
+If no relevant quote exists, use an empty array.
 """
 
 ARGUMENT_PROMPT_TEMPLATE = """
@@ -99,4 +145,39 @@ If no fallacies are present, return an empty array for fallacies.
 Be precise and grounded in the provided text.
 
 Text: {text}
+"""
+
+IDENTIFY_PROMPT_TEMPLATE = """
+You are an expert philosophy librarian. A student is looking for a reading or philosophy paper based on their description, but they don't have the text.
+
+Analyze the description and provide up to 3 most likely matching philosophical works, essays, or books. Order them by confidence (highest first).
+
+Return ONLY a valid JSON object with this exact structure:
+{{
+  "candidates": [
+    {{
+      "author": "Author name",
+      "work": "Work title",
+      "period": "Era/century/year",
+      "confidence": 1 to 10 integer,
+      "reasoning": "brief explanation of why this matches the description"
+    }}
+  ]
+}}
+
+If the description is completely unrecognizable, return an empty candidates array: {{ "candidates": [] }}.
+
+Description: {description}
+"""
+
+SYNTHETIC_TEXT_PROMPT_TEMPLATE = """
+You are a philosophy expert. Generate a comprehensive scholarly excerpt and summary representing "{work}" by {author} ({period}).
+
+The text should be detailed (at least 1500 words) and structured so that it clearly contains:
+1. The core thesis and main philosophical arguments
+2. Key conceptual definitions and distinctions made by the author
+3. Direct formulations of the premises and conclusions
+4. Representative quotations or passages characteristic of the work
+
+Write this as a continuous philosophical prose passage that can be analyzed for arguments, historical context, and exam study guides.
 """

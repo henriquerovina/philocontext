@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { AnalysisResult } from '../types/api';
 import Tabs from './Tabs';
 import ArgumentTab from './ArgumentTab';
+import HistoryTab from './HistoryTab';
+import StudyGuideTab from './StudyGuideTab';
 
 interface ResultsProps {
   result: AnalysisResult;
@@ -10,7 +12,7 @@ interface ResultsProps {
 }
 
 export default function Results({ result, onNew }: ResultsProps) {
-  const [activeTab, setActiveTab] = useState('argument');
+  const [activeTab, setActiveTab] = useState('history');
 
   const exportAsJSON = () => {
     const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
@@ -57,10 +59,33 @@ ${(arg?.fallacies ?? []).length === 0 ? 'No fallacies detected' : (arg?.fallacie
 ${(arg?.objections ?? []).map((o) => `- ${o.critic} (${o.era}, ${o.popularity}): ${o.summary} | Response: ${o.response}`).join('\n')}
 
 ## Historical Context
-${result.historical_context}
+${(() => {
+  const hc = result.historical_context;
+  if (!hc || !hc.sections) return 'Not available.';
+  const secMd = hc.sections
+    .map((s) => {
+      const quotes = (s.source_quotes ?? []).map((q) => `> "${q}"`).join('\n');
+      return `### ${s.title}\n${s.content}\n${quotes}`;
+    })
+    .join('\n\n');
+  const tlMd =
+    hc.timeline && hc.timeline.length > 0
+      ? `\n\n#### Timeline\n${hc.timeline.map((t) => `- ${t.date}: ${t.event}`).join('\n')}`
+      : '';
+  return secMd + tlMd;
+})()}
 
 ## Study Guide
-${result.exam_study_guide}
+${(() => {
+  const sg = result.exam_study_guide;
+  if (!sg || !sg.concepts) return 'Not available.';
+  return sg.concepts
+    .map((c) => {
+      const quotes = (c.source_quotes ?? []).map((q) => `> "${q}"`).join('\n');
+      return `### ${c.concept}\n- **Definition**: ${c.definition}\n- **Stakes**: ${c.stakes}\n- **Exam Trap**: ${c.exam_trap}\n${quotes}`;
+    })
+    .join('\n\n');
+})()}
 `;
     const blob = new Blob([md], { type: 'text/markdown' });
     const url = URL.createObjectURL(blob);
@@ -72,18 +97,18 @@ ${result.exam_study_guide}
   };
 
   const tabs = [
-    { id: 'argument', label: 'Argument', content: <ArgumentTab argument={result.argument} /> },
-    { id: 'metadata', label: 'Metadata', content: <MetadataTab result={result} /> },
     {
       id: 'history',
       label: 'Historical Context',
-      content: <div className="whitespace-pre-wrap leading-relaxed text-gray-800 dark:text-gray-100">{result.historical_context}</div>,
+      content: <HistoryTab data={result.historical_context} />,
     },
+    { id: 'argument', label: 'Argument', content: <ArgumentTab argument={result.argument} /> },
     {
       id: 'guide',
       label: 'Study Guide',
-      content: <div className="whitespace-pre-wrap leading-relaxed text-gray-800 dark:text-gray-100">{result.exam_study_guide}</div>,
+      content: <StudyGuideTab data={result.exam_study_guide} />,
     },
+    { id: 'metadata', label: 'Metadata', content: <MetadataTab result={result} /> },
     {
       id: 'export',
       label: 'Export',
@@ -129,11 +154,44 @@ ${result.exam_study_guide}
 }
 
 function MetadataTab({ result }: { result: AnalysisResult }) {
+  const authorPhoto = useAuthorPhoto(result.metadata.author);
+
   return (
     <div className="space-y-4">
       <div>
         <p className="text-gray-600 dark:text-gray-300 font-semibold">Author</p>
-        <p className="text-gray-900 dark:text-gray-50">{result.metadata.author}</p>
+        <div className="mt-2 flex items-center gap-3">
+          {authorPhoto ? (
+            <img
+              src={authorPhoto.thumbnail}
+              alt={`Portrait of ${result.metadata.author}`}
+              className="h-16 w-16 rounded-full object-cover border-2 border-maroon-100 dark:border-gold-500/30"
+              onError={(event) => {
+                event.currentTarget.style.display = 'none';
+              }}
+            />
+          ) : (
+            <div
+              aria-hidden="true"
+              className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-maroon-100 text-xl font-semibold text-maroon-700 dark:bg-gold-500/20 dark:text-gold-500"
+            >
+              {getInitials(result.metadata.author)}
+            </div>
+          )}
+          <div>
+            <p className="text-gray-900 dark:text-gray-50">{result.metadata.author}</p>
+            {authorPhoto && (
+              <a
+                href={authorPhoto.url}
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs text-gray-500 hover:text-maroon-700 dark:text-gray-400 dark:hover:text-gold-500"
+              >
+                View on Wikipedia
+              </a>
+            )}
+          </div>
+        </div>
       </div>
       <div>
         <p className="text-gray-600 dark:text-gray-300 font-semibold">Period</p>
@@ -158,4 +216,68 @@ function MetadataTab({ result }: { result: AnalysisResult }) {
       </div>
     </div>
   );
+}
+
+interface AuthorPhoto {
+  thumbnail: string;
+  url: string;
+}
+
+function useAuthorPhoto(author: string): AuthorPhoto | null {
+  const [photo, setPhoto] = useState<AuthorPhoto | null>(null);
+
+  useEffect(() => {
+    const name = author.trim();
+    if (!name) {
+      setPhoto(null);
+      return;
+    }
+
+    const controller = new AbortController();
+    setPhoto(null);
+
+    const params = new URLSearchParams({
+      action: 'query',
+      generator: 'search',
+      gsrsearch: name,
+      gsrnamespace: '0',
+      gsrlimit: '1',
+      prop: 'pageimages|info',
+      inprop: 'url',
+      piprop: 'thumbnail',
+      pithumbsize: '240',
+      format: 'json',
+      origin: '*',
+    });
+
+    fetch(`https://en.wikipedia.org/w/api.php?${params}`, { signal: controller.signal })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data) => {
+        const page = data?.query?.pages ? Object.values(data.query.pages)[0] as {
+          thumbnail?: { source?: string };
+          fullurl?: string;
+        } : undefined;
+        const thumbnail = page?.thumbnail?.source;
+        if (thumbnail && page.fullurl) {
+          setPhoto({ thumbnail, url: page.fullurl });
+        }
+      })
+      .catch(() => {
+        // A missing network connection or Wikipedia page should not affect analysis.
+      });
+
+    return () => controller.abort();
+  }, [author]);
+
+  return photo;
+}
+
+function getInitials(name: string): string {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join('')
+    .toUpperCase();
 }

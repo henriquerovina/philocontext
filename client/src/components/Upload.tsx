@@ -3,14 +3,17 @@ import { motion } from 'framer-motion';
 
 interface UploadProps {
   onAnalyze: (file: File) => void;
+  onIdentifyPaper: (description: string) => void;
   loading: boolean;
   error: string | null;
 }
 
-export default function Upload({ onAnalyze, loading, error }: UploadProps) {
+export default function Upload({ onAnalyze, onIdentifyPaper, loading, error }: UploadProps) {
   const [file, setFile] = useState<File | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [showDescribeForm, setShowDescribeForm] = useState(false);
+  const [description, setDescription] = useState('');
 
   const isImageFile = (f: File | null) => {
     if (!f) return false;
@@ -43,7 +46,13 @@ export default function Upload({ onAnalyze, loading, error }: UploadProps) {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    if (file) onAnalyze(file);
+    if (showDescribeForm) {
+      if (description.trim()) {
+        onIdentifyPaper(description.trim());
+      }
+    } else {
+      if (file) onAnalyze(file);
+    }
   };
 
   return (
@@ -62,57 +71,116 @@ export default function Upload({ onAnalyze, loading, error }: UploadProps) {
         </motion.p>
 
         <motion.form onSubmit={handleSubmit} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-100 dark:border-maroon-700">
-          <div
-            onDrop={handleDrop}
-            onDragOver={(e) => {
-              e.preventDefault();
-              setIsDragging(true);
-            }}
-            onDragLeave={() => setIsDragging(false)}
-            className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition ${
-              isDragging ? 'border-maroon-700 dark:border-gold-500 bg-maroon-50 dark:bg-gold-500/10' : 'border-gray-300 dark:border-gray-600 hover:border-maroon-700/40 dark:hover:border-gold-500/40'
-            }`}
-          >
-            <input
-              type="file"
-              accept=".pdf,.png,.jpg,.jpeg,.webp"
-              onChange={handleFileChange}
-              className="hidden"
-              id="file-input"
-            />
-            <label htmlFor="file-input" className="block cursor-pointer">
-              {previewUrl ? (
-                <div className="space-y-3">
-                  <img src={previewUrl} alt="Preview" className="max-h-40 mx-auto rounded-lg object-contain" />
-                  <p className="text-gray-600 dark:text-gray-300 text-sm truncate">{file?.name}</p>
-                </div>
-              ) : (
-                <p className="text-gray-600 dark:text-gray-300">
-                  {file ? file.name : 'Drag PDF or image here or click to select'}
-                </p>
-              )}
-            </label>
-          </div>
+          {!showDescribeForm ? (
+            <>
+              <div
+                onDrop={handleDrop}
+                onDragOver={(e) => {
+                  e.preventDefault();
+                  setIsDragging(true);
+                }}
+                onDragLeave={() => setIsDragging(false)}
+                className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition ${
+                  isDragging ? 'border-maroon-700 dark:border-gold-500 bg-maroon-50 dark:bg-gold-500/10' : 'border-gray-300 dark:border-gray-600 hover:border-maroon-700/40 dark:hover:border-gold-500/40'
+                }`}
+              >
+                <input
+                  type="file"
+                  accept=".pdf,.png,.jpg,.jpeg,.webp"
+                  onChange={handleFileChange}
+                  className="hidden"
+                  id="file-input"
+                />
+                <label htmlFor="file-input" className="block cursor-pointer">
+                  {previewUrl ? (
+                    <div className="space-y-3">
+                      <img src={previewUrl} alt="Preview" className="max-h-40 mx-auto rounded-lg object-contain" />
+                      <p className="text-gray-600 dark:text-gray-300 text-sm truncate">{file?.name}</p>
+                    </div>
+                  ) : (
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {file ? file.name : 'Drag PDF or image here or click to select'}
+                    </p>
+                  )}
+                </label>
+              </div>
 
-          {error && <p className="text-red-500 mt-4">{error}</p>}
+              {error && <p className="text-red-500 mt-4 text-sm">{error}</p>}
 
-          <motion.button
-            whileTap={{ scale: 0.97 }}
-            type="submit"
-            disabled={!file || loading}
-            className="w-full mt-6 bg-maroon-700 hover:bg-maroon-800 dark:bg-gold-500 dark:hover:bg-gold-700 dark:text-maroon-900 text-white py-2 rounded-lg font-semibold disabled:opacity-50 transition-colors"
-          >
-            {loading ? (
-              <span className="flex items-center justify-center gap-1.5">
-                Analyzing
-                <span className="inline-flex gap-0.5">
-                  {[0, 0.2, 0.4].map((d) => (
-                    <span key={d} className="w-1.5 h-1.5 bg-current rounded-full animate-pulse-dot" style={{ animationDelay: `${d}s` }} />
-                  ))}
-                </span>
-              </span>
-            ) : 'Analyze'}
-          </motion.button>
+              <motion.button
+                whileTap={{ scale: 0.97 }}
+                type="submit"
+                disabled={!file || loading}
+                className="w-full mt-6 bg-maroon-700 hover:bg-maroon-800 dark:bg-gold-500 dark:hover:bg-gold-700 dark:text-maroon-900 text-white py-2 rounded-lg font-semibold disabled:opacity-50 transition-colors"
+              >
+                {loading ? (
+                  <span className="flex items-center justify-center gap-1.5">
+                    Analyzing
+                    <span className="inline-flex gap-0.5">
+                      {[0, 0.2, 0.4].map((d) => (
+                        <span key={d} className="w-1.5 h-1.5 bg-current rounded-full animate-pulse-dot" style={{ animationDelay: `${d}s` }} />
+                      ))}
+                    </span>
+                  </span>
+                ) : 'Analyze'}
+              </motion.button>
+
+              <div className="mt-4 text-center">
+                <button
+                  type="button"
+                  onClick={() => setShowDescribeForm(true)}
+                  className="text-sm text-maroon-700 dark:text-gold-500 hover:underline font-medium"
+                >
+                  Don't have the reading or paper?
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="space-y-3">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+                  Describe the paper or reading:
+                </label>
+                <textarea
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  placeholder="e.g., Kant's Groundwork for the Metaphysics of Morals, or the paper where Descartes discusses the evil demon..."
+                  rows={4}
+                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-maroon-700 dark:focus:ring-gold-500"
+                />
+              </div>
+
+              {error && <p className="text-red-500 mt-4 text-sm">{error}</p>}
+
+              <motion.button
+                whileTap={{ scale: 0.97 }}
+                type="submit"
+                disabled={!description.trim() || loading}
+                className="w-full mt-6 bg-maroon-700 hover:bg-maroon-800 dark:bg-gold-500 dark:hover:bg-gold-700 dark:text-maroon-900 text-white py-2 rounded-lg font-semibold disabled:opacity-50 transition-colors"
+              >
+                {loading ? (
+                  <span className="flex items-center justify-center gap-1.5">
+                    Recognizing & Analyzing
+                    <span className="inline-flex gap-0.5">
+                      {[0, 0.2, 0.4].map((d) => (
+                        <span key={d} className="w-1.5 h-1.5 bg-current rounded-full animate-pulse-dot" style={{ animationDelay: `${d}s` }} />
+                      ))}
+                    </span>
+                  </span>
+                ) : 'Find & Analyze'}
+              </motion.button>
+
+              <div className="mt-4 text-center">
+                <button
+                  type="button"
+                  onClick={() => setShowDescribeForm(false)}
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                >
+                  ← Upload a file instead
+                </button>
+              </div>
+            </>
+          )}
         </motion.form>
       </div>
     </motion.div>
