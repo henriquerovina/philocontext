@@ -1,9 +1,12 @@
+import asyncio
 import os
+import traceback
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from orchestrator import PhilosophyAnalyzer
-from models import IdentifyPaperRequest, AnalyzeCandidateRequest
+from agents.debate_agent import DebateAgent
+from models import IdentifyPaperRequest, AnalyzeCandidateRequest, DebateQuestionsRequest, EvaluateAnswerRequest, DebateQuestion
 
 app = FastAPI()
 
@@ -16,6 +19,7 @@ app.add_middleware(
 )
 
 analyzer = PhilosophyAnalyzer()
+debate_agent = DebateAgent()
 
 
 ALLOWED_EXTENSIONS = (".pdf", ".png", ".jpg", ".jpeg", ".webp")
@@ -38,6 +42,7 @@ async def analyze_pdf(file: UploadFile = File(...)):
         return result.model_dump()
 
     except Exception as e:
+        traceback.print_exc()
         return JSONResponse(
             status_code=500,
             content={"error": str(e)}
@@ -58,6 +63,7 @@ async def identify_paper(req: IdentifyPaperRequest):
         res = await analyzer.identify_paper(req.description)
         return res
     except Exception as e:
+        traceback.print_exc()
         return JSONResponse(
             status_code=500,
             content={"error": str(e)}
@@ -70,10 +76,40 @@ async def analyze_identified(req: AnalyzeCandidateRequest):
         packet = await analyzer.analyze_identified_paper(req.author, req.work, req.period)
         return packet.model_dump()
     except Exception as e:
+        traceback.print_exc()
         return JSONResponse(
             status_code=500,
             content={"error": str(e)}
         )
+
+
+@app.post("/api/debate/questions")
+async def debate_questions(req: DebateQuestionsRequest):
+    try:
+        result = await asyncio.to_thread(
+            debate_agent.generate_questions,
+            req.metadata,
+            req.raw_text,
+            req.study_guide_concepts,
+            req.count,
+        )
+        return result
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+
+@app.post("/api/debate/evaluate")
+async def debate_evaluate(req: EvaluateAnswerRequest):
+    try:
+        result = await asyncio.to_thread(
+            debate_agent.evaluate_answer,
+            req.question.model_dump(),
+            req.user_answer,
+            req.metadata,
+        )
+        return result
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"error": str(e)})
 
 
 @app.get("/api/health")

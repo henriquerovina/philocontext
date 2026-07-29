@@ -88,7 +88,8 @@ class PhilosophyAnalyzer:
             metadata=metadata,
             historical_context=history_ctx,
             exam_study_guide=study_guide,
-            argument=argument
+            argument=argument,
+            raw_text=synthetic_text
         )
 
     async def analyze_paper(self, file_path: str, extension: str | None = None) -> ResearchPacket:
@@ -158,5 +159,6 @@ class PhilosophyAnalyzer:
             metadata=metadata,
             historical_context=history_ctx,
             exam_study_guide=study_guide,
-            argument=argument
+            argument=argument,
+            raw_text=raw_text
         )

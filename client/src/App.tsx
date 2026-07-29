@@ -30,9 +30,8 @@ function App() {
         body: formData,
       });
 
-      if (!response.ok) throw new Error('Analysis failed');
       const data = await response.json();
-      if (data.error) throw new Error(data.error);
+      if (!response.ok) throw new Error(data.error || 'Analysis failed');
       setResult(data);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Unknown error');
@@ -83,9 +82,8 @@ function App() {
         }),
       });
 
-      if (!response.ok) throw new Error('Analysis failed');
       const data = await response.json();
-      if (data.error) throw new Error(data.error);
+      if (!response.ok) throw new Error(data.error || 'Analysis failed');
       setResult(data);
       setCandidates(null);
     } catch (err) {

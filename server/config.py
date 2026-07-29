@@ -147,6 +147,63 @@ Be precise and grounded in the provided text.
 Text: {text}
 """
 
+DEBATE_TEMP = 0.4
+DEBATE_QUESTION_PROMPT_TEMPLATE = """
+You are a Socratic philosophy professor preparing an oral exam on "{work}" by {author} ({period}).
+
+The student has already studied these concepts:
+{concepts}
+
+Below is an excerpt from the text:
+---BEGIN EXCERPT---
+{text}
+---END EXCERPT---
+
+Generate {count} questions that probe whether the student truly understands the author's reasoning, not just memorized definitions.
+Mix question types:
+- "Explain the author's thesis in your own words" (thesis comprehension)
+- "Why does the author believe X?" (premise reasoning)
+- "How would the author respond to objection Y?" (counterargument anticipation)
+- "What distinguishes concept A from concept B?" (fine-grained distinction)
+
+Return ONLY valid JSON:
+{{
+  "questions": [
+    {{
+      "question": "The question to ask the student",
+      "concept_tested": "Which concept this probes",
+      "expected_key_points": ["point 1", "point 2", "point 3"],
+      "hints": ["hint if student struggles"]
+    }}
+  ]
+}}
+"""
+
+DEBATE_EVALUATE_PROMPT_TEMPLATE = """
+You are a philosophy professor evaluating a student's oral exam answer about "{work}" by {author}.
+
+Question: {question}
+Concept being tested: {concept_tested}
+Expected key points: {expected_key_points}
+
+Student's answer: "{user_answer}"
+
+Evaluate the answer:
+1. Score 1–5 (1 = completely wrong/missing, 5 = excellent grasp)
+2. What the student got right
+3. What key points are missing or misunderstood
+4. What they should re-study
+
+Return ONLY valid JSON:
+{{
+  "score": 1 to 5,
+  "correct_points": ["what they got right"],
+  "missing_points": ["what's missing"],
+  "feedback": "2-3 sentence constructive feedback",
+  "suggested_study": "specific concept or passage to re-read"
+}}
+"""
+
 IDENTIFY_PROMPT_TEMPLATE = """
 You are an expert philosophy librarian. A student is looking for a reading or philosophy paper based on their description, but they don't have the text.
 
