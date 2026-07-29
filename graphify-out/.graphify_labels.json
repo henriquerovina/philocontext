@@ -10,10 +10,10 @@
   "8": "client/package.json",
   "9": "philo-frontend/package.json",
   "10": "Philocontext Backend",
-  "11": "Philocontext",
+  "11": "dev.sh",
   "12": "UW-LAX Logo Mark",
   "13": "Philocontext Favicon",
-  "14": "opencode.json",
+  "14": "plugin",
   "15": "Bluesky Icon",
   "16": "UW-La Crosse Brand Color Palette",
   "17": "graphify.js",
@@ -47,7 +47,7 @@
   "45": "python-multipart",
   "46": "uvicorn",
   "47": "graphify reference: extra exports and benchmark",
-  "48": "api.py",
+  "48": "BaseAgent",
   "49": "graphify reference: query, path, explain",
   "50": "graphify reference: add a URL and watch a folder",
   "51": "graphify reference: commit hook and native CLAUDE.md integration",
@@ -56,5 +56,7 @@
   "54": "graphify reference: GitHub clone and cross-repo merge",
   "55": "graphify reference: transcribe video and audio",
   "56": "CLAUDE.md",
-  "57": "extraction-spec.md"
+  "57": "extraction-spec.md",
+  "58": "StudyManager.tsx",
+  "59": "vercel.json"
 }

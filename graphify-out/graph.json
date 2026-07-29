@@ -140,7 +140,7 @@
       "_origin": "ast",
       "id": "opencode_opencode",
       "community": 14,
-      "community_name": "opencode.json",
+      "community_name": "plugin",
       "norm_label": "opencode.json"
     },
     {
@@ -151,7 +151,7 @@
       "_origin": "ast",
       "id": "opencode_opencode_schema",
       "community": 14,
-      "community_name": "opencode.json",
+      "community_name": "plugin",
       "norm_label": "$schema"
     },
     {
@@ -162,7 +162,7 @@
       "_origin": "ast",
       "id": "opencode_opencode_plugin",
       "community": 14,
-      "community_name": "opencode.json",
+      "community_name": "plugin",
       "norm_label": "plugin"
     },
     {
@@ -173,8 +173,19 @@
       "_origin": "ast",
       "id": "ref_opencode_plugins_graphify_js",
       "community": 14,
-      "community_name": "opencode.json",
+      "community_name": "plugin",
       "norm_label": ".opencode/plugins/graphify.js"
+    },
+    {
+      "label": "@dietrichgebert/ponytail",
+      "file_type": "concept",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "ref_dietrichgebert_ponytail",
+      "community": 14,
+      "community_name": "plugin",
+      "norm_label": "@dietrichgebert/ponytail"
     },
     {
       "label": "graphify.js",
@@ -730,7 +741,7 @@
       "label": "App()",
       "file_type": "code",
       "source_file": "client/src/App.tsx",
-      "source_location": "L10",
+      "source_location": "L12",
       "_origin": "ast",
       "id": "client_src_app_app",
       "community": 0,
@@ -782,6 +793,39 @@
       "norm_label": "argumenttab()"
     },
     {
+      "label": "CandidatePicker.tsx",
+      "file_type": "code",
+      "source_file": "client/src/components/CandidatePicker.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "client_src_components_candidatepicker",
+      "community": 0,
+      "community_name": "api.ts",
+      "norm_label": "candidatepicker.tsx"
+    },
+    {
+      "label": "CandidatePickerProps",
+      "file_type": "code",
+      "source_file": "client/src/components/CandidatePicker.tsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "client_src_components_candidatepicker_candidatepickerprops",
+      "community": 0,
+      "community_name": "api.ts",
+      "norm_label": "candidatepickerprops"
+    },
+    {
+      "label": "CandidatePicker()",
+      "file_type": "code",
+      "source_file": "client/src/components/CandidatePicker.tsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "client_src_components_candidatepicker_candidatepicker",
+      "community": 0,
+      "community_name": "api.ts",
+      "norm_label": "candidatepicker()"
+    },
+    {
       "label": "HistoryTab.tsx",
       "file_type": "code",
       "source_file": "client/src/components/HistoryTab.tsx",
@@ -829,7 +873,7 @@
       "label": "ResultsProps",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "client_src_components_results_resultsprops",
       "community": 0,
@@ -840,7 +884,7 @@
       "label": "Results()",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "client_src_components_results_results",
       "community": 0,
@@ -851,7 +895,7 @@
       "label": "MetadataTab()",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L156",
+      "source_location": "L172",
       "_origin": "ast",
       "id": "client_src_components_results_metadatatab",
       "community": 0,
@@ -862,7 +906,7 @@
       "label": "AuthorPhoto",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L221",
+      "source_location": "L237",
       "_origin": "ast",
       "id": "client_src_components_results_authorphoto",
       "community": 0,
@@ -873,7 +917,7 @@
       "label": "useAuthorPhoto()",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L226",
+      "source_location": "L242",
       "_origin": "ast",
       "id": "client_src_components_results_useauthorphoto",
       "community": 0,
@@ -884,7 +928,7 @@
       "label": "getInitials()",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L275",
+      "source_location": "L291",
       "_origin": "ast",
       "id": "client_src_components_results_getinitials",
       "community": 0,
@@ -898,8 +942,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "client_src_components_studyguidetab",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
       "norm_label": "studyguidetab.tsx"
     },
     {
@@ -909,8 +953,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "client_src_components_studyguidetab_studyguidetabprops",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
       "norm_label": "studyguidetabprops"
     },
     {
@@ -920,20 +964,75 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "client_src_components_studyguidetab_conceptcard",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
       "norm_label": "conceptcard()"
+    },
+    {
+      "label": "FlashCardView()",
+      "file_type": "code",
+      "source_file": "client/src/components/StudyGuideTab.tsx",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "client_src_components_studyguidetab_flashcardview",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "flashcardview()"
     },
     {
       "label": "StudyGuideTab()",
       "file_type": "code",
       "source_file": "client/src/components/StudyGuideTab.tsx",
-      "source_location": "L106",
+      "source_location": "L403",
       "_origin": "ast",
       "id": "client_src_components_studyguidetab_studyguidetab",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
       "norm_label": "studyguidetab()"
+    },
+    {
+      "label": "StudyManager.tsx",
+      "file_type": "code",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "client_src_components_studymanager",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "studymanager.tsx"
+    },
+    {
+      "label": "StudyManagerProps",
+      "file_type": "code",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "client_src_components_studymanager_studymanagerprops",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "studymanagerprops"
+    },
+    {
+      "label": "OpenGuide",
+      "file_type": "code",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "client_src_components_studymanager_openguide",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "openguide"
+    },
+    {
+      "label": "StudyManager()",
+      "file_type": "code",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "client_src_components_studymanager_studymanager",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "studymanager()"
     },
     {
       "label": "Tabs.tsx",
@@ -1027,12 +1126,155 @@
       "label": "Upload()",
       "file_type": "code",
       "source_file": "client/src/components/Upload.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "client_src_components_upload_upload",
       "community": 0,
       "community_name": "api.ts",
       "norm_label": "upload()"
+    },
+    {
+      "label": "studies.ts",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "client_src_lib_studies",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "studies.ts"
+    },
+    {
+      "label": "SavedStudy",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_savedstudy",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "savedstudy"
+    },
+    {
+      "label": "StudyCompilation",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_studycompilation",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "studycompilation"
+    },
+    {
+      "label": "read()",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_read",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "read()"
+    },
+    {
+      "label": "write()",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_write",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "write()"
+    },
+    {
+      "label": "getSavedStudies()",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_getsavedstudies",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "getsavedstudies()"
+    },
+    {
+      "label": "saveStudy()",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_savestudy",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "savestudy()"
+    },
+    {
+      "label": "deleteStudy()",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_deletestudy",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "deletestudy()"
+    },
+    {
+      "label": "getCompilations()",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_getcompilations",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "getcompilations()"
+    },
+    {
+      "label": "createCompilation()",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_createcompilation",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "createcompilation()"
+    },
+    {
+      "label": "deleteCompilation()",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_deletecompilation",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "deletecompilation()"
+    },
+    {
+      "label": "mergeCompilations()",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_mergecompilations",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "mergecompilations()"
+    },
+    {
+      "label": "conceptsForStudies()",
+      "file_type": "code",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "client_src_lib_studies_conceptsforstudies",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
+      "norm_label": "conceptsforstudies()"
     },
     {
       "label": "main.tsx",
@@ -1173,8 +1415,8 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "client_src_types_api_conceptguide",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
       "norm_label": "conceptguide"
     },
     {
@@ -1184,8 +1426,8 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "client_src_types_api_studyguide",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 58,
+      "community_name": "StudyManager.tsx",
       "norm_label": "studyguide"
     },
     {
@@ -1198,6 +1440,28 @@
       "community": 0,
       "community_name": "api.ts",
       "norm_label": "analysisresult"
+    },
+    {
+      "label": "PaperCandidate",
+      "file_type": "code",
+      "source_file": "client/src/types/api.ts",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "client_src_types_api_papercandidate",
+      "community": 0,
+      "community_name": "api.ts",
+      "norm_label": "papercandidate"
+    },
+    {
+      "label": "IdentifyCandidatesResponse",
+      "file_type": "code",
+      "source_file": "client/src/types/api.ts",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "client_src_types_api_identifycandidatesresponse",
+      "community": 0,
+      "community_name": "api.ts",
+      "norm_label": "identifycandidatesresponse"
     },
     {
       "label": "vite-env.d.ts",
@@ -1464,6 +1728,28 @@
       "norm_label": "src"
     },
     {
+      "label": "vercel.json",
+      "file_type": "code",
+      "source_file": "client/vercel.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "client_vercel",
+      "community": 59,
+      "community_name": "vercel.json",
+      "norm_label": "vercel.json"
+    },
+    {
+      "label": "rewrites",
+      "file_type": "code",
+      "source_file": "client/vercel.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "client_vercel_rewrites",
+      "community": 59,
+      "community_name": "vercel.json",
+      "norm_label": "rewrites"
+    },
+    {
       "label": "vite.config.js",
       "file_type": "code",
       "source_file": "client/vite.config.js",
@@ -1473,6 +1759,36 @@
       "community": 32,
       "community_name": "vite.config.js",
       "norm_label": "vite.config.js"
+    },
+    {
+      "label": "dev.sh",
+      "file_type": "code",
+      "source_file": "dev.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "dev",
+      "community": 11,
+      "community_name": "dev.sh",
+      "norm_label": "dev.sh"
+    },
+    {
+      "label": "dev.sh script",
+      "file_type": "code",
+      "source_file": "dev.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "dev_sh__entry",
+      "community": 11,
+      "community_name": "dev.sh",
+      "norm_label": "dev.sh script"
     },
     {
       "label": "agents/__init__.py",
@@ -1492,8 +1808,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_agents_argument_agent",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "argument_agent.py"
     },
     {
@@ -1503,8 +1819,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "server_agents_argument_agent_argumentagent",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "argumentagent"
     },
     {
@@ -1514,8 +1830,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "server_agents_argument_agent_argumentagent_init",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": ".__init__()"
     },
     {
@@ -1525,8 +1841,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "server_agents_argument_agent_argumentagent_process",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": ".process()"
     },
     {
@@ -1536,8 +1852,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_agents_base_agent",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "base_agent.py"
     },
     {
@@ -1547,8 +1863,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "server_agents_base_agent_baseagent",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "baseagent"
     },
     {
@@ -1558,8 +1874,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "abc",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "abc"
     },
     {
@@ -1569,8 +1885,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "server_agents_base_agent_baseagent_init",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": ".__init__()"
     },
     {
@@ -1580,8 +1896,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "server_agents_base_agent_baseagent_call_llm",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": ".call_llm()"
     },
     {
@@ -1591,8 +1907,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "server_agents_base_agent_baseagent_process",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": ".process()"
     },
     {
@@ -1602,8 +1918,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_agents_exam_agent",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "exam_agent.py"
     },
     {
@@ -1613,8 +1929,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "server_agents_exam_agent_examagent",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "examagent"
     },
     {
@@ -1624,8 +1940,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "server_agents_exam_agent_examagent_init",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": ".__init__()"
     },
     {
@@ -1635,8 +1951,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "server_agents_exam_agent_examagent_process",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": ".process()"
     },
     {
@@ -1646,8 +1962,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_agents_history_agent",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "history_agent.py"
     },
     {
@@ -1657,8 +1973,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "server_agents_history_agent_historyagent",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "historyagent"
     },
     {
@@ -1668,8 +1984,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "server_agents_history_agent_historyagent_init",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": ".__init__()"
     },
     {
@@ -1679,9 +1995,64 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "server_agents_history_agent_historyagent_process",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": ".process()"
+    },
+    {
+      "label": "identify_agent.py",
+      "file_type": "code",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_agents_identify_agent",
+      "community": 48,
+      "community_name": "BaseAgent",
+      "norm_label": "identify_agent.py"
+    },
+    {
+      "label": "IdentifyAgent",
+      "file_type": "code",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "server_agents_identify_agent_identifyagent",
+      "community": 48,
+      "community_name": "BaseAgent",
+      "norm_label": "identifyagent"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "server_agents_identify_agent_identifyagent_init",
+      "community": 48,
+      "community_name": "BaseAgent",
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".process()",
+      "file_type": "code",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "server_agents_identify_agent_identifyagent_process",
+      "community": 48,
+      "community_name": "BaseAgent",
+      "norm_label": ".process()"
+    },
+    {
+      "label": ".generate_synthetic_text()",
+      "file_type": "code",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "server_agents_identify_agent_identifyagent_generate_synthetic_text",
+      "community": 48,
+      "community_name": "BaseAgent",
+      "norm_label": ".generate_synthetic_text()"
     },
     {
       "label": "metadata_agent.py",
@@ -1690,8 +2061,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_agents_metadata_agent",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "metadata_agent.py"
     },
     {
@@ -1701,8 +2072,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "server_agents_metadata_agent_metadataagent",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "metadataagent"
     },
     {
@@ -1712,8 +2083,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "server_agents_metadata_agent_metadataagent_init",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": ".__init__()"
     },
     {
@@ -1723,8 +2094,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "server_agents_metadata_agent_metadataagent_process",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": ".process()"
     },
     {
@@ -1734,8 +2105,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_api",
-      "community": 48,
-      "community_name": "api.py",
+      "community": 1,
+      "community_name": "orchestrator.py",
       "norm_label": "api.py"
     },
     {
@@ -1745,19 +2116,19 @@
       "source_location": "",
       "_origin": "ast",
       "id": "post",
-      "community": 48,
-      "community_name": "api.py",
+      "community": 1,
+      "community_name": "orchestrator.py",
       "norm_label": "post"
     },
     {
       "label": "analyze_pdf()",
       "file_type": "code",
       "source_file": "server/api.py",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "server_api_analyze_pdf",
-      "community": 48,
-      "community_name": "api.py",
+      "community": 1,
+      "community_name": "orchestrator.py",
       "norm_label": "analyze_pdf()"
     },
     {
@@ -1767,9 +2138,31 @@
       "source_location": "",
       "_origin": "ast",
       "id": "uploadfile",
-      "community": 48,
-      "community_name": "api.py",
+      "community": 1,
+      "community_name": "orchestrator.py",
       "norm_label": "uploadfile"
+    },
+    {
+      "label": "identify_paper()",
+      "file_type": "code",
+      "source_file": "server/api.py",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "server_api_identify_paper",
+      "community": 1,
+      "community_name": "orchestrator.py",
+      "norm_label": "identify_paper()"
+    },
+    {
+      "label": "analyze_identified()",
+      "file_type": "code",
+      "source_file": "server/api.py",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "server_api_analyze_identified",
+      "community": 1,
+      "community_name": "orchestrator.py",
+      "norm_label": "analyze_identified()"
     },
     {
       "label": "get",
@@ -1778,19 +2171,19 @@
       "source_location": "",
       "_origin": "ast",
       "id": "get",
-      "community": 48,
-      "community_name": "api.py",
+      "community": 1,
+      "community_name": "orchestrator.py",
       "norm_label": "get"
     },
     {
       "label": "health()",
       "file_type": "code",
       "source_file": "server/api.py",
-      "source_location": "L50",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "server_api_health",
-      "community": 48,
-      "community_name": "api.py",
+      "community": 1,
+      "community_name": "orchestrator.py",
       "norm_label": "health()"
     },
     {
@@ -1800,8 +2193,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_config",
-      "community": 1,
-      "community_name": "orchestrator.py",
+      "community": 48,
+      "community_name": "BaseAgent",
       "norm_label": "config.py"
     },
     {
@@ -2146,6 +2539,50 @@
       "norm_label": "researchpacket"
     },
     {
+      "label": "IdentifyPaperRequest",
+      "file_type": "code",
+      "source_file": "server/models.py",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "server_models_identifypaperrequest",
+      "community": 1,
+      "community_name": "orchestrator.py",
+      "norm_label": "identifypaperrequest"
+    },
+    {
+      "label": "PaperCandidate",
+      "file_type": "code",
+      "source_file": "server/models.py",
+      "source_location": "L104",
+      "_origin": "ast",
+      "id": "server_models_papercandidate",
+      "community": 1,
+      "community_name": "orchestrator.py",
+      "norm_label": "papercandidate"
+    },
+    {
+      "label": "IdentifyCandidatesResponse",
+      "file_type": "code",
+      "source_file": "server/models.py",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "server_models_identifycandidatesresponse",
+      "community": 1,
+      "community_name": "orchestrator.py",
+      "norm_label": "identifycandidatesresponse"
+    },
+    {
+      "label": "AnalyzeCandidateRequest",
+      "file_type": "code",
+      "source_file": "server/models.py",
+      "source_location": "L116",
+      "_origin": "ast",
+      "id": "server_models_analyzecandidaterequest",
+      "community": 1,
+      "community_name": "orchestrator.py",
+      "norm_label": "analyzecandidaterequest"
+    },
+    {
       "label": "orchestrator.py",
       "file_type": "code",
       "source_file": "server/orchestrator.py",
@@ -2160,7 +2597,7 @@
       "label": "PhilosophyAnalyzer",
       "file_type": "code",
       "source_file": "server/orchestrator.py",
-      "source_location": "L13",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "server_orchestrator_philosophyanalyzer",
       "community": 1,
@@ -2171,18 +2608,40 @@
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "server/orchestrator.py",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "server_orchestrator_philosophyanalyzer_init",
+      "community": 48,
+      "community_name": "BaseAgent",
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".identify_paper()",
+      "file_type": "code",
+      "source_file": "server/orchestrator.py",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "server_orchestrator_philosophyanalyzer_identify_paper",
       "community": 1,
       "community_name": "orchestrator.py",
-      "norm_label": ".__init__()"
+      "norm_label": ".identify_paper()"
+    },
+    {
+      "label": ".analyze_identified_paper()",
+      "file_type": "code",
+      "source_file": "server/orchestrator.py",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "server_orchestrator_philosophyanalyzer_analyze_identified_paper",
+      "community": 1,
+      "community_name": "orchestrator.py",
+      "norm_label": ".analyze_identified_paper()"
     },
     {
       "label": ".analyze_paper()",
       "file_type": "code",
       "source_file": "server/orchestrator.py",
-      "source_location": "L20",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "server_orchestrator_philosophyanalyzer_analyze_paper",
       "community": 1,
@@ -3420,10 +3879,10 @@
       "author": null,
       "contributor": null,
       "rationale": "Upload philosophy PDF \u2192 get rich context (metadata, historical background, study guide)",
-      "community": 11,
+      "community": 6,
       "norm_label": "philocontext",
-      "id": "readme_philocontext",
-      "community_name": "Philocontext"
+      "community_name": "Graphify",
+      "id": "readme_philocontext"
     },
     {
       "label": "Client/Server Architecture",
@@ -3435,10 +3894,10 @@
       "author": null,
       "contributor": null,
       "rationale": "client/ (React+Vite port 5173), server/ (FastAPI port 8000)",
-      "community": 11,
+      "community": 6,
       "norm_label": "client/server architecture",
-      "id": "readme_architecture",
-      "community_name": "Philocontext"
+      "community_name": "Graphify",
+      "id": "readme_architecture"
     },
     {
       "label": "Quick Start Setup",
@@ -3449,10 +3908,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 6,
       "norm_label": "quick start setup",
-      "id": "readme_quick_start",
-      "community_name": "Philocontext"
+      "community_name": "Graphify",
+      "id": "readme_quick_start"
     },
     {
       "label": "Agent Skills System",
@@ -3464,10 +3923,10 @@
       "author": null,
       "contributor": null,
       "rationale": "CLAUDE.md defines issue tracker, triage labels, domain docs, and graphify integration for agent sessions",
-      "community": 11,
+      "community": 6,
       "norm_label": "agent skills system",
-      "id": "claude_agent_skills",
-      "community_name": "Philocontext"
+      "community_name": "Graphify",
+      "id": "claude_agent_skills"
     },
     {
       "label": "Graphify CLI Integration",
@@ -3479,10 +3938,10 @@
       "author": null,
       "contributor": null,
       "rationale": "Project has knowledge graph at graphify-out/; use graphify query before raw browsing",
-      "community": 11,
+      "community": 6,
       "norm_label": "graphify cli integration",
-      "id": "claude_graphify",
-      "community_name": "Philocontext"
+      "community_name": "Graphify",
+      "id": "claude_graphify"
     },
     {
       "label": "Graphify Usage Rules",
@@ -3494,10 +3953,10 @@
       "author": null,
       "contributor": null,
       "rationale": "Prefer graphify query/path/explain over raw grep; dirty graph files expected; use wiki/index.md for broad navigation; run graphify update after code changes",
-      "community": 11,
+      "community": 6,
       "norm_label": "graphify usage rules",
-      "id": "agents_graphify_rules",
-      "community_name": "Philocontext"
+      "community_name": "Graphify",
+      "id": "agents_graphify_rules"
     },
     {
       "label": "Graphify",
@@ -3511,8 +3970,8 @@
       "rationale": "Turns any folder into a navigable knowledge graph with community detection, audit trail, and HTML/JSON/report outputs",
       "community": 6,
       "norm_label": "graphify",
-      "id": "_claude_skills_graphify_skill_graphify",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_skill_graphify"
     },
     {
       "label": "Knowledge Graph",
@@ -3526,8 +3985,8 @@
       "rationale": "Persistent across sessions, queryable via graphify query, built from code/docs/papers/images/video",
       "community": 6,
       "norm_label": "knowledge graph",
-      "id": "_claude_skills_graphify_skill_knowledge_graph",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_skill_knowledge_graph"
     },
     {
       "label": "Community Detection",
@@ -3541,8 +4000,8 @@
       "rationale": "Surfaces cross-document connections; uses clustering algorithm on constructed graph",
       "community": 6,
       "norm_label": "community detection",
-      "id": "_claude_skills_graphify_skill_community_detection",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_skill_community_detection"
     },
     {
       "label": "Audit Trail",
@@ -3556,8 +4015,8 @@
       "rationale": "Three-level confidence: EXTRACTED (explicit), INFERRED (reasonable), AMBIGUOUS (uncertain). Never invent an edge.",
       "community": 6,
       "norm_label": "audit trail",
-      "id": "_claude_skills_graphify_skill_audit_trail",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_skill_audit_trail"
     },
     {
       "label": "Semantic Extraction",
@@ -3571,8 +4030,8 @@
       "rationale": "LLM-based extraction for docs/papers/images. Uses Gemini if key set, otherwise host agent. Parallel subagents per chunk.",
       "community": 6,
       "norm_label": "semantic extraction",
-      "id": "_claude_skills_graphify_skill_semantic_extraction",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_skill_semantic_extraction"
     },
     {
       "label": "AST Extraction",
@@ -3586,8 +4045,8 @@
       "rationale": "Deterministic structural extraction for code files. No LLM, no API key needed. Runs in parallel with semantic extraction.",
       "community": 6,
       "norm_label": "ast extraction",
-      "id": "_claude_skills_graphify_skill_ast_extraction",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_skill_ast_extraction"
     },
     {
       "label": "Honesty Rules",
@@ -3601,8 +4060,8 @@
       "rationale": "Never invent an edge; never skip corpus check warning; always show token cost; show raw cohesion scores; warn before >5000 node viz",
       "community": 6,
       "norm_label": "honesty rules",
-      "id": "_claude_skills_graphify_skill_honesty_rules",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_skill_honesty_rules"
     },
     {
       "label": "Fast Path Query",
@@ -3616,8 +4075,8 @@
       "rationale": "If graphify-out/graph.json exists and user asks a codebase question, skip rebuild and run graphify query immediately",
       "community": 6,
       "norm_label": "fast path query",
-      "id": "_claude_skills_graphify_skill_fast_path",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_skill_fast_path"
     },
     {
       "label": "Graphify Pipeline",
@@ -3631,8 +4090,8 @@
       "rationale": "Step 0-9: install check \u2192 detect files \u2192 transcribe video \u2192 extract (AST + semantic) \u2192 merge \u2192 build/cluster \u2192 health check \u2192 label \u2192 export \u2192 manifest/cleanup",
       "community": 6,
       "norm_label": "graphify pipeline",
-      "id": "_claude_skills_graphify_skill_pipeline",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_skill_pipeline"
     },
     {
       "label": "No API Key Required",
@@ -3646,8 +4105,8 @@
       "rationale": "graphify never asks for API keys. Code-only corpora use AST only; semantic uses host agent or Gemini if key is set. Never blocks on missing key.",
       "community": 6,
       "norm_label": "no api key required",
-      "id": "_claude_skills_graphify_skill_no_api_key",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_skill_no_api_key"
     },
     {
       "label": "Node ID Format Rules",
@@ -3661,8 +4120,8 @@
       "rationale": "{stem}_{entity} where stem is full repo-relative path with extension dropped, segments joined by _. Lowercase, a-z0-9_ only. Deterministic from label alone.",
       "community": 6,
       "norm_label": "node id format rules",
-      "id": "_claude_skills_graphify_references_extraction_spec_node_id_rules",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_references_extraction_spec_node_id_rules"
     },
     {
       "label": "Confidence Rubric",
@@ -3676,8 +4135,8 @@
       "rationale": "Discrete values: EXTRACTED=1.0; INFERRED from set {0.95,0.85,0.75,0.65,0.55}; AMBIGUOUS=0.1-0.3. Never use 0.5 default.",
       "community": 6,
       "norm_label": "confidence rubric",
-      "id": "_claude_skills_graphify_references_extraction_spec_confidence_rubric",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_references_extraction_spec_confidence_rubric"
     },
     {
       "label": "Hyperedges",
@@ -3691,8 +4150,8 @@
       "rationale": "Group 3+ nodes in shared concept/flow/pattern not captured by pairwise edges. Max 3 per chunk.",
       "community": 6,
       "norm_label": "hyperedges",
-      "id": "_claude_skills_graphify_references_extraction_spec_hyperedges",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_references_extraction_spec_hyperedges"
     },
     {
       "label": "Incremental Update",
@@ -3706,8 +4165,8 @@
       "rationale": "Re-extracts only new/changed files. Code-only changes skip semantic. Uses build_merge with replace-on-re-extract. Prunes deleted files.",
       "community": 6,
       "norm_label": "incremental update",
-      "id": "_claude_skills_graphify_references_update_incremental",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_references_update_incremental"
     },
     {
       "label": "BFS/DFS Traversal",
@@ -3721,8 +4180,8 @@
       "rationale": "BFS for broad context (nearest neighbors), DFS for specific path tracing. Depth-limited. Token-budget aware output.",
       "community": 6,
       "norm_label": "bfs/dfs traversal",
-      "id": "_claude_skills_graphify_references_query_traversal",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_references_query_traversal"
     },
     {
       "label": "Query Vocabulary Expansion",
@@ -3736,8 +4195,8 @@
       "rationale": "Extract vocab from graph node labels, pick up to 12 matching tokens, use expanded string for traversal. No invented tokens.",
       "community": 6,
       "norm_label": "query vocabulary expansion",
-      "id": "_claude_skills_graphify_references_query_expansion",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_references_query_expansion"
     },
     {
       "label": "Work Memory System",
@@ -3751,8 +4210,8 @@
       "rationale": "save-result with outcome (useful/dead_end/corrected) persists lessons. reflect refreshes LESSONS.md. Self-improving loop across sessions.",
       "community": 6,
       "norm_label": "work memory system",
-      "id": "_claude_skills_graphify_references_query_work_memory",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_references_query_work_memory"
     },
     {
       "label": "Post-Commit Hook",
@@ -3766,8 +4225,8 @@
       "rationale": "Auto-rebuilds graph after git commit. Only AST for code changes; doc/image changes need manual --update. Appends to existing hooks.",
       "community": 6,
       "norm_label": "post-commit hook",
-      "id": "_claude_skills_graphify_references_hooks_commit_hook",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_references_hooks_commit_hook"
     },
     {
       "label": "MCP Server",
@@ -3781,8 +4240,8 @@
       "rationale": "Stdio MCP server exposing query_graph, get_node, get_neighbors, get_community, god_nodes, graph_stats, shortest_path tools",
       "community": 6,
       "norm_label": "mcp server",
-      "id": "_claude_skills_graphify_references_exports_mcp_server",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_references_exports_mcp_server"
     },
     {
       "label": "Watch Mode",
@@ -3796,8 +4255,8 @@
       "rationale": "Background folder watcher with 3s debounce. Code-only changes trigger auto-rebuild; doc/image changes set needs_update flag.",
       "community": 6,
       "norm_label": "watch mode",
-      "id": "_claude_skills_graphify_references_add_watch_watch_mode",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_references_add_watch_watch_mode"
     },
     {
       "label": "GitHub Clone Flow",
@@ -3811,8 +4270,8 @@
       "rationale": "Clones repos into ~/.graphify/repos/, supports single repo, cross-repo merge, and monorepo multi-subfolder merge",
       "community": 6,
       "norm_label": "github clone flow",
-      "id": "_claude_skills_graphify_references_github_clone",
-      "community_name": "Graphify"
+      "community_name": "Graphify",
+      "id": "_claude_skills_graphify_references_github_clone"
     },
     {
       "label": "Improve Historical Context & Study Guide Plan",
@@ -3824,10 +4283,10 @@
       "author": null,
       "contributor": null,
       "rationale": "10-step plan to ground historical context and study guide in source text, return structured JSON, and build rich UI components",
-      "community": 11,
+      "community": 6,
       "norm_label": "improve historical context & study guide plan",
-      "id": "_opencode_plans_improve_history_study_guide_plan",
-      "community_name": "Philocontext"
+      "community_name": "Graphify",
+      "id": "_opencode_plans_improve_history_study_guide_plan"
     },
     {
       "label": "HistoricalContext Model",
@@ -3839,10 +4298,10 @@
       "author": null,
       "contributor": null,
       "rationale": "Pydantic model with sections (title/content/source_quotes) and optional timeline. Replaces plain str field in AnalysisResult.",
-      "community": 11,
+      "community": 6,
       "norm_label": "historicalcontext model",
-      "id": "_opencode_plans_improve_history_study_guide_historical_context",
-      "community_name": "Philocontext"
+      "community_name": "Graphify",
+      "id": "_opencode_plans_improve_history_study_guide_historical_context"
     },
     {
       "label": "StudyGuide Model",
@@ -3854,10 +4313,10 @@
       "author": null,
       "contributor": null,
       "rationale": "Pydantic model with concepts (ConceptGuide: concept/definition/stakes/exam_trap/source_quotes). Replaces plain str in AnalysisResult.",
-      "community": 11,
+      "community": 6,
       "norm_label": "studyguide model",
-      "id": "_opencode_plans_improve_history_study_guide_study_guide",
-      "community_name": "Philocontext"
+      "community_name": "Graphify",
+      "id": "_opencode_plans_improve_history_study_guide_study_guide"
     },
     {
       "label": "HistoryAgent",
@@ -3869,10 +4328,10 @@
       "author": null,
       "contributor": null,
       "rationale": "LLM agent that generates HistoricalContext from metadata and raw_text using json_mode=True. Falls back to flat analysis on parse failure.",
-      "community": 11,
+      "community": 6,
       "norm_label": "historyagent",
-      "id": "_opencode_plans_improve_history_study_guide_history_agent",
-      "community_name": "Philocontext"
+      "community_name": "Graphify",
+      "id": "_opencode_plans_improve_history_study_guide_history_agent"
     },
     {
       "label": "ExamAgent",
@@ -3884,10 +4343,10 @@
       "author": null,
       "contributor": null,
       "rationale": "LLM agent that generates StudyGuide from metadata, concepts, and raw_text using json_mode=True. Falls back to single concept on parse failure.",
-      "community": 11,
+      "community": 6,
       "norm_label": "examagent",
-      "id": "_opencode_plans_improve_history_study_guide_exam_agent",
-      "community_name": "Philocontext"
+      "community_name": "Graphify",
+      "id": "_opencode_plans_improve_history_study_guide_exam_agent"
     },
     {
       "label": "Philocontext Client",
@@ -3900,8 +4359,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "philocontext client",
-      "id": "client_readme_philocontext_client",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "client_readme_philocontext_client"
     },
     {
       "label": "Vite",
@@ -3914,8 +4373,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "vite",
-      "id": "client_readme_vite",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "client_readme_vite"
     },
     {
       "label": "API Proxy",
@@ -3928,8 +4387,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "api proxy",
-      "id": "client_readme_api_proxy",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "client_readme_api_proxy"
     },
     {
       "label": "Philocontext HTML Entry",
@@ -3942,8 +4401,8 @@
       "contributor": null,
       "community": 24,
       "norm_label": "philocontext html entry",
-      "id": "client_indexhtml_philocontext_entry",
-      "community_name": "Philocontext HTML Entry"
+      "community_name": "Philocontext HTML Entry",
+      "id": "client_indexhtml_philocontext_entry"
     },
     {
       "label": "Domain Documentation Conventions",
@@ -3956,8 +4415,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "domain documentation conventions",
-      "id": "docs_agents_domain_domain_documentation",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_domain_domain_documentation"
     },
     {
       "label": "CONTEXT.md",
@@ -3970,8 +4429,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "context.md",
-      "id": "docs_agents_domain_context_md",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_domain_context_md"
     },
     {
       "label": "CONTEXT-MAP.md",
@@ -3984,8 +4443,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "context-map.md",
-      "id": "docs_agents_domain_context_map_md",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_domain_context_map_md"
     },
     {
       "label": "Architecture Decision Record (ADR)",
@@ -3998,8 +4457,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "architecture decision record (adr)",
-      "id": "docs_agents_domain_adr",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_domain_adr"
     },
     {
       "label": "Domain Modeling (/domain-modeling)",
@@ -4012,8 +4471,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "domain modeling (/domain-modeling)",
-      "id": "docs_agents_domain_domain_modeling",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_domain_domain_modeling"
     },
     {
       "label": "Glossary Vocabulary",
@@ -4026,8 +4485,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "glossary vocabulary",
-      "id": "docs_agents_domain_glossary",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_domain_glossary"
     },
     {
       "label": "ADR Conflict Flagging",
@@ -4040,8 +4499,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "adr conflict flagging",
-      "id": "docs_agents_domain_adr_conflict_flagging",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_domain_adr_conflict_flagging"
     },
     {
       "label": "GitHub Issues",
@@ -4054,8 +4513,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "github issues",
-      "id": "docs_agents_issue_tracker_github_issues",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_issue_tracker_github_issues"
     },
     {
       "label": "gh CLI",
@@ -4068,8 +4527,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "gh cli",
-      "id": "docs_agents_issue_tracker_gh_cli",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_issue_tracker_gh_cli"
     },
     {
       "label": "Wayfinder (/wayfinder)",
@@ -4082,8 +4541,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "wayfinder (/wayfinder)",
-      "id": "docs_agents_issue_tracker_wayfinder",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_issue_tracker_wayfinder"
     },
     {
       "label": "Frontier Query",
@@ -4096,8 +4555,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "frontier query",
-      "id": "docs_agents_issue_tracker_frontier_query",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_issue_tracker_frontier_query"
     },
     {
       "label": "Native Issue Dependencies (Blocking)",
@@ -4110,8 +4569,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "native issue dependencies (blocking)",
-      "id": "docs_agents_issue_tracker_native_dependencies",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_issue_tracker_native_dependencies"
     },
     {
       "label": "Triage (/triage)",
@@ -4124,8 +4583,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "triage (/triage)",
-      "id": "docs_agents_issue_tracker_triage",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_issue_tracker_triage"
     },
     {
       "label": "PR as Request Surface",
@@ -4138,8 +4597,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "pr as request surface",
-      "id": "docs_agents_issue_tracker_pr_as_request_surface",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_issue_tracker_pr_as_request_surface"
     },
     {
       "label": "Five Canonical Triage Roles",
@@ -4152,8 +4611,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "five canonical triage roles",
-      "id": "docs_agents_triage_labels_five_roles",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_triage_labels_five_roles"
     },
     {
       "label": "needs-triage",
@@ -4166,8 +4625,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "needs-triage",
-      "id": "docs_agents_triage_labels_needs_triage",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_triage_labels_needs_triage"
     },
     {
       "label": "needs-info",
@@ -4180,8 +4639,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "needs-info",
-      "id": "docs_agents_triage_labels_needs_info",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_triage_labels_needs_info"
     },
     {
       "label": "ready-for-agent",
@@ -4194,8 +4653,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "ready-for-agent",
-      "id": "docs_agents_triage_labels_ready_for_agent",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_triage_labels_ready_for_agent"
     },
     {
       "label": "ready-for-human",
@@ -4208,8 +4667,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "ready-for-human",
-      "id": "docs_agents_triage_labels_ready_for_human",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_triage_labels_ready_for_human"
     },
     {
       "label": "wontfix",
@@ -4222,8 +4681,8 @@
       "contributor": null,
       "community": 7,
       "norm_label": "wontfix",
-      "id": "docs_agents_triage_labels_wontfix",
-      "community_name": "Domain Documentation Conventions"
+      "community_name": "Domain Documentation Conventions",
+      "id": "docs_agents_triage_labels_wontfix"
     },
     {
       "label": "Philocontext Backend",
@@ -4236,8 +4695,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "philocontext backend",
-      "id": "server_readme_philocontext_backend",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_readme_philocontext_backend"
     },
     {
       "label": "Backend Config (config.py)",
@@ -4250,8 +4709,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "backend config (config.py)",
-      "id": "server_readme_config",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_readme_config"
     },
     {
       "label": "Pydantic Models (models.py / ResearchPacket)",
@@ -4264,8 +4723,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "pydantic models (models.py / researchpacket)",
-      "id": "server_readme_models",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_readme_models"
     },
     {
       "label": "PhiloParser",
@@ -4278,8 +4737,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "philoparser",
-      "id": "server_readme_philoparser",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_readme_philoparser"
     },
     {
       "label": "PhilosophyAnalyzer",
@@ -4292,8 +4751,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "philosophyanalyzer",
-      "id": "server_readme_philosophy_analyzer",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_readme_philosophy_analyzer"
     },
     {
       "label": "MetadataAgent",
@@ -4306,8 +4765,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "metadataagent",
-      "id": "server_readme_metadata_agent",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_readme_metadata_agent"
     },
     {
       "label": "HistoryAgent",
@@ -4320,8 +4779,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "historyagent",
-      "id": "server_readme_history_agent",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_readme_history_agent"
     },
     {
       "label": "ExamAgent",
@@ -4334,8 +4793,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "examagent",
-      "id": "server_readme_exam_agent",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_readme_exam_agent"
     },
     {
       "label": "BaseAgent",
@@ -4348,8 +4807,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "baseagent",
-      "id": "server_readme_base_agent",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_readme_base_agent"
     },
     {
       "label": "FastAPI API (api.py)",
@@ -4362,8 +4821,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "fastapi api (api.py)",
-      "id": "server_readme_fastapi_api",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_readme_fastapi_api"
     },
     {
       "label": "Railway Deployment",
@@ -4376,8 +4835,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "railway deployment",
-      "id": "server_readme_railway_deploy",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_readme_railway_deploy"
     },
     {
       "label": "Vite Template (philo-frontend)",
@@ -4390,8 +4849,8 @@
       "contributor": null,
       "community": 38,
       "norm_label": "vite template (philo-frontend)",
-      "id": "server_philo_frontend_readme_vite_template",
-      "community_name": "Vite Template (philo-frontend)"
+      "community_name": "Vite Template (philo-frontend)",
+      "id": "server_philo_frontend_readme_vite_template"
     },
     {
       "label": "philo-frontend HTML Entry",
@@ -4404,8 +4863,8 @@
       "contributor": null,
       "community": 36,
       "norm_label": "philo-frontend html entry",
-      "id": "server_philo_frontend_indexhtml_philo_frontend_entry",
-      "community_name": "philo-frontend HTML Entry"
+      "community_name": "philo-frontend HTML Entry",
+      "id": "server_philo_frontend_indexhtml_philo_frontend_entry"
     },
     {
       "label": "fastapi",
@@ -4418,8 +4877,8 @@
       "contributor": null,
       "community": 10,
       "norm_label": "fastapi",
-      "id": "server_requirements_txt_fastapi",
-      "community_name": "Philocontext Backend"
+      "community_name": "Philocontext Backend",
+      "id": "server_requirements_txt_fastapi"
     },
     {
       "label": "uvicorn",
@@ -4432,8 +4891,8 @@
       "contributor": null,
       "community": 46,
       "norm_label": "uvicorn",
-      "id": "server_requirements_txt_uvicorn",
-      "community_name": "uvicorn"
+      "community_name": "uvicorn",
+      "id": "server_requirements_txt_uvicorn"
     },
     {
       "label": "python-dotenv",
@@ -4446,8 +4905,8 @@
       "contributor": null,
       "community": 44,
       "norm_label": "python-dotenv",
-      "id": "server_requirements_txt_python_dotenv",
-      "community_name": "python-dotenv"
+      "community_name": "python-dotenv",
+      "id": "server_requirements_txt_python_dotenv"
     },
     {
       "label": "pydantic",
@@ -4460,8 +4919,8 @@
       "contributor": null,
       "community": 41,
       "norm_label": "pydantic",
-      "id": "server_requirements_txt_pydantic",
-      "community_name": "pydantic"
+      "community_name": "pydantic",
+      "id": "server_requirements_txt_pydantic"
     },
     {
       "label": "pypdf",
@@ -4474,8 +4933,8 @@
       "contributor": null,
       "community": 42,
       "norm_label": "pypdf",
-      "id": "server_requirements_txt_pypdf",
-      "community_name": "pypdf"
+      "community_name": "pypdf",
+      "id": "server_requirements_txt_pypdf"
     },
     {
       "label": "groq",
@@ -4488,8 +4947,8 @@
       "contributor": null,
       "community": 39,
       "norm_label": "groq",
-      "id": "server_requirements_txt_groq",
-      "community_name": "groq"
+      "community_name": "groq",
+      "id": "server_requirements_txt_groq"
     },
     {
       "label": "python-multipart",
@@ -4502,8 +4961,8 @@
       "contributor": null,
       "community": 45,
       "norm_label": "python-multipart",
-      "id": "server_requirements_txt_python_multipart",
-      "community_name": "python-multipart"
+      "community_name": "python-multipart",
+      "id": "server_requirements_txt_python_multipart"
     },
     {
       "label": "pytesseract",
@@ -4516,8 +4975,8 @@
       "contributor": null,
       "community": 43,
       "norm_label": "pytesseract",
-      "id": "server_requirements_txt_pytesseract",
-      "community_name": "pytesseract"
+      "community_name": "pytesseract",
+      "id": "server_requirements_txt_pytesseract"
     },
     {
       "label": "Pillow",
@@ -4530,8 +4989,8 @@
       "contributor": null,
       "community": 40,
       "norm_label": "pillow",
-      "id": "server_requirements_txt_pillow",
-      "community_name": "Pillow"
+      "community_name": "Pillow",
+      "id": "server_requirements_txt_pillow"
     },
     {
       "label": "Philocontext Favicon",
@@ -4544,8 +5003,8 @@
       "contributor": null,
       "community": 13,
       "norm_label": "philocontext favicon",
-      "id": "client_public_favicon_philocontext_favicon",
-      "community_name": "Philocontext Favicon"
+      "community_name": "Philocontext Favicon",
+      "id": "client_public_favicon_philocontext_favicon"
     },
     {
       "label": "Brand Purple Color (#863bff)",
@@ -4558,8 +5017,8 @@
       "contributor": null,
       "community": 13,
       "norm_label": "brand purple color (#863bff)",
-      "id": "client_public_favicon_brand_purple",
-      "community_name": "Philocontext Favicon"
+      "community_name": "Philocontext Favicon",
+      "id": "client_public_favicon_brand_purple"
     },
     {
       "label": "Stylized Geometric Logo Mark",
@@ -4572,8 +5031,8 @@
       "contributor": null,
       "community": 13,
       "norm_label": "stylized geometric logo mark",
-      "id": "client_public_favicon_stylized_geometric_shape",
-      "community_name": "Philocontext Favicon"
+      "community_name": "Philocontext Favicon",
+      "id": "client_public_favicon_stylized_geometric_shape"
     },
     {
       "label": "Display P3 Wide Gamut Color",
@@ -4586,8 +5045,8 @@
       "contributor": null,
       "community": 13,
       "norm_label": "display p3 wide gamut color",
-      "id": "client_public_favicon_display_p3_color",
-      "community_name": "Philocontext Favicon"
+      "community_name": "Philocontext Favicon",
+      "id": "client_public_favicon_display_p3_color"
     },
     {
       "label": "Glow and Lighting Effect",
@@ -4600,8 +5059,8 @@
       "contributor": null,
       "community": 13,
       "norm_label": "glow and lighting effect",
-      "id": "client_public_favicon_glow_lighting_effect",
-      "community_name": "Philocontext Favicon"
+      "community_name": "Philocontext Favicon",
+      "id": "client_public_favicon_glow_lighting_effect"
     },
     {
       "label": "Bluesky Icon",
@@ -4614,8 +5073,8 @@
       "contributor": null,
       "community": 26,
       "norm_label": "bluesky icon",
-      "id": "client_public_icons_bluesky_icon",
-      "community_name": "Bluesky Icon"
+      "community_name": "Bluesky Icon",
+      "id": "client_public_icons_bluesky_icon"
     },
     {
       "label": "Discord Icon",
@@ -4628,8 +5087,8 @@
       "contributor": null,
       "community": 27,
       "norm_label": "discord icon",
-      "id": "client_public_icons_discord_icon",
-      "community_name": "Discord Icon"
+      "community_name": "Discord Icon",
+      "id": "client_public_icons_discord_icon"
     },
     {
       "label": "GitHub Icon",
@@ -4642,8 +5101,8 @@
       "contributor": null,
       "community": 28,
       "norm_label": "github icon",
-      "id": "client_public_icons_github_icon",
-      "community_name": "GitHub Icon"
+      "community_name": "GitHub Icon",
+      "id": "client_public_icons_github_icon"
     },
     {
       "label": "X (Twitter) Icon",
@@ -4656,8 +5115,8 @@
       "contributor": null,
       "community": 29,
       "norm_label": "x (twitter) icon",
-      "id": "client_public_icons_x_icon",
-      "community_name": "X (Twitter) Icon"
+      "community_name": "X (Twitter) Icon",
+      "id": "client_public_icons_x_icon"
     },
     {
       "label": "Documentation Icon",
@@ -4670,8 +5129,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "documentation icon",
-      "id": "client_public_icons_documentation_icon",
-      "community_name": "Documentation Icon"
+      "community_name": "Documentation Icon",
+      "id": "client_public_icons_documentation_icon"
     },
     {
       "label": "Social Icon",
@@ -4684,8 +5143,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "social icon",
-      "id": "client_public_icons_social_icon",
-      "community_name": "Documentation Icon"
+      "community_name": "Documentation Icon",
+      "id": "client_public_icons_social_icon"
     },
     {
       "label": "Philocontext Favicon",
@@ -4698,8 +5157,8 @@
       "contributor": null,
       "community": 18,
       "norm_label": "philocontext favicon",
-      "id": "server_philo-frontend_public_favicon",
-      "community_name": "Philocontext Favicon"
+      "community_name": "Philocontext Favicon",
+      "id": "server_philo-frontend_public_favicon"
     },
     {
       "label": "Philocontext Brand Mark",
@@ -4712,8 +5171,8 @@
       "contributor": null,
       "community": 18,
       "norm_label": "philocontext brand mark",
-      "id": "server_philo-frontend_public_favicon_brand_mark",
-      "community_name": "Philocontext Favicon"
+      "community_name": "Philocontext Favicon",
+      "id": "server_philo-frontend_public_favicon_brand_mark"
     },
     {
       "label": "Brand Purple (#863bff)",
@@ -4726,8 +5185,8 @@
       "contributor": null,
       "community": 18,
       "norm_label": "brand purple (#863bff)",
-      "id": "server_philo-frontend_public_favicon_brand_purple",
-      "community_name": "Philocontext Favicon"
+      "community_name": "Philocontext Favicon",
+      "id": "server_philo-frontend_public_favicon_brand_purple"
     },
     {
       "label": "Bluesky Icon",
@@ -4740,8 +5199,8 @@
       "contributor": null,
       "community": 15,
       "norm_label": "bluesky icon",
-      "id": "server_philo_frontend_public_icons_bluesky_icon",
-      "community_name": "Bluesky Icon"
+      "community_name": "Bluesky Icon",
+      "id": "server_philo_frontend_public_icons_bluesky_icon"
     },
     {
       "label": "Discord Icon",
@@ -4754,8 +5213,8 @@
       "contributor": null,
       "community": 15,
       "norm_label": "discord icon",
-      "id": "server_philo_frontend_public_icons_discord_icon",
-      "community_name": "Bluesky Icon"
+      "community_name": "Bluesky Icon",
+      "id": "server_philo_frontend_public_icons_discord_icon"
     },
     {
       "label": "Documentation Icon",
@@ -4768,8 +5227,8 @@
       "contributor": null,
       "community": 21,
       "norm_label": "documentation icon",
-      "id": "server_philo_frontend_public_icons_documentation_icon",
-      "community_name": "Documentation Icon"
+      "community_name": "Documentation Icon",
+      "id": "server_philo_frontend_public_icons_documentation_icon"
     },
     {
       "label": "GitHub Icon",
@@ -4782,8 +5241,8 @@
       "contributor": null,
       "community": 15,
       "norm_label": "github icon",
-      "id": "server_philo_frontend_public_icons_github_icon",
-      "community_name": "Bluesky Icon"
+      "community_name": "Bluesky Icon",
+      "id": "server_philo_frontend_public_icons_github_icon"
     },
     {
       "label": "Social (Profile Settings) Icon",
@@ -4796,8 +5255,8 @@
       "contributor": null,
       "community": 21,
       "norm_label": "social (profile settings) icon",
-      "id": "server_philo_frontend_public_icons_social_icon",
-      "community_name": "Documentation Icon"
+      "community_name": "Documentation Icon",
+      "id": "server_philo_frontend_public_icons_social_icon"
     },
     {
       "label": "X (Twitter) Icon",
@@ -4810,8 +5269,8 @@
       "contributor": null,
       "community": 15,
       "norm_label": "x (twitter) icon",
-      "id": "server_philo_frontend_public_icons_x_icon",
-      "community_name": "Bluesky Icon"
+      "community_name": "Bluesky Icon",
+      "id": "server_philo_frontend_public_icons_x_icon"
     },
     {
       "label": "UW-LAX Logo Mark",
@@ -4824,8 +5283,8 @@
       "contributor": null,
       "community": 12,
       "norm_label": "uw-lax logo mark",
-      "id": "uwlax_pallete_uwlax_image_uwlax_logo_mark",
-      "community_name": "UW-LAX Logo Mark"
+      "community_name": "UW-LAX Logo Mark",
+      "id": "uwlax_pallete_uwlax_image_uwlax_logo_mark"
     },
     {
       "label": "UW-LAX Eagle Crest Emblem",
@@ -4838,8 +5297,8 @@
       "contributor": null,
       "community": 12,
       "norm_label": "uw-lax eagle crest emblem",
-      "id": "uwlax_pallete_uwlax_image_eagle_crest",
-      "community_name": "UW-LAX Logo Mark"
+      "community_name": "UW-LAX Logo Mark",
+      "id": "uwlax_pallete_uwlax_image_eagle_crest"
     },
     {
       "label": "UW-LAX Primary Maroon (#73253D)",
@@ -4852,8 +5311,8 @@
       "contributor": null,
       "community": 12,
       "norm_label": "uw-lax primary maroon (#73253d)",
-      "id": "uwlax_pallete_uwlax_image_primary_maroon",
-      "community_name": "UW-LAX Logo Mark"
+      "community_name": "UW-LAX Logo Mark",
+      "id": "uwlax_pallete_uwlax_image_primary_maroon"
     },
     {
       "label": "UW-LAX Secondary Gray (#A6AAAD)",
@@ -4866,8 +5325,8 @@
       "contributor": null,
       "community": 12,
       "norm_label": "uw-lax secondary gray (#a6aaad)",
-      "id": "uwlax_pallete_uwlax_image_secondary_gray",
-      "community_name": "UW-LAX Logo Mark"
+      "community_name": "UW-LAX Logo Mark",
+      "id": "uwlax_pallete_uwlax_image_secondary_gray"
     },
     {
       "label": "UW-LAX Brand Identifier Text",
@@ -4880,8 +5339,8 @@
       "contributor": null,
       "community": 12,
       "norm_label": "uw-lax brand identifier text",
-      "id": "uwlax_pallete_uwlax_image_brand_text",
-      "community_name": "UW-LAX Logo Mark"
+      "community_name": "UW-LAX Logo Mark",
+      "id": "uwlax_pallete_uwlax_image_brand_text"
     },
     {
       "label": "Traditional Collegiate Seal Design Style",
@@ -4894,8 +5353,8 @@
       "contributor": null,
       "community": 12,
       "norm_label": "traditional collegiate seal design style",
-      "id": "uwlax_pallete_uwlax_image_traditional_collegiate_seal",
-      "community_name": "UW-LAX Logo Mark"
+      "community_name": "UW-LAX Logo Mark",
+      "id": "uwlax_pallete_uwlax_image_traditional_collegiate_seal"
     },
     {
       "label": "UW-La Crosse Brand Color Palette Variant",
@@ -4908,8 +5367,8 @@
       "contributor": null,
       "community": 16,
       "norm_label": "uw-la crosse brand color palette variant",
-      "id": "uwlax_pallete_uwlax_colors_1_uwlax_color_palette_variant",
-      "community_name": "UW-La Crosse Brand Color Palette"
+      "community_name": "UW-La Crosse Brand Color Palette",
+      "id": "uwlax_pallete_uwlax_colors_1_uwlax_color_palette_variant"
     },
     {
       "label": "UW-La Crosse Brand Color Palette",
@@ -4922,8 +5381,8 @@
       "contributor": null,
       "community": 16,
       "norm_label": "uw-la crosse brand color palette",
-      "id": "uwlax_pallete_uwlax_colors_uwlax_color_palette",
-      "community_name": "UW-La Crosse Brand Color Palette"
+      "community_name": "UW-La Crosse Brand Color Palette",
+      "id": "uwlax_pallete_uwlax_colors_uwlax_color_palette"
     },
     {
       "label": "Maroon Primary Color (#83151d)",
@@ -4936,8 +5395,8 @@
       "contributor": null,
       "community": 16,
       "norm_label": "maroon primary color (#83151d)",
-      "id": "uwlax_pallete_uwlax_colors_maroon",
-      "community_name": "UW-La Crosse Brand Color Palette"
+      "community_name": "UW-La Crosse Brand Color Palette",
+      "id": "uwlax_pallete_uwlax_colors_maroon"
     },
     {
       "label": "Gray Secondary Color",
@@ -4950,8 +5409,8 @@
       "contributor": null,
       "community": 16,
       "norm_label": "gray secondary color",
-      "id": "uwlax_pallete_uwlax_colors_gray",
-      "community_name": "UW-La Crosse Brand Color Palette"
+      "community_name": "UW-La Crosse Brand Color Palette",
+      "id": "uwlax_pallete_uwlax_colors_gray"
     },
     {
       "label": "Gold Decorative Letter P",
@@ -4964,8 +5423,8 @@
       "contributor": null,
       "community": 19,
       "norm_label": "gold decorative letter p",
-      "id": "uwlax_pallete_p_decorative_p",
-      "community_name": "UWLAX Gold Accent Color"
+      "community_name": "UWLAX Gold Accent Color",
+      "id": "uwlax_pallete_p_decorative_p"
     },
     {
       "label": "UWLAX Gold Accent Color",
@@ -4978,8 +5437,8 @@
       "contributor": null,
       "community": 19,
       "norm_label": "uwlax gold accent color",
-      "id": "uwlax_pallete_p_gold_accent",
-      "community_name": "UWLAX Gold Accent Color"
+      "community_name": "UWLAX Gold Accent Color",
+      "id": "uwlax_pallete_p_gold_accent"
     },
     {
       "label": "UW-La Crosse Brand Palette",
@@ -4992,8 +5451,8 @@
       "contributor": null,
       "community": 19,
       "norm_label": "uw-la crosse brand palette",
-      "id": "uwlax_pallete_p_brand_palette",
-      "community_name": "UWLAX Gold Accent Color"
+      "community_name": "UWLAX Gold Accent Color",
+      "id": "uwlax_pallete_p_brand_palette"
     }
   ],
   "links": [
@@ -5017,6 +5476,18 @@
       "_origin": "ast",
       "source": "opencode_opencode",
       "target": "opencode_opencode_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast",
+      "source": "opencode_opencode_plugin",
+      "target": "ref_dietrichgebert_ponytail",
       "confidence_score": 1.0
     },
     {
@@ -5546,7 +6017,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/App.tsx",
-      "source_location": "L10",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_app",
@@ -5562,7 +6033,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_app",
-      "target": "client_src_components_results",
+      "target": "client_src_components_candidatepicker",
       "confidence_score": 1.0
     },
     {
@@ -5571,6 +6042,30 @@
       "confidence": "EXTRACTED",
       "source_file": "client/src/App.tsx",
       "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_app",
+      "target": "client_src_components_results",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/App.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_app",
+      "target": "client_src_components_studymanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/App.tsx",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_app",
@@ -5611,6 +6106,18 @@
       "_origin": "ast",
       "source": "client_src_app",
       "target": "client_src_types_api_analysisresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/App.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_app",
+      "target": "client_src_types_api_papercandidate",
       "confidence_score": 1.0
     },
     {
@@ -5721,6 +6228,64 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "client/src/components/CandidatePicker.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_candidatepicker",
+      "target": "client_src_components_candidatepicker_candidatepicker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/CandidatePicker.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_candidatepicker",
+      "target": "client_src_components_candidatepicker_candidatepickerprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/CandidatePicker.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_candidatepicker",
+      "target": "client_src_types_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/CandidatePicker.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_candidatepicker",
+      "target": "client_src_types_api_papercandidate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/CandidatePicker.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_candidatepicker_candidatepickerprops",
+      "target": "client_src_types_api_papercandidate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "client/src/components/HistoryTab.tsx",
       "source_location": "L8",
       "weight": 1.0,
@@ -5792,7 +6357,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L221",
+      "source_location": "L237",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -5803,7 +6368,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L275",
+      "source_location": "L291",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -5814,7 +6379,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L156",
+      "source_location": "L172",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -5825,7 +6390,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -5836,7 +6401,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -5847,7 +6412,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L226",
+      "source_location": "L242",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -5883,6 +6448,30 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_results",
+      "target": "client_src_lib_studies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/Results.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_results",
+      "target": "client_src_lib_studies_savestudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/Results.tsx",
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
@@ -5907,7 +6496,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results_resultsprops",
@@ -5918,8 +6507,20 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L178",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_results_results",
+      "target": "client_src_lib_studies_savestudy"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/Results.tsx",
+      "source_location": "L194",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results_metadatatab",
@@ -5931,7 +6532,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L157",
+      "source_location": "L173",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results_metadatatab",
@@ -5954,6 +6555,17 @@
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/StudyGuideTab.tsx",
       "source_location": "L106",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studyguidetab",
+      "target": "client_src_components_studyguidetab_flashcardview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyGuideTab.tsx",
+      "source_location": "L403",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_studyguidetab",
@@ -6008,6 +6620,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_components_studyguidetab",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "context": "field",
       "confidence": "EXTRACTED",
@@ -6018,6 +6642,279 @@
       "source": "client_src_components_studyguidetab_studyguidetabprops",
       "target": "client_src_types_api_studyguide",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_components_studymanager_openguide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_components_studymanager_studymanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_components_studymanager_studymanagerprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_lib_studies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_lib_studies_conceptsforstudies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_lib_studies_createcompilation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_lib_studies_deletecompilation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_lib_studies_deletestudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_lib_studies_getcompilations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_lib_studies_getsavedstudies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_lib_studies_mergecompilations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_lib_studies_savedstudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_lib_studies_studycompilation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_types_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager",
+      "target": "client_src_types_api_studyguide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager_openguide",
+      "target": "client_src_types_api_studyguide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager_studymanager",
+      "target": "client_src_lib_studies_conceptsforstudies"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager_studymanager",
+      "target": "client_src_lib_studies_createcompilation"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L163",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager_studymanager",
+      "target": "client_src_lib_studies_deletecompilation"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L120",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager_studymanager",
+      "target": "client_src_lib_studies_deletestudy"
+    },
+    {
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager_studymanager",
+      "target": "client_src_lib_studies_getcompilations"
+    },
+    {
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager_studymanager",
+      "target": "client_src_lib_studies_getsavedstudies"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/components/StudyManager.tsx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_studymanager_studymanager",
+      "target": "client_src_lib_studies_mergecompilations"
     },
     {
       "relation": "contains",
@@ -6067,7 +6964,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Upload.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_upload",
@@ -6083,6 +6980,342 @@
       "_origin": "ast",
       "source": "client_src_components_upload",
       "target": "client_src_components_upload_uploadprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_conceptsforstudies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_createcompilation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_deletecompilation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_deletestudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_getcompilations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_getsavedstudies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_mergecompilations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_read",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_savedstudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_savestudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_studycompilation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_lib_studies_write",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_types_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_types_api_analysisresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies",
+      "target": "client_src_types_api_conceptguide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_savedstudy",
+      "target": "client_src_types_api_conceptguide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_getcompilations",
+      "target": "client_src_lib_studies_read",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_getsavedstudies",
+      "target": "client_src_lib_studies_read",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_createcompilation",
+      "target": "client_src_lib_studies_write",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_deletecompilation",
+      "target": "client_src_lib_studies_write",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_deletestudy",
+      "target": "client_src_lib_studies_write",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_savestudy",
+      "target": "client_src_lib_studies_write",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_conceptsforstudies",
+      "target": "client_src_lib_studies_getsavedstudies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_deletestudy",
+      "target": "client_src_lib_studies_getsavedstudies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_savestudy",
+      "target": "client_src_lib_studies_getsavedstudies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_deletestudy",
+      "target": "client_src_lib_studies_getcompilations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_createcompilation",
+      "target": "client_src_lib_studies_getcompilations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_deletecompilation",
+      "target": "client_src_lib_studies_getcompilations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/lib/studies.ts",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_lib_studies_mergecompilations",
+      "target": "client_src_lib_studies_createcompilation",
       "confidence_score": 1.0
     },
     {
@@ -6188,11 +7421,33 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/types/api.ts",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_types_api",
+      "target": "client_src_types_api_identifycandidatesresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/types/api.ts",
       "source_location": "L37",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_types_api",
       "target": "client_src_types_api_objection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/types/api.ts",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_types_api",
+      "target": "client_src_types_api_papercandidate",
       "confidence_score": 1.0
     },
     {
@@ -6465,6 +7720,28 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/vercel.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_vercel",
+      "target": "client_vercel_rewrites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dev.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "dev",
+      "target": "dev_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -6585,7 +7862,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_init",
@@ -6647,6 +7924,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_agents_history_agent",
+      "target": "server_agents_base_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_identify_agent",
       "target": "server_agents_base_agent",
       "confidence_score": 1.0
     },
@@ -6749,6 +8038,29 @@
       "weight": 0.8,
       "_origin": "ast",
       "source": "server_agents_history_agent_historyagent",
+      "target": "server_agents_base_agent_baseagent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_identify_agent",
+      "target": "server_agents_base_agent_baseagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L2",
+      "weight": 0.8,
+      "_origin": "ast",
+      "source": "server_agents_identify_agent_identifyagent",
       "target": "server_agents_base_agent_baseagent",
       "confidence_score": 0.5
     },
@@ -6861,7 +8173,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_init",
@@ -6953,11 +8265,114 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_init",
       "target": "server_agents_history_agent_historyagent"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_identify_agent",
+      "target": "server_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_identify_agent",
+      "target": "server_agents_identify_agent_identifyagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/orchestrator.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_orchestrator",
+      "target": "server_agents_identify_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_identify_agent_identifyagent",
+      "target": "server_agents_identify_agent_identifyagent_generate_synthetic_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_identify_agent_identifyagent",
+      "target": "server_agents_identify_agent_identifyagent_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/identify_agent.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_identify_agent_identifyagent",
+      "target": "server_agents_identify_agent_identifyagent_process",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/orchestrator.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_orchestrator",
+      "target": "server_agents_identify_agent_identifyagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "server/orchestrator.py",
+      "source_location": "L9",
+      "weight": 0.8,
+      "_origin": "ast",
+      "source": "server_orchestrator_philosophyanalyzer",
+      "target": "server_agents_identify_agent_identifyagent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/orchestrator.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_orchestrator_philosophyanalyzer_init",
+      "target": "server_agents_identify_agent_identifyagent"
     },
     {
       "relation": "imports_from",
@@ -7045,11 +8460,23 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_init",
       "target": "server_agents_metadata_agent_metadataagent"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_models",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -7067,7 +8494,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L24",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_api_analyze_identified",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api",
@@ -7078,11 +8516,46 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L50",
+      "source_location": "L80",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api",
       "target": "server_api_health",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_api_identify_paper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_models_analyzecandidaterequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_models_identifypaperrequest",
       "confidence_score": 1.0
     },
     {
@@ -7101,7 +8574,19 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L23",
+      "source_location": "L67",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "source": "server_api_analyze_identified",
+      "target": "post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -7111,10 +8596,22 @@
     },
     {
       "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "source": "server_api_identify_paper",
+      "target": "post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api_analyze_pdf",
@@ -7123,9 +8620,33 @@
     },
     {
       "relation": "references",
+      "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L49",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api_identify_paper",
+      "target": "server_models_identifypaperrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api_analyze_identified",
+      "target": "server_models_analyzecandidaterequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L79",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -7138,7 +8659,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator",
@@ -7230,7 +8751,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L23",
+      "source_location": "L97",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -7333,7 +8854,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L25",
+      "source_location": "L99",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -7435,6 +8956,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
+      "source_location": "L116",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models",
+      "target": "server_models_analyzecandidaterequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
       "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
@@ -7523,11 +9055,44 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models",
+      "target": "server_models_identifycandidatesresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models",
+      "target": "server_models_identifypaperrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
       "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_models",
       "target": "server_models_objection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models",
+      "target": "server_models_papercandidate",
       "confidence_score": 1.0
     },
     {
@@ -7579,7 +9144,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator",
@@ -7616,6 +9181,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_models_analysisresult",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
+      "source_location": "L116",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models_analyzecandidaterequest",
       "target": "basemodel",
       "confidence_score": 1.0
     },
@@ -7711,10 +9287,43 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models_identifycandidatesresponse",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models_identifypaperrequest",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
       "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_models_objection",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models_papercandidate",
       "target": "basemodel",
       "confidence_score": 1.0
     },
@@ -7756,7 +9365,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator",
@@ -7767,7 +9376,7 @@
       "relation": "uses",
       "confidence": "INFERRED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 0.8,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer",
@@ -7780,7 +9389,19 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L67",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_orchestrator_philosophyanalyzer_analyze_identified_paper",
+      "target": "server_models_historicalsection"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/orchestrator.py",
+      "source_location": "L141",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -7791,7 +9412,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator",
@@ -7802,7 +9423,7 @@
       "relation": "uses",
       "confidence": "INFERRED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 0.8,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer",
@@ -7815,7 +9436,19 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L66",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_orchestrator_philosophyanalyzer_analyze_identified_paper",
+      "target": "server_models_historicalcontext"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/orchestrator.py",
+      "source_location": "L140",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -7826,7 +9459,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator",
@@ -7837,7 +9470,7 @@
       "relation": "uses",
       "confidence": "INFERRED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 0.8,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer",
@@ -7850,7 +9483,19 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L78",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_orchestrator_philosophyanalyzer_analyze_identified_paper",
+      "target": "server_models_conceptguide"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/orchestrator.py",
+      "source_location": "L152",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -7861,7 +9506,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator",
@@ -7872,7 +9517,7 @@
       "relation": "uses",
       "confidence": "INFERRED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 0.8,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer",
@@ -7885,7 +9530,19 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L77",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_orchestrator_philosophyanalyzer_analyze_identified_paper",
+      "target": "server_models_studyguide"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/orchestrator.py",
+      "source_location": "L151",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -7896,7 +9553,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator",
@@ -7907,7 +9564,7 @@
       "relation": "uses",
       "confidence": "INFERRED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 0.8,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer",
@@ -7919,7 +9576,19 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L20",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_orchestrator_philosophyanalyzer_analyze_identified_paper",
+      "target": "server_models_researchpacket",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "server/orchestrator.py",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -7930,7 +9599,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator",
@@ -7941,7 +9610,18 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L20",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_orchestrator_philosophyanalyzer",
+      "target": "server_orchestrator_philosophyanalyzer_analyze_identified_paper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/orchestrator.py",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer",
@@ -7952,7 +9632,18 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L14",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_orchestrator_philosophyanalyzer",
+      "target": "server_orchestrator_philosophyanalyzer_identify_paper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/orchestrator.py",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer",
@@ -10149,5 +11840,5 @@
       "source_file": "uwlax-pallete/p.png"
     }
   ],
-  "built_at_commit": "5b8fd51af38d40996fa5c3d609b1fe1ec0b47bdf"
+  "built_at_commit": "4778306a3a0020dbe31cde7204262f92e390a0b6"
 }

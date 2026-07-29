@@ -90,6 +90,8 @@ class PhilosophyAnalyzer:
             exam_study_guide=study_guide,
             argument=argument
         )
+
+    async def analyze_paper(self, file_path: str, extension: str | None = None) -> ResearchPacket:
         ext = extension or os.path.splitext(file_path)[1].lower()
         if ext in (".png", ".jpg", ".jpeg", ".webp"):
             parser = ImageParser(file_path)

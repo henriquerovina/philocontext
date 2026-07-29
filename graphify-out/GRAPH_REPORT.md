@@ -1,16 +1,16 @@
-# Graph Report - philocontext  (2026-07-27)
+# Graph Report - philocontext  (2026-07-28)
 
 ## Corpus Check
-- 67 files · ~36,176 words
+- 73 files · ~39,687 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 409 nodes · 455 edges · 58 communities (35 shown, 23 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.74)
+- 450 nodes · 561 edges · 60 communities (35 shown, 25 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 41 edges (avg confidence: 0.73)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5b8fd51a`
+- Built from commit: `4778306a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,10 +26,10 @@
 - client/package.json
 - philo-frontend/package.json
 - Philocontext Backend
-- Philocontext
+- dev.sh
 - UW-LAX Logo Mark
 - Philocontext Favicon
-- opencode.json
+- plugin
 - Bluesky Icon
 - UW-La Crosse Brand Color Palette
 - graphify.js
@@ -53,7 +53,7 @@
 - python-multipart
 - uvicorn
 - graphify reference: extra exports and benchmark
-- api.py
+- BaseAgent
 - graphify reference: query, path, explain
 - graphify reference: add a URL and watch a folder
 - graphify reference: commit hook and native CLAUDE.md integration
@@ -63,18 +63,20 @@
 - graphify reference: transcribe video and audio
 - CLAUDE.md
 - extraction-spec.md
+- StudyManager.tsx
+- vercel.json
 
 ## God Nodes (most connected - your core abstractions)
-1. `PhilosophyAnalyzer` - 17 edges
+1. `PhilosophyAnalyzer` - 20 edges
 2. `Graphify` - 16 edges
 3. `compilerOptions` - 15 edges
-4. `BaseAgent` - 13 edges
+4. `BaseAgent` - 15 edges
 5. `What You Must Do When Invoked` - 12 edges
 6. `/graphify` - 10 edges
-7. `graphify reference: extra exports and benchmark` - 8 edges
-8. `ArgumentAgent` - 7 edges
-9. `ExamAgent` - 7 edges
-10. `HistoryAgent` - 7 edges
+7. `StudyManager()` - 8 edges
+8. `IdentifyAgent` - 8 edges
+9. `graphify reference: extra exports and benchmark` - 8 edges
+10. `getSavedStudies()` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Philocontext` --references--> `Agent Skills System`  [INFERRED]
@@ -101,15 +103,15 @@
 - **Social Media Brand Icons** — server_philo_frontend_public_icons_bluesky_icon, server_philo_frontend_public_icons_discord_icon, server_philo_frontend_public_icons_github_icon, server_philo_frontend_public_icons_x_icon [EXTRACTED 1.00]
 - **UWLAX Brand Color Element** — uwlax_pallete_p_decorative_p, uwlax_pallete_p_gold_accent, uwlax_pallete_p_brand_palette [INFERRED 0.95]
 
-## Communities (58 total, 23 thin omitted)
+## Communities (60 total, 25 thin omitted)
 
 ### Community 0 - "api.ts"
-Cohesion: 0.06
-Nodes (25): ArgumentTabProps, SectionId, HistoryTabProps, AuthorPhoto, getInitials(), MetadataTab(), ResultsProps, useAuthorPhoto() (+17 more)
+Cohesion: 0.07
+Nodes (26): ArgumentTabProps, SectionId, CandidatePickerProps, HistoryTabProps, AuthorPhoto, getInitials(), MetadataTab(), Results() (+18 more)
 
 ### Community 1 - "orchestrator.py"
-Cohesion: 0.08
-Nodes (27): ABC, BaseModel, ArgumentAgent, BaseAgent, ExamAgent, HistoryAgent, MetadataAgent, ImageParser (+19 more)
+Cohesion: 0.09
+Nodes (32): BaseModel, get, post, analyze_identified(), analyze_pdf(), health(), identify_paper(), ImageParser (+24 more)
 
 ### Community 2 - "devDependencies"
 Cohesion: 0.07
@@ -128,8 +130,8 @@ Cohesion: 0.09
 Nodes (21): compilerOptions, allowSyntheticDefaultImports, esModuleInterop, isolatedModules, jsx, lib, module, moduleResolution (+13 more)
 
 ### Community 6 - "Graphify"
-Cohesion: 0.10
-Nodes (21): Watch Mode, MCP Server, Confidence Rubric, Hyperedges, Node ID Format Rules, GitHub Clone Flow, Post-Commit Hook, Query Vocabulary Expansion (+13 more)
+Cohesion: 0.07
+Nodes (32): Watch Mode, MCP Server, Confidence Rubric, Hyperedges, Node ID Format Rules, GitHub Clone Flow, Post-Commit Hook, Query Vocabulary Expansion (+24 more)
 
 ### Community 7 - "Domain Documentation Conventions"
 Cohesion: 0.11
@@ -147,10 +149,6 @@ Nodes (16): dependencies, react, react-dom, @tailwindcss/postcss, react, react-d
 Cohesion: 0.17
 Nodes (15): API Proxy, Philocontext Client, Vite, BaseAgent, Backend Config (config.py), ExamAgent, FastAPI API (api.py), HistoryAgent (+7 more)
 
-### Community 11 - "Philocontext"
-Cohesion: 0.24
-Nodes (11): ExamAgent, HistoricalContext Model, HistoryAgent, Improve Historical Context & Study Guide Plan, StudyGuide Model, Graphify Usage Rules, Agent Skills System, Graphify CLI Integration (+3 more)
-
 ### Community 12 - "UW-LAX Logo Mark"
 Cohesion: 0.47
 Nodes (6): UW-LAX Brand Identifier Text, UW-LAX Eagle Crest Emblem, UW-LAX Primary Maroon (#73253D), UW-LAX Secondary Gray (#A6AAAD), Traditional Collegiate Seal Design Style, UW-LAX Logo Mark
@@ -159,9 +157,9 @@ Nodes (6): UW-LAX Brand Identifier Text, UW-LAX Eagle Crest Emblem, UW-LAX Prima
 Cohesion: 0.40
 Nodes (5): Brand Purple Color (#863bff), Display P3 Wide Gamut Color, Glow and Lighting Effect, Philocontext Favicon, Stylized Geometric Logo Mark
 
-### Community 14 - "opencode.json"
-Cohesion: 0.50
-Nodes (3): plugin, $schema, .opencode/plugins/graphify.js
+### Community 14 - "plugin"
+Cohesion: 0.40
+Nodes (4): plugin, $schema, @dietrichgebert/ponytail, .opencode/plugins/graphify.js
 
 ### Community 15 - "Bluesky Icon"
 Cohesion: 1.00
@@ -183,9 +181,9 @@ Nodes (3): UW-La Crosse Brand Palette, Gold Decorative Letter P, UWLAX Gold Acce
 Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
-### Community 48 - "api.py"
-Cohesion: 0.33
-Nodes (5): get, post, analyze_pdf(), health(), UploadFile
+### Community 48 - "BaseAgent"
+Cohesion: 0.12
+Nodes (7): ABC, ArgumentAgent, BaseAgent, ExamAgent, HistoryAgent, IdentifyAgent, MetadataAgent
 
 ### Community 49 - "graphify reference: query, path, explain"
 Cohesion: 0.33
@@ -203,25 +201,29 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
+### Community 58 - "StudyManager.tsx"
+Cohesion: 0.21
+Nodes (18): StudyGuideTabProps, OpenGuide, StudyManager(), StudyManagerProps, conceptsForStudies(), createCompilation(), deleteCompilation(), deleteStudy() (+10 more)
+
 ## Knowledge Gaps
-- **172 isolated node(s):** `$schema`, `.opencode/plugins/graphify.js`, `name`, `private`, `version` (+167 more)
+- **177 isolated node(s):** `$schema`, `.opencode/plugins/graphify.js`, `@dietrichgebert/ponytail`, `name`, `private` (+172 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `devDependencies` connect `devDependencies` to `client/package.json`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `philo-frontend/package.json`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `Graphify` connect `Graphify` to `Philocontext`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Are the 11 inferred relationships involving `PhilosophyAnalyzer` (e.g. with `ArgumentAgent` and `ExamAgent`) actually correct?**
-  _`PhilosophyAnalyzer` has 11 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `$schema`, `.opencode/plugins/graphify.js`, `name` to the rest of the system?**
-  _172 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `PhilosophyAnalyzer` connect `orchestrator.py` to `BaseAgent`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Are the 12 inferred relationships involving `PhilosophyAnalyzer` (e.g. with `ArgumentAgent` and `ExamAgent`) actually correct?**
+  _`PhilosophyAnalyzer` has 12 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 5 inferred relationships involving `BaseAgent` (e.g. with `ArgumentAgent` and `ExamAgent`) actually correct?**
+  _`BaseAgent` has 5 INFERRED edges - model-reasoned connections that need verification._
+- **What connects `$schema`, `.opencode/plugins/graphify.js`, `@dietrichgebert/ponytail` to the rest of the system?**
+  _177 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `api.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.06342494714587738 - nodes in this community are weakly interconnected._
-- **Should `orchestrator.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.07769423558897243 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06533776301218161 - nodes in this community are weakly interconnected._

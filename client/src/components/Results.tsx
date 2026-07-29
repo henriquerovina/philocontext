@@ -5,6 +5,7 @@ import Tabs from './Tabs';
 import ArgumentTab from './ArgumentTab';
 import HistoryTab from './HistoryTab';
 import StudyGuideTab from './StudyGuideTab';
+import { saveStudy } from '../lib/studies';
 
 interface ResultsProps {
   result: AnalysisResult;
@@ -13,6 +14,11 @@ interface ResultsProps {
 
 export default function Results({ result, onNew }: ResultsProps) {
   const [activeTab, setActiveTab] = useState('history');
+  const [saved, setSaved] = useState(false);
+
+  const handleSaveStudy = () => {
+    setSaved(saveStudy(result) !== null);
+  };
 
   const exportAsJSON = () => {
     const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
@@ -136,13 +142,23 @@ ${(() => {
   return (
     <motion.div className="min-h-screen bg-gray-50 dark:bg-maroon-900 p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
       <div className="max-w-4xl mx-auto">
-        <motion.button
-          whileTap={{ scale: 0.97 }}
-          onClick={onNew}
-          className="mb-6 bg-maroon-700 hover:bg-maroon-800 dark:bg-gold-500 dark:hover:bg-gold-700 dark:text-maroon-900 text-white px-4 py-2 rounded transition-colors"
-        >
-          ← New Analysis
-        </motion.button>
+        <div className="mb-6 flex flex-wrap gap-3">
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            onClick={onNew}
+            className="bg-maroon-700 hover:bg-maroon-800 dark:bg-gold-500 dark:hover:bg-gold-700 dark:text-maroon-900 text-white px-4 py-2 rounded transition-colors"
+          >
+            ← New Analysis
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            onClick={handleSaveStudy}
+            disabled={saved || !(result.exam_study_guide?.concepts.length)}
+            className="border border-maroon-700 px-4 py-2 rounded text-maroon-700 transition-colors hover:bg-maroon-50 disabled:opacity-50 dark:border-gold-500 dark:text-gold-500 dark:hover:bg-gold-500/10"
+          >
+            {saved ? 'Study Saved' : 'Save Study'}
+          </motion.button>
+        </div>
 
         <motion.h1 initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-3xl font-bold font-serif text-maroon-700 dark:text-gray-50 mb-2">{result.metadata.work}</motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="text-lg text-gray-600 dark:text-gray-300 mb-8">by {result.metadata.author}</motion.p>

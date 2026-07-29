@@ -4,6 +4,7 @@ import { AnalysisResult, PaperCandidate } from './types/api';
 import Upload from './components/Upload';
 import CandidatePicker from './components/CandidatePicker';
 import Results from './components/Results';
+import StudyManager from './components/StudyManager';
 import ThemeToggle from './components/ThemeToggle';
 
 const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000';
@@ -13,6 +14,7 @@ function App() {
   const [candidates, setCandidates] = useState<PaperCandidate[] | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showStudies, setShowStudies] = useState(false);
 
   const handleAnalyze = async (file: File) => {
     setLoading(true);
@@ -97,13 +99,26 @@ function App() {
     setResult(null);
     setCandidates(null);
     setError(null);
+    setShowStudies(false);
   };
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-maroon-900">
       <ThemeToggle />
+      {!showStudies && (
+        <button
+          onClick={() => setShowStudies(true)}
+          className="fixed top-4 left-4 z-50 rounded bg-maroon-700 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-maroon-800 dark:bg-gold-500 dark:text-maroon-900 dark:hover:bg-gold-700"
+        >
+          My Studies
+        </button>
+      )}
       <AnimatePresence mode="wait">
-        {result ? (
+        {showStudies ? (
+          <motion.div key="studies" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>
+            <StudyManager onBack={() => setShowStudies(false)} />
+          </motion.div>
+        ) : result ? (
           <motion.div key="results" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>
             <Results result={result} onNew={handleNewAnalysis} />
           </motion.div>
