@@ -12,7 +12,9 @@ class TopicAgent(BaseAgent):
         response = self.call_llm(
             system_prompt="You are a philosophy professor and historian of ideas who outputs strictly JSON and never fabricates specific names or sources you are not confident about.",
             user_prompt=prompt,
-            json_mode=True
+            json_mode=True,
+            reasoning_effort="low",
+            max_completion_tokens=4096,
         )
         try:
             data = json.loads(response)

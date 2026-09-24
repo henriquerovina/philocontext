@@ -9,11 +9,15 @@ class BaseAgent(ABC):
         self.model = MODEL
         self.temperature = temperature
 
-    def call_llm(self, system_prompt: str, user_prompt: str, json_mode: bool = False) -> str:
+    def call_llm(self, system_prompt: str, user_prompt: str, json_mode: bool = False, reasoning_effort: str | None = None, max_completion_tokens: int | None = None) -> str:
         try:
             kwargs = {}
             if json_mode:
                 kwargs["response_format"] = {"type": "json_object"}
+            if reasoning_effort is not None:
+                kwargs["reasoning_effort"] = reasoning_effort
+            if max_completion_tokens is not None:
+                kwargs["max_completion_tokens"] = max_completion_tokens
             completion = self.client.chat.completions.create(
                 messages=[
                     {"role": "system", "content": system_prompt},
