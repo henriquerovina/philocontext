@@ -93,3 +93,23 @@ export interface IdentifyCandidatesResponse {
   candidates: PaperCandidate[];
   error?: string;
 }
+
+export interface PhilosopherQuote {
+  quote: string;
+  context: string;
+}
+
+export interface TopicView {
+  philosopher: string;
+  topic: string;
+  explanation: string;
+  objections: Objection[];
+  quotes: PhilosopherQuote[];
+  quote_recognition_hint: string;
+  disclaimer: string;
+}
+
+export interface TopicViewRequest {
+  philosopher: string;
+  topic: string;
+}

@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { AnalysisResult, PaperCandidate } from './types/api';
+import { AnalysisResult, PaperCandidate, TopicView as TopicViewType } from './types/api';
 import Upload from './components/Upload';
 import CandidatePicker from './components/CandidatePicker';
 import Results from './components/Results';
 import StudyManager from './components/StudyManager';
 import ThemeToggle from './components/ThemeToggle';
+import TopicView from './components/TopicView';
 
 const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000';
 
 function App() {
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [candidates, setCandidates] = useState<PaperCandidate[] | null>(null);
+  const [topicView, setTopicView] = useState<TopicViewType | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showStudies, setShowStudies] = useState(false);
@@ -95,9 +97,33 @@ function App() {
     }
   };
 
+  const handleTopicView = async (philosopher: string, topic: string) => {
+    setLoading(true);
+    setError(null);
+    setCandidates(null);
+
+    try {
+      const response = await fetch(`${API_URL}/api/topic-view`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ philosopher, topic }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'Failed to generate topic view');
+      if (data.error) throw new Error(data.error);
+      setTopicView(data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Unknown error');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleNewAnalysis = () => {
     setResult(null);
     setCandidates(null);
+    setTopicView(null);
     setError(null);
     setShowStudies(false);
   };
@@ -122,13 +148,17 @@ function App() {
           <motion.div key="results" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>
             <Results result={result} onNew={handleNewAnalysis} />
           </motion.div>
+        ) : topicView ? (
+          <motion.div key="topic-view" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>
+            <TopicView view={topicView} onNew={handleNewAnalysis} />
+          </motion.div>
         ) : candidates ? (
           <motion.div key="candidates" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>
             <CandidatePicker candidates={candidates} onSelect={handleAnalyzeCandidate} onBack={() => setCandidates(null)} loading={loading} />
           </motion.div>
         ) : (
           <motion.div key="upload" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>
-            <Upload onAnalyze={handleAnalyze} onIdentifyPaper={handleIdentifyPaper} loading={loading} error={error} />
+            <Upload onAnalyze={handleAnalyze} onIdentifyPaper={handleIdentifyPaper} onTopicView={handleTopicView} loading={loading} error={error} />
           </motion.div>
         )}
       </AnimatePresence>

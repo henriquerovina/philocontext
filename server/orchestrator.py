@@ -7,7 +7,8 @@ from agents.history_agent import HistoryAgent
 from agents.exam_agent import ExamAgent
 from agents.argument_agent import ArgumentAgent
 from agents.identify_agent import IdentifyAgent
-from models import ResearchPacket, HistoricalContext, HistoricalSection, StudyGuide, ConceptGuide
+from agents.topic_agent import TopicAgent
+from models import ResearchPacket, HistoricalContext, HistoricalSection, StudyGuide, ConceptGuide, TopicView, Objection, PhilosopherQuote
 from config import MAX_PDF_PAGES
 
 
@@ -18,10 +19,52 @@ class PhilosophyAnalyzer:
         self.exam_agent = ExamAgent()
         self.argument_agent = ArgumentAgent()
         self.identify_agent = IdentifyAgent()
+        self.topic_agent = TopicAgent()
 
     async def identify_paper(self, description: str) -> dict:
         identification = await asyncio.to_thread(self.identify_agent.process, description)
         return identification
+
+    async def get_topic_view(self, philosopher: str, topic: str) -> TopicView:
+        fallback = {
+            "explanation": "",
+            "objections": [],
+            "quotes": [],
+            "quote_recognition_hint": "",
+        }
+
+        async def safe_call(agent_fn, *args, fallback):
+            try:
+                result = await asyncio.to_thread(agent_fn, *args)
+                if result is None or (isinstance(result, dict) and not result):
+                    return fallback
+                if isinstance(result, str) and result.startswith("Agent Error"):
+                    return fallback
+                return result
+            except Exception:
+                return fallback
+
+        raw = await safe_call(self.topic_agent.process, philosopher, topic, fallback=fallback)
+
+        try:
+            objections = [Objection(**o) for o in raw.get("objections", [])]
+        except Exception:
+            objections = []
+
+        try:
+            quotes = [PhilosopherQuote(**q) for q in raw.get("quotes", [])]
+        except Exception:
+            quotes = []
+
+        return TopicView(
+            philosopher=philosopher,
+            topic=topic,
+            explanation=raw.get("explanation") or f"No information could be generated for {philosopher} on this topic.",
+            objections=objections,
+            quotes=quotes,
+            quote_recognition_hint=raw.get("quote_recognition_hint") or "",
+            disclaimer="This content is AI-generated and not verified against primary sources. Quotes, attributions, and objections may be inaccurate — confirm with a primary text or scholarly source before citing.",
+        )
 
     async def analyze_identified_paper(self, author: str, work: str, period: str) -> ResearchPacket:
         synthetic_text = await asyncio.to_thread(

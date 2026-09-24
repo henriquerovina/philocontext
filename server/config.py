@@ -11,6 +11,7 @@ METADATA_EXTRACTION_TEMP = 0.1
 HISTORY_CONTEXT_TEMP = 0.4
 EXAM_GUIDE_TEMP = 0.3
 ARGUMENT_ANALYSIS_TEMP = 0.2
+TOPIC_VIEW_TEMP = 0.3
 
 # Prompt templates
 METADATA_PROMPT_TEMPLATE = """
@@ -168,6 +169,51 @@ Return ONLY a valid JSON object with this exact structure:
 If the description is completely unrecognizable, return an empty candidates array: {{ "candidates": [] }}.
 
 Description: {description}
+"""
+
+TOPIC_VIEW_PROMPT_TEMPLATE = """
+You are a philosophy professor helping a student understand a philosopher's position on a specific topic, using only your own knowledge (no source text is provided).
+
+Philosopher: {philosopher}
+Topic: {topic}
+
+Task:
+1. Explain this philosopher's view or argument on this topic. Write the explanation as a single cohesive passage that begins literally with the words:
+   "What they meant when they said {topic} was..."
+   (adapt grammar naturally if needed, but preserve this framing). State their actual position and the key reasoning behind it, in plain language a student can understand, in 3-6 sentences.
+   If "{philosopher}" is not a real, identifiable philosopher, or did not write about this topic in any documented way, say so honestly in the explanation instead of inventing a position.
+
+2. List well-documented objections to this view. For each objection:
+   - "critic": the name of a real philosopher, school of thought, or tradition well known for raising this kind of objection. Only name a specific individual if you are reasonably confident they actually raised it. If you are not confident of a specific name, use a general attribution such as "Contemporary critics" or "Later commentators" instead of inventing a name.
+   - "summary": a concise description of the objection.
+   - "era": "contemporary" (raised in the philosopher's own time) or "later" (raised afterward).
+   - "popularity": "major" (well-known, frequently cited) or "niche" (more specialized).
+   - "response": how {philosopher} or their defenders might respond, or plausibly would respond.
+   Include between 2 and 4 objections. Do not fabricate a specific critic's name if you are not confident about it.
+
+3. List the 5 most famous, most commonly quoted lines attributed to {philosopher} in general (these do NOT need to relate to {topic} — pick their best-known quotes overall). For each quote, give brief context (the work it's from, or the circumstance, if known; if the attribution is disputed or uncertain, say so in the context field rather than inventing a source).
+
+4. Give one short paragraph describing how a student could recognize this philosopher's writing style if they saw an unattributed quote from them on an exam — e.g. characteristic vocabulary, sentence structure, recurring themes, tone, or rhetorical habits.
+
+Return ONLY a valid JSON object with this exact structure:
+{{
+  "explanation": "What they meant when they said {topic} was...",
+  "objections": [
+    {{
+      "critic": "Name or general attribution",
+      "summary": "objection summary",
+      "era": "contemporary|later",
+      "popularity": "major|niche",
+      "response": "possible response"
+    }}
+  ],
+  "quotes": [
+    {{ "quote": "exact or best-known rendering of the quote", "context": "brief source/context, or a note that attribution is uncertain" }}
+  ],
+  "quote_recognition_hint": "paragraph describing style/vocabulary/themes that identify this philosopher's quotes"
+}}
+
+Be honest about uncertainty rather than fabricating specific names, works, or quotes you are not confident about.
 """
 
 SYNTHETIC_TEXT_PROMPT_TEMPLATE = """

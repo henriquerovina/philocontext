@@ -3,7 +3,7 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from orchestrator import PhilosophyAnalyzer
-from models import IdentifyPaperRequest, AnalyzeCandidateRequest
+from models import IdentifyPaperRequest, AnalyzeCandidateRequest, TopicViewRequest
 
 app = FastAPI()
 
@@ -69,6 +69,23 @@ async def analyze_identified(req: AnalyzeCandidateRequest):
     try:
         packet = await analyzer.analyze_identified_paper(req.author, req.work, req.period)
         return packet.model_dump()
+    except Exception as e:
+        return JSONResponse(
+            status_code=500,
+            content={"error": str(e)}
+        )
+
+
+@app.post("/api/topic-view")
+async def topic_view(req: TopicViewRequest):
+    try:
+        if not req.philosopher.strip() or not req.topic.strip():
+            return JSONResponse(
+                status_code=400,
+                content={"error": "Please provide both a philosopher and a topic."}
+            )
+        view = await analyzer.get_topic_view(req.philosopher.strip(), req.topic.strip())
+        return view.model_dump()
     except Exception as e:
         return JSONResponse(
             status_code=500,

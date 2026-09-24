@@ -117,3 +117,23 @@ class AnalyzeCandidateRequest(BaseModel):
     author: str
     work: str
     period: str
+
+
+class TopicViewRequest(BaseModel):
+    philosopher: str
+    topic: str
+
+
+class PhilosopherQuote(BaseModel):
+    quote: str
+    context: str
+
+
+class TopicView(BaseModel):
+    philosopher: str
+    topic: str
+    explanation: str
+    objections: List[Objection]
+    quotes: List[PhilosopherQuote]
+    quote_recognition_hint: str
+    disclaimer: str

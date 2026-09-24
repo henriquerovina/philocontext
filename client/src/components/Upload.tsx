@@ -4,16 +4,21 @@ import { motion } from 'framer-motion';
 interface UploadProps {
   onAnalyze: (file: File) => void;
   onIdentifyPaper: (description: string) => void;
+  onTopicView: (philosopher: string, topic: string) => void;
   loading: boolean;
   error: string | null;
 }
 
-export default function Upload({ onAnalyze, onIdentifyPaper, loading, error }: UploadProps) {
+type UploadMode = 'upload' | 'describe' | 'topic';
+
+export default function Upload({ onAnalyze, onIdentifyPaper, onTopicView, loading, error }: UploadProps) {
   const [file, setFile] = useState<File | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [showDescribeForm, setShowDescribeForm] = useState(false);
+  const [mode, setMode] = useState<UploadMode>('upload');
   const [description, setDescription] = useState('');
+  const [philosopher, setPhilosopher] = useState('');
+  const [topic, setTopic] = useState('');
 
   const isImageFile = (f: File | null) => {
     if (!f) return false;
@@ -46,9 +51,13 @@ export default function Upload({ onAnalyze, onIdentifyPaper, loading, error }: U
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    if (showDescribeForm) {
+    if (mode === 'describe') {
       if (description.trim()) {
         onIdentifyPaper(description.trim());
+      }
+    } else if (mode === 'topic') {
+      if (philosopher.trim() && topic.trim()) {
+        onTopicView(philosopher.trim(), topic.trim());
       }
     } else {
       if (file) onAnalyze(file);
@@ -71,7 +80,7 @@ export default function Upload({ onAnalyze, onIdentifyPaper, loading, error }: U
         </motion.p>
 
         <motion.form onSubmit={handleSubmit} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-100 dark:border-maroon-700">
-          {!showDescribeForm ? (
+          {mode === 'upload' ? (
             <>
               <div
                 onDrop={handleDrop}
@@ -125,17 +134,24 @@ export default function Upload({ onAnalyze, onIdentifyPaper, loading, error }: U
                 ) : 'Analyze'}
               </motion.button>
 
-              <div className="mt-4 text-center">
+              <div className="mt-4 text-center space-y-2">
                 <button
                   type="button"
-                  onClick={() => setShowDescribeForm(true)}
-                  className="text-sm text-maroon-700 dark:text-gold-500 hover:underline font-medium"
+                  onClick={() => setMode('describe')}
+                  className="block w-full text-sm text-maroon-700 dark:text-gold-500 hover:underline font-medium"
                 >
                   Don't have the reading or paper?
                 </button>
+                <button
+                  type="button"
+                  onClick={() => setMode('topic')}
+                  className="block w-full text-sm text-maroon-700 dark:text-gold-500 hover:underline font-medium"
+                >
+                  Just want to explore a philosopher's view on a topic?
+                </button>
               </div>
             </>
-          ) : (
+          ) : mode === 'describe' ? (
             <>
               <div className="space-y-3">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
@@ -173,7 +189,62 @@ export default function Upload({ onAnalyze, onIdentifyPaper, loading, error }: U
               <div className="mt-4 text-center">
                 <button
                   type="button"
-                  onClick={() => setShowDescribeForm(false)}
+                  onClick={() => setMode('upload')}
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                >
+                  ← Upload a file instead
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="space-y-3">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+                  Philosopher:
+                </label>
+                <input
+                  type="text"
+                  value={philosopher}
+                  onChange={(e) => setPhilosopher(e.target.value)}
+                  placeholder="e.g., Immanuel Kant"
+                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-maroon-700 dark:focus:ring-gold-500"
+                />
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+                  Topic:
+                </label>
+                <input
+                  type="text"
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
+                  placeholder="e.g., free will"
+                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-maroon-700 dark:focus:ring-gold-500"
+                />
+              </div>
+
+              {error && <p className="text-red-500 mt-4 text-sm">{error}</p>}
+
+              <motion.button
+                whileTap={{ scale: 0.97 }}
+                type="submit"
+                disabled={!philosopher.trim() || !topic.trim() || loading}
+                className="w-full mt-6 bg-maroon-700 hover:bg-maroon-800 dark:bg-gold-500 dark:hover:bg-gold-700 dark:text-maroon-900 text-white py-2 rounded-lg font-semibold disabled:opacity-50 transition-colors"
+              >
+                {loading ? (
+                  <span className="flex items-center justify-center gap-1.5">
+                    Consulting the archives
+                    <span className="inline-flex gap-0.5">
+                      {[0, 0.2, 0.4].map((d) => (
+                        <span key={d} className="w-1.5 h-1.5 bg-current rounded-full animate-pulse-dot" style={{ animationDelay: `${d}s` }} />
+                      ))}
+                    </span>
+                  </span>
+                ) : 'Explore'}
+              </motion.button>
+
+              <div className="mt-4 text-center">
+                <button
+                  type="button"
+                  onClick={() => setMode('upload')}
                   className="text-sm text-gray-600 dark:text-gray-400 hover:underline"
                 >
                   ← Upload a file instead
