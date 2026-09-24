@@ -1,30 +1,30 @@
 # Graph Report - philocontext  (2026-07-28)
 
 ## Corpus Check
-- 73 files · ~39,687 words
+- 60 files · ~29,595 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 450 nodes · 561 edges · 60 communities (35 shown, 25 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 41 edges (avg confidence: 0.73)
+- 431 nodes · 566 edges · 61 communities (36 shown, 25 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 36 edges (avg confidence: 0.7)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4778306a`
+- Built from commit: `67f05b18`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - api.ts
-- orchestrator.py
+- models.py
 - devDependencies
 - devDependencies
 - What You Must Do When Invoked
 - compilerOptions
-- Graphify
-- Domain Documentation Conventions
+- Improve Historical Context & Study Guide Plan
+- UnderstandingCheck.tsx
 - client/package.json
-- philo-frontend/package.json
+- App.tsx
 - Philocontext Backend
 - dev.sh
 - UW-LAX Logo Mark
@@ -53,73 +53,72 @@
 - python-multipart
 - uvicorn
 - graphify reference: extra exports and benchmark
-- BaseAgent
+- orchestrator.py
 - graphify reference: query, path, explain
 - graphify reference: add a URL and watch a folder
 - graphify reference: commit hook and native CLAUDE.md integration
 - graphify reference: incremental update and cluster-only
-- graphify reference: transcribe video and audio
+- Results.tsx
 - graphify reference: GitHub clone and cross-repo merge
 - graphify reference: transcribe video and audio
-- CLAUDE.md
+- HistoryTab.tsx
 - extraction-spec.md
 - StudyManager.tsx
 - vercel.json
+- Tabs.tsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `PhilosophyAnalyzer` - 20 edges
-2. `Graphify` - 16 edges
+2. `BaseAgent` - 17 edges
 3. `compilerOptions` - 15 edges
-4. `BaseAgent` - 15 edges
-5. `What You Must Do When Invoked` - 12 edges
-6. `/graphify` - 10 edges
-7. `StudyManager()` - 8 edges
-8. `IdentifyAgent` - 8 edges
-9. `graphify reference: extra exports and benchmark` - 8 edges
-10. `getSavedStudies()` - 7 edges
+4. `What You Must Do When Invoked` - 12 edges
+5. `/graphify` - 10 edges
+6. `StudyManager()` - 8 edges
+7. `IdentifyAgent` - 8 edges
+8. `graphify reference: extra exports and benchmark` - 8 edges
+9. `getSavedStudies()` - 7 edges
+10. `getCompilations()` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Philocontext` --references--> `Agent Skills System`  [INFERRED]
-  README.md → CLAUDE.md
-- `Philocontext` --conceptually_related_to--> `Graphify CLI Integration`  [INFERRED]
-  README.md → CLAUDE.md
 - `Philocontext` --conceptually_related_to--> `Improve Historical Context & Study Guide Plan`  [INFERRED]
   README.md → .opencode/plans/improve-history-study-guide.md
 - `Philocontext` --references--> `Graphify Usage Rules`  [INFERRED]
   README.md → AGENTS.md
-- `Graphify CLI Integration` --conceptually_related_to--> `Graphify Usage Rules`  [INFERRED]
-  CLAUDE.md → AGENTS.md
+- `Results()` --calls--> `saveStudy()`  [EXTRACTED]
+  client/src/components/Results.tsx → client/src/lib/studies.ts
+- `Philocontext Client` --references--> `Philocontext Backend`  [EXTRACTED]
+  client/README.md → server/README.md
+- `ResultsProps` --references--> `AnalysisResult`  [EXTRACTED]
+  client/src/components/Results.tsx → client/src/types/api.ts
 
 ## Import Cycles
 - None detected.
 
 ## Hyperedges (group relationships)
-- **Graphify Pipeline Steps** — _claude_skills_graphify_skill_ast_extraction, _claude_skills_graphify_skill_semantic_extraction, _claude_skills_graphify_skill_community_detection, _claude_skills_graphify_skill_knowledge_graph, _claude_skills_graphify_skill_audit_trail, _claude_skills_graphify_skill_pipeline, _claude_skills_graphify_skill_no_api_key, _claude_skills_graphify_skill_honesty_rules, _claude_skills_graphify_references_update_incremental, _claude_skills_graphify_references_query_traversal, _claude_skills_graphify_references_hooks_commit_hook, _claude_skills_graphify_references_exports_mcp_server, _claude_skills_graphify_references_add_watch_watch_mode, _claude_skills_graphify_references_github_clone [EXTRACTED 1.00]
 - **Improve History Study Guide Workstream** — _opencode_plans_improve_history_study_guide_plan, _opencode_plans_improve_history_study_guide_historical_context, _opencode_plans_improve_history_study_guide_study_guide, _opencode_plans_improve_history_study_guide_history_agent, _opencode_plans_improve_history_study_guide_exam_agent [EXTRACTED 1.00]
 - **Philocontext Analysis Pipeline** — server_readme_philoparser, server_readme_metadata_agent, server_readme_history_agent, server_readme_exam_agent, server_readme_philosophy_analyzer [EXTRACTED 1.00]
-- **Triage Workflow State Machine** — docs_agents_triage_labels_needs_triage, docs_agents_triage_labels_needs_info, docs_agents_triage_labels_ready_for_agent, docs_agents_triage_labels_ready_for_human, docs_agents_triage_labels_wontfix [EXTRACTED 1.00]
 - **Social Platform Link Icons** — client_public_icons_bluesky_icon, client_public_icons_discord_icon, client_public_icons_github_icon, client_public_icons_x_icon [EXTRACTED 1.00]
 - **Philocontext UI Icon Sprite** — client_public_icons_bluesky_icon, client_public_icons_discord_icon, client_public_icons_github_icon, client_public_icons_x_icon, client_public_icons_documentation_icon, client_public_icons_social_icon [EXTRACTED 1.00]
 - **Social Media Brand Icons** — server_philo_frontend_public_icons_bluesky_icon, server_philo_frontend_public_icons_discord_icon, server_philo_frontend_public_icons_github_icon, server_philo_frontend_public_icons_x_icon [EXTRACTED 1.00]
 - **UWLAX Brand Color Element** — uwlax_pallete_p_decorative_p, uwlax_pallete_p_gold_accent, uwlax_pallete_p_brand_palette [INFERRED 0.95]
 
-## Communities (60 total, 25 thin omitted)
+## Communities (61 total, 25 thin omitted)
 
 ### Community 0 - "api.ts"
-Cohesion: 0.07
-Nodes (26): ArgumentTabProps, SectionId, CandidatePickerProps, HistoryTabProps, AuthorPhoto, getInitials(), MetadataTab(), Results() (+18 more)
+Cohesion: 0.16
+Nodes (12): ArgumentTabProps, SectionId, ArgumentAnalysis, ArgumentReconstruction, ArgumentThesis, Conclusion, Fallacy, HistoricalSection (+4 more)
 
-### Community 1 - "orchestrator.py"
-Cohesion: 0.09
-Nodes (32): BaseModel, get, post, analyze_identified(), analyze_pdf(), health(), identify_paper(), ImageParser (+24 more)
+### Community 1 - "models.py"
+Cohesion: 0.14
+Nodes (28): BaseModel, get, post, analyze_identified(), analyze_pdf(), debate_evaluate(), debate_questions(), health() (+20 more)
 
 ### Community 2 - "devDependencies"
 Cohesion: 0.07
 Nodes (27): devDependencies, autoprefixer, eslint, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh, globals, postcss (+19 more)
 
 ### Community 3 - "devDependencies"
-Cohesion: 0.08
-Nodes (25): devDependencies, autoprefixer, eslint, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh, globals, postcss (+17 more)
+Cohesion: 0.05
+Nodes (41): dependencies, react, react-dom, @tailwindcss/postcss, devDependencies, autoprefixer, eslint, @eslint/js (+33 more)
 
 ### Community 4 - "What You Must Do When Invoked"
 Cohesion: 0.08
@@ -129,21 +128,21 @@ Nodes (24): For /graphify add and --watch, For /graphify query, For the commit h
 Cohesion: 0.09
 Nodes (21): compilerOptions, allowSyntheticDefaultImports, esModuleInterop, isolatedModules, jsx, lib, module, moduleResolution (+13 more)
 
-### Community 6 - "Graphify"
-Cohesion: 0.07
-Nodes (32): Watch Mode, MCP Server, Confidence Rubric, Hyperedges, Node ID Format Rules, GitHub Clone Flow, Post-Commit Hook, Query Vocabulary Expansion (+24 more)
+### Community 6 - "Improve Historical Context & Study Guide Plan"
+Cohesion: 0.28
+Nodes (9): ExamAgent, HistoricalContext Model, HistoryAgent, Improve Historical Context & Study Guide Plan, StudyGuide Model, Graphify Usage Rules, Client/Server Architecture, Philocontext (+1 more)
 
-### Community 7 - "Domain Documentation Conventions"
-Cohesion: 0.11
-Nodes (20): Architecture Decision Record (ADR), ADR Conflict Flagging, CONTEXT-MAP.md, CONTEXT.md, Domain Documentation Conventions, Domain Modeling (/domain-modeling), Glossary Vocabulary, Frontier Query (+12 more)
+### Community 7 - "UnderstandingCheck.tsx"
+Cohesion: 0.14
+Nodes (11): getSpeechRecognition(), SpeechRecognitionAlternative, SpeechRecognitionEvent, SpeechRecognitionInstance, SpeechRecognitionResult, SpeechRecognitionResultList, Stage, UnderstandingCheck() (+3 more)
 
 ### Community 8 - "client/package.json"
 Cohesion: 0.12
 Nodes (16): dependencies, framer-motion, react, react-dom, react, react-dom, name, private (+8 more)
 
-### Community 9 - "philo-frontend/package.json"
-Cohesion: 0.12
-Nodes (16): dependencies, react, react-dom, @tailwindcss/postcss, react, react-dom, name, private (+8 more)
+### Community 9 - "App.tsx"
+Cohesion: 0.20
+Nodes (3): CandidatePickerProps, UploadProps, PaperCandidate
 
 ### Community 10 - "Philocontext Backend"
 Cohesion: 0.17
@@ -181,9 +180,9 @@ Nodes (3): UW-La Crosse Brand Palette, Gold Decorative Letter P, UWLAX Gold Acce
 Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
-### Community 48 - "BaseAgent"
-Cohesion: 0.12
-Nodes (7): ABC, ArgumentAgent, BaseAgent, ExamAgent, HistoryAgent, IdentifyAgent, MetadataAgent
+### Community 48 - "orchestrator.py"
+Cohesion: 0.08
+Nodes (18): ABC, ArgumentAgent, BaseAgent, DebateAgent, ExamAgent, HistoryAgent, IdentifyAgent, MetadataAgent (+10 more)
 
 ### Community 49 - "graphify reference: query, path, explain"
 Cohesion: 0.33
@@ -201,12 +200,16 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
+### Community 53 - "Results.tsx"
+Cohesion: 0.31
+Nodes (8): AuthorPhoto, getInitials(), MetadataTab(), Results(), ResultsProps, useAuthorPhoto(), UnderstandingCheckProps, AnalysisResult
+
 ### Community 58 - "StudyManager.tsx"
 Cohesion: 0.21
 Nodes (18): StudyGuideTabProps, OpenGuide, StudyManager(), StudyManagerProps, conceptsForStudies(), createCompilation(), deleteCompilation(), deleteStudy() (+10 more)
 
 ## Knowledge Gaps
-- **177 isolated node(s):** `$schema`, `.opencode/plugins/graphify.js`, `@dietrichgebert/ponytail`, `name`, `private` (+172 more)
+- **165 isolated node(s):** `$schema`, `.opencode/plugins/graphify.js`, `@dietrichgebert/ponytail`, `name`, `private` (+160 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -214,16 +217,16 @@ Nodes (18): StudyGuideTabProps, OpenGuide, StudyManager(), StudyManagerProps, co
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `devDependencies` connect `devDependencies` to `client/package.json`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `devDependencies` connect `devDependencies` to `philo-frontend/package.json`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `PhilosophyAnalyzer` connect `orchestrator.py` to `BaseAgent`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `PhilosophyAnalyzer` connect `orchestrator.py` to `models.py`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Are the 12 inferred relationships involving `PhilosophyAnalyzer` (e.g. with `ArgumentAgent` and `ExamAgent`) actually correct?**
   _`PhilosophyAnalyzer` has 12 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 5 inferred relationships involving `BaseAgent` (e.g. with `ArgumentAgent` and `ExamAgent`) actually correct?**
-  _`BaseAgent` has 5 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 6 inferred relationships involving `BaseAgent` (e.g. with `ArgumentAgent` and `DebateAgent`) actually correct?**
+  _`BaseAgent` has 6 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `$schema`, `.opencode/plugins/graphify.js`, `@dietrichgebert/ponytail` to the rest of the system?**
-  _177 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `api.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.06533776301218161 - nodes in this community are weakly interconnected._
+  _165 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `models.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.135632183908046 - nodes in this community are weakly interconnected._
+- **Should `devDependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._

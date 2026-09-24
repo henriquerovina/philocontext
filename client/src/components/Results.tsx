@@ -5,6 +5,7 @@ import Tabs from './Tabs';
 import ArgumentTab from './ArgumentTab';
 import HistoryTab from './HistoryTab';
 import StudyGuideTab from './StudyGuideTab';
+import UnderstandingCheck from './UnderstandingCheck';
 import { saveStudy } from '../lib/studies';
 
 interface ResultsProps {
@@ -113,6 +114,11 @@ ${(() => {
       id: 'guide',
       label: 'Study Guide',
       content: <StudyGuideTab data={result.exam_study_guide} />,
+    },
+    {
+      id: 'debate',
+      label: 'Understanding Check',
+      content: <UnderstandingCheck result={result} />,
     },
     { id: 'metadata', label: 'Metadata', content: <MetadataTab result={result} /> },
     {

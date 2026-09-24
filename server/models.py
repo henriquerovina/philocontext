@@ -95,6 +95,7 @@ class ResearchPacket(BaseModel):
     historical_context: HistoricalContext | None = None
     exam_study_guide: StudyGuide | None = None
     argument: ArgumentAnalysis | None = None
+    raw_text: str | None = None
 
 
 class IdentifyPaperRequest(BaseModel):
@@ -111,6 +112,34 @@ class PaperCandidate(BaseModel):
 
 class IdentifyCandidatesResponse(BaseModel):
     candidates: List[PaperCandidate]
+
+
+class DebateQuestion(BaseModel):
+    question: str
+    concept_tested: str
+    expected_key_points: List[str]
+    hints: List[str]
+
+
+class DebateQuestionsRequest(BaseModel):
+    metadata: Dict[str, Any]
+    raw_text: str = ""
+    study_guide_concepts: List[Dict[str, Any]] = []
+    count: int = 6
+
+
+class EvaluateAnswerRequest(BaseModel):
+    question: DebateQuestion
+    user_answer: str
+    metadata: Dict[str, Any]
+
+
+class AnswerEvaluation(BaseModel):
+    score: int
+    correct_points: List[str]
+    missing_points: List[str]
+    feedback: str
+    suggested_study: str
 
 
 class AnalyzeCandidateRequest(BaseModel):

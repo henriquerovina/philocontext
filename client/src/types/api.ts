@@ -79,6 +79,22 @@ export interface AnalysisResult {
   historical_context: HistoricalContext | null;
   exam_study_guide: StudyGuide | null;
   argument: ArgumentAnalysis;
+  raw_text?: string;
+}
+
+export interface DebateQuestion {
+  question: string;
+  concept_tested: string;
+  expected_key_points: string[];
+  hints: string[];
+}
+
+export interface AnswerEvaluation {
+  score: number;
+  correct_points: string[];
+  missing_points: string[];
+  feedback: string;
+  suggested_study: string;
 }
 
 export interface PaperCandidate {

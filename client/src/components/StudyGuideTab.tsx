@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { StudyGuide, ConceptGuide } from '../types/api';
 
@@ -155,12 +155,7 @@ function FlashCardView({
   const handleMarkKnown = useCallback(() => {
     setKnownSet((prev) => {
       const next = new Set(prev);
-      if (next.has(effectiveIndex)) {
-        next.delete(effectiveIndex);
-      } else {
-        next.add(effectiveIndex);
-        next.delete(effectiveIndex); // remove from learning if present
-      }
+      next.has(effectiveIndex) ? next.delete(effectiveIndex) : next.add(effectiveIndex);
       return next;
     });
     setLearningSet((prev) => {
@@ -173,12 +168,7 @@ function FlashCardView({
   const handleMarkLearning = useCallback(() => {
     setLearningSet((prev) => {
       const next = new Set(prev);
-      if (next.has(effectiveIndex)) {
-        next.delete(effectiveIndex);
-      } else {
-        next.add(effectiveIndex);
-        next.delete(effectiveIndex); // remove from known if present
-      }
+      next.has(effectiveIndex) ? next.delete(effectiveIndex) : next.add(effectiveIndex);
       return next;
     });
     setKnownSet((prev) => {
@@ -220,6 +210,42 @@ function FlashCardView({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
+  const touchStartX = useRef(0);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    if (Math.abs(dx) > 50) {
+      if (dx > 0) handlePrev();
+      else handleNext();
+    }
+  }, [handlePrev, handleNext]);
+
+  const variant = isKnown ? 'known' : isLearning ? 'learning' : 'default';
+  const v = {
+    known: {
+      face: 'bg-gradient-to-br from-green-50 to-green-100 border-green-300 dark:from-green-900/20 dark:to-green-800/20 dark:border-green-700',
+      title: 'text-green-800 dark:text-green-300',
+      caption: 'text-green-600 dark:text-green-400',
+      badge: 'bg-green-600 dark:bg-green-500',
+    },
+    learning: {
+      face: 'bg-gradient-to-br from-yellow-50 to-yellow-100 border-yellow-300 dark:from-yellow-900/20 dark:to-yellow-800/20 dark:border-yellow-700',
+      title: 'text-yellow-800 dark:text-yellow-300',
+      caption: 'text-yellow-600 dark:text-yellow-400',
+      badge: 'bg-yellow-600 dark:bg-yellow-500',
+    },
+    default: {
+      face: 'bg-gradient-to-br from-white to-gray-50 border-gray-200 dark:from-maroon-800/40 dark:to-maroon-900/40 dark:border-maroon-700/50',
+      title: 'text-maroon-700 dark:text-gold-500',
+      caption: 'text-gray-500 dark:text-gray-400',
+      badge: '',
+    },
+  }[variant];
+
   return (
     <div className="flex flex-col items-center space-y-6 p-4">
       {/* Progress Bar */}
@@ -242,108 +268,117 @@ function FlashCardView({
         </p>
       </div>
 
-      {/* Card Counter */}
+      {/* Card Counter + Shuffle */}
       <div className="flex items-center justify-between w-full max-w-md">
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-200">
+        <span className="inline-block text-sm font-medium text-white bg-maroon-700 dark:bg-gold-500 dark:text-maroon-900 px-3 py-1 rounded-full">
           Card {currentIndex + 1} of {total}
         </span>
-        <label className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={isShuffled}
-            onChange={handleShuffle}
-            className="w-4 h-4 accent-maroon-600 rounded"
-          />
-          Shuffle
-        </label>
+        <button
+          onClick={handleShuffle}
+          className={`px-3 py-1.5 text-sm font-medium rounded-full transition-colors ${
+            isShuffled
+              ? 'bg-maroon-700 text-white dark:bg-gold-500 dark:text-maroon-900'
+              : 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+          }`}
+        >
+          {isShuffled ? 'Shuffled' : 'Shuffle'}
+        </button>
       </div>
 
-      {/* Flashcard */}
+      {/* Flashcard — proper 3D flip */}
       <motion.div
         onClick={handleFlip}
         onKeyDown={(e) => e.key === 'Enter' && handleFlip()}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
         tabIndex={0}
         role="button"
         aria-label={isFlipped ? 'Flip back to concept' : 'Flip to reveal definition'}
-        className="perspective-1000 w-full max-w-md cursor-pointer"
-        style={{ minHeight: '280px' }}
+        className="relative w-full max-w-md cursor-pointer select-none"
+        style={{ perspective: '1000px', minHeight: '360px' }}
+        whileTap={{ scale: 0.97 }}
       >
-        <AnimatePresence mode="wait">
-          {isFlipped ? (
-            <motion.div
-              key="back"
-              initial={{ rotateY: 90 }}
-              animate={{ rotateY: 0 }}
-              exit={{ rotateY: -90 }}
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
-              className="relative w-full h-full transform-style-3d backface-hidden"
-              style={{ transformStyle: 'preserve-3d' }}
+        {/* Status badge — outside flip, stays visible */}
+        {v.badge && (
+          <span className={`absolute top-3 right-3 z-10 text-[10px] font-bold uppercase tracking-widest text-white px-2 py-0.5 rounded-full ${v.badge}`}>
+            {variant === 'known' ? '✓ Known' : '? Learning'}
+          </span>
+        )}
+
+        <motion.div
+          animate={{ rotateY: isFlipped ? 180 : 0 }}
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          className="relative w-full"
+          style={{ transformStyle: 'preserve-3d', minHeight: '360px' }}
+        >
+          {/* Front face */}
+          <div
+            className={`absolute inset-0 w-full h-full rounded-xl border p-6 flex flex-col items-center justify-center shadow-xl dark:shadow-black/30 ${v.face}`}
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+            }}
+          >
+            <h3 className={`text-2xl font-bold font-serif text-center ${v.title}`}>
+              {currentConcept.concept}
+            </h3>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.3 }}
+              className={`mt-4 text-sm text-center ${v.caption}`}
             >
-              <div className="absolute inset-0 w-full h-full bg-white dark:bg-maroon-800/60 border border-gray-200 dark:border-maroon-700/50 rounded-xl shadow-lg p-6 transform-style-3d backface-hidden rotate-y-180" style={{ transform: 'rotateY(180deg)', backfaceVisibility: 'hidden' }}>
-                <div className="space-y-5">
-                  <h3 className="text-xl font-bold font-serif text-maroon-700 dark:text-gold-500 text-center">
-                    {currentConcept.concept}
-                  </h3>
+              Click or press Space to flip
+            </motion.p>
+          </div>
 
-                  <div className="space-y-1">
-                    <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-white bg-maroon-700 dark:bg-gold-500 dark:text-maroon-900 px-2 py-0.5 rounded">
-                      Definition
-                    </span>
-                    <p className="text-gray-700 dark:text-gray-200 leading-relaxed text-lg">
-                      {currentConcept.definition}
-                    </p>
-                  </div>
+          {/* Back face */}
+          <div
+            className="absolute inset-0 w-full h-full rounded-xl border bg-white dark:bg-maroon-800/60 border-gray-200 dark:border-maroon-700/50 shadow-xl dark:shadow-black/30 p-6 overflow-y-auto"
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+              transform: 'rotateY(180deg)',
+            }}
+          >
+            <div className="space-y-5">
+              <h3 className="text-xl font-bold font-serif text-maroon-700 dark:text-gold-500 text-center">
+                {currentConcept.concept}
+              </h3>
 
-                  {currentConcept.stakes && (
-                    <div className="space-y-1 pt-2 border-t border-gray-100 dark:border-maroon-700/30">
-                      <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-white bg-blue-600 dark:bg-blue-500 px-2 py-0.5 rounded">
-                        Why It Matters
-                      </span>
-                      <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
-                        {currentConcept.stakes}
-                      </p>
-                    </div>
-                  )}
+              <div className="space-y-1">
+                <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-white bg-maroon-700 dark:bg-gold-500 dark:text-maroon-900 px-2 py-0.5 rounded">
+                  Definition
+                </span>
+                <p className="text-gray-700 dark:text-gray-200 leading-relaxed text-lg">
+                  {currentConcept.definition}
+                </p>
+              </div>
 
-                  {currentConcept.exam_trap && (
-                    <div className="space-y-1 pt-2 border-t border-gray-100 dark:border-maroon-700/30">
-                      <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-white bg-red-600 dark:bg-red-500 px-2 py-0.5 rounded">
-                        Exam Trap
-                      </span>
-                      <p className="text-gray-700 dark:text-gray-200 leading-relaxed bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-800/50 rounded p-3 text-sm">
-                        {currentConcept.exam_trap}
-                      </p>
-                    </div>
-                  )}
+              {currentConcept.stakes && (
+                <div className="space-y-1 pt-2 border-t border-gray-100 dark:border-maroon-700/30">
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-white bg-blue-600 dark:bg-blue-500 px-2 py-0.5 rounded">
+                    Why It Matters
+                  </span>
+                  <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
+                    {currentConcept.stakes}
+                  </p>
                 </div>
-              </div>
-            </motion.div>
-          ) : (
-            <motion.div
-              key="front"
-              initial={{ rotateY: -90 }}
-              animate={{ rotateY: 0 }}
-              exit={{ rotateY: 90 }}
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
-              className="relative w-full h-full transform-style-3d backface-hidden"
-              style={{ transformStyle: 'preserve-3d' }}
-            >
-              <div className="absolute inset-0 w-full h-full bg-white dark:bg-maroon-800/60 border border-gray-200 dark:border-maroon-700/50 rounded-xl shadow-lg p-6 flex flex-col items-center justify-center transform-style-3d backface-hidden" style={{ backfaceVisibility: 'hidden' }}>
-                <h3 className="text-2xl font-bold font-serif text-maroon-700 dark:text-gold-500 text-center">
-                  {currentConcept.concept}
-                </h3>
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2, duration: 0.3 }}
-                  className="mt-4 text-sm text-gray-500 dark:text-gray-400 text-center"
-                >
-                  Click or press Space to flip
-                </motion.p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              )}
+
+              {currentConcept.exam_trap && (
+                <div className="space-y-1 pt-2 border-t border-gray-100 dark:border-maroon-700/30">
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-white bg-red-600 dark:bg-red-500 px-2 py-0.5 rounded">
+                    Exam Trap
+                  </span>
+                  <p className="text-gray-700 dark:text-gray-200 leading-relaxed bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-800/50 rounded p-3 text-sm">
+                    {currentConcept.exam_trap}
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
 
       {/* Navigation */}
@@ -394,7 +429,7 @@ function FlashCardView({
 
       {/* Keyboard hint */}
       <p className="text-xs text-gray-400 dark:text-gray-500 text-center">
-        Space/→ flip&nbsp;|&nbsp;← back&nbsp;|&nbsp;↑ known&nbsp;|&nbsp;↓ learning
+        Space/→ flip&nbsp;|&nbsp;← back&nbsp;|&nbsp;↑ known&nbsp;|&nbsp;↓ learning&nbsp;|&nbsp;swipe on mobile
       </p>
     </div>
   );

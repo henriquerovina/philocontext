@@ -4,30 +4,6 @@
   "graph": {
     "hyperedges": [
       {
-        "id": "graphify_pipeline_steps",
-        "label": "Graphify Pipeline Steps",
-        "nodes": [
-          "_claude_skills_graphify_skill_ast_extraction",
-          "_claude_skills_graphify_skill_semantic_extraction",
-          "_claude_skills_graphify_skill_community_detection",
-          "_claude_skills_graphify_skill_knowledge_graph",
-          "_claude_skills_graphify_skill_audit_trail",
-          "_claude_skills_graphify_skill_pipeline",
-          "_claude_skills_graphify_skill_no_api_key",
-          "_claude_skills_graphify_skill_honesty_rules",
-          "_claude_skills_graphify_references_update_incremental",
-          "_claude_skills_graphify_references_query_traversal",
-          "_claude_skills_graphify_references_hooks_commit_hook",
-          "_claude_skills_graphify_references_exports_mcp_server",
-          "_claude_skills_graphify_references_add_watch_watch_mode",
-          "_claude_skills_graphify_references_github_clone"
-        ],
-        "relation": "participate_in",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": ".claude/skills/graphify/SKILL.md"
-      },
-      {
         "id": "improve_history_study_guide_workstream",
         "label": "Improve History Study Guide Workstream",
         "nodes": [
@@ -56,21 +32,6 @@
         "confidence": "EXTRACTED",
         "confidence_score": 1.0,
         "source_file": "server/README.md"
-      },
-      {
-        "id": "triage_workflow",
-        "label": "Triage Workflow State Machine",
-        "nodes": [
-          "docs_agents_triage_labels_needs_triage",
-          "docs_agents_triage_labels_needs_info",
-          "docs_agents_triage_labels_ready_for_agent",
-          "docs_agents_triage_labels_ready_for_human",
-          "docs_agents_triage_labels_wontfix"
-        ],
-        "relation": "participate_in",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "docs/agents/triage-labels.md"
       },
       {
         "id": "social_platform_link_icons",
@@ -733,8 +694,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "client_src_app",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "app.tsx"
     },
     {
@@ -744,8 +705,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "client_src_app_app",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "app()"
     },
     {
@@ -799,8 +760,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "client_src_components_candidatepicker",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "candidatepicker.tsx"
     },
     {
@@ -810,8 +771,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "client_src_components_candidatepicker_candidatepickerprops",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "candidatepickerprops"
     },
     {
@@ -821,8 +782,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "client_src_components_candidatepicker_candidatepicker",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "candidatepicker()"
     },
     {
@@ -832,8 +793,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "client_src_components_historytab",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 56,
+      "community_name": "HistoryTab.tsx",
       "norm_label": "historytab.tsx"
     },
     {
@@ -843,8 +804,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "client_src_components_historytab_historytabprops",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 56,
+      "community_name": "HistoryTab.tsx",
       "norm_label": "historytabprops"
     },
     {
@@ -854,8 +815,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "client_src_components_historytab_historytab",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 56,
+      "community_name": "HistoryTab.tsx",
       "norm_label": "historytab()"
     },
     {
@@ -865,74 +826,74 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "client_src_components_results",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 53,
+      "community_name": "Results.tsx",
       "norm_label": "results.tsx"
     },
     {
       "label": "ResultsProps",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "client_src_components_results_resultsprops",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 53,
+      "community_name": "Results.tsx",
       "norm_label": "resultsprops"
     },
     {
       "label": "Results()",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L15",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "client_src_components_results_results",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 53,
+      "community_name": "Results.tsx",
       "norm_label": "results()"
     },
     {
       "label": "MetadataTab()",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L172",
+      "source_location": "L178",
       "_origin": "ast",
       "id": "client_src_components_results_metadatatab",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 53,
+      "community_name": "Results.tsx",
       "norm_label": "metadatatab()"
     },
     {
       "label": "AuthorPhoto",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L237",
+      "source_location": "L243",
       "_origin": "ast",
       "id": "client_src_components_results_authorphoto",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 53,
+      "community_name": "Results.tsx",
       "norm_label": "authorphoto"
     },
     {
       "label": "useAuthorPhoto()",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L242",
+      "source_location": "L248",
       "_origin": "ast",
       "id": "client_src_components_results_useauthorphoto",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 53,
+      "community_name": "Results.tsx",
       "norm_label": "useauthorphoto()"
     },
     {
       "label": "getInitials()",
       "file_type": "code",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L291",
+      "source_location": "L297",
       "_origin": "ast",
       "id": "client_src_components_results_getinitials",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 53,
+      "community_name": "Results.tsx",
       "norm_label": "getinitials()"
     },
     {
@@ -1041,8 +1002,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "client_src_components_tabs",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 60,
+      "community_name": "Tabs.tsx",
       "norm_label": "tabs.tsx"
     },
     {
@@ -1052,8 +1013,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "client_src_components_tabs_tab",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 60,
+      "community_name": "Tabs.tsx",
       "norm_label": "tab"
     },
     {
@@ -1063,8 +1024,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "client_src_components_tabs_tabsprops",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 60,
+      "community_name": "Tabs.tsx",
       "norm_label": "tabsprops"
     },
     {
@@ -1074,8 +1035,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "client_src_components_tabs_tabs",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 60,
+      "community_name": "Tabs.tsx",
       "norm_label": "tabs()"
     },
     {
@@ -1085,8 +1046,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "client_src_components_themetoggle",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "themetoggle.tsx"
     },
     {
@@ -1096,9 +1057,185 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "client_src_components_themetoggle_themetoggle",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "themetoggle()"
+    },
+    {
+      "label": "UnderstandingCheck.tsx",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "understandingcheck.tsx"
+    },
+    {
+      "label": "UnderstandingCheckProps",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_understandingcheckprops",
+      "community": 53,
+      "community_name": "Results.tsx",
+      "norm_label": "understandingcheckprops"
+    },
+    {
+      "label": "Stage",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_stage",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "stage"
+    },
+    {
+      "label": "SpeechRecognitionEvent",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_speechrecognitionevent",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "speechrecognitionevent"
+    },
+    {
+      "label": "SpeechRecognitionResultList",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_speechrecognitionresultlist",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "speechrecognitionresultlist"
+    },
+    {
+      "label": ".item()",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_speechrecognitionresultlist_item",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": ".item()"
+    },
+    {
+      "label": "SpeechRecognitionResult",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_speechrecognitionresult",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "speechrecognitionresult"
+    },
+    {
+      "label": ".item()",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_speechrecognitionresult_item",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": ".item()"
+    },
+    {
+      "label": "SpeechRecognitionAlternative",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_speechrecognitionalternative",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "speechrecognitionalternative"
+    },
+    {
+      "label": "SpeechRecognitionInstance",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_speechrecognitioninstance",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "speechrecognitioninstance"
+    },
+    {
+      "label": ".start()",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_speechrecognitioninstance_start",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": ".start()"
+    },
+    {
+      "label": ".stop()",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_speechrecognitioninstance_stop",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": ".stop()"
+    },
+    {
+      "label": ".abort()",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_speechrecognitioninstance_abort",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": ".abort()"
+    },
+    {
+      "label": "Window",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_window",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "window"
+    },
+    {
+      "label": "getSpeechRecognition()",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_getspeechrecognition",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "getspeechrecognition()"
+    },
+    {
+      "label": "UnderstandingCheck()",
+      "file_type": "code",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "client_src_components_understandingcheck_understandingcheck",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "understandingcheck()"
     },
     {
       "label": "Upload.tsx",
@@ -1107,8 +1244,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "client_src_components_upload",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "upload.tsx"
     },
     {
@@ -1118,8 +1255,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "client_src_components_upload_uploadprops",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "uploadprops"
     },
     {
@@ -1129,8 +1266,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "client_src_components_upload_upload",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "upload()"
     },
     {
@@ -1283,8 +1420,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "client_src_main",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "main.tsx"
     },
     {
@@ -1404,8 +1541,8 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "client_src_types_api_historicalcontext",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 56,
+      "community_name": "HistoryTab.tsx",
       "norm_label": "historicalcontext"
     },
     {
@@ -1437,26 +1574,48 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "client_src_types_api_analysisresult",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 53,
+      "community_name": "Results.tsx",
       "norm_label": "analysisresult"
+    },
+    {
+      "label": "DebateQuestion",
+      "file_type": "code",
+      "source_file": "client/src/types/api.ts",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "client_src_types_api_debatequestion",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "debatequestion"
+    },
+    {
+      "label": "AnswerEvaluation",
+      "file_type": "code",
+      "source_file": "client/src/types/api.ts",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "client_src_types_api_answerevaluation",
+      "community": 7,
+      "community_name": "UnderstandingCheck.tsx",
+      "norm_label": "answerevaluation"
     },
     {
       "label": "PaperCandidate",
       "file_type": "code",
       "source_file": "client/src/types/api.ts",
-      "source_location": "L84",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "client_src_types_api_papercandidate",
-      "community": 0,
-      "community_name": "api.ts",
+      "community": 9,
+      "community_name": "App.tsx",
       "norm_label": "papercandidate"
     },
     {
       "label": "IdentifyCandidatesResponse",
       "file_type": "code",
       "source_file": "client/src/types/api.ts",
-      "source_location": "L92",
+      "source_location": "L108",
       "_origin": "ast",
       "id": "client_src_types_api_identifycandidatesresponse",
       "community": 0,
@@ -1809,7 +1968,7 @@
       "_origin": "ast",
       "id": "server_agents_argument_agent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "argument_agent.py"
     },
     {
@@ -1820,7 +1979,7 @@
       "_origin": "ast",
       "id": "server_agents_argument_agent_argumentagent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "argumentagent"
     },
     {
@@ -1831,7 +1990,7 @@
       "_origin": "ast",
       "id": "server_agents_argument_agent_argumentagent_init",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".__init__()"
     },
     {
@@ -1842,7 +2001,7 @@
       "_origin": "ast",
       "id": "server_agents_argument_agent_argumentagent_process",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".process()"
     },
     {
@@ -1853,7 +2012,7 @@
       "_origin": "ast",
       "id": "server_agents_base_agent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "base_agent.py"
     },
     {
@@ -1864,7 +2023,7 @@
       "_origin": "ast",
       "id": "server_agents_base_agent_baseagent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "baseagent"
     },
     {
@@ -1875,7 +2034,7 @@
       "_origin": "ast",
       "id": "abc",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "abc"
     },
     {
@@ -1886,7 +2045,7 @@
       "_origin": "ast",
       "id": "server_agents_base_agent_baseagent_init",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".__init__()"
     },
     {
@@ -1897,7 +2056,7 @@
       "_origin": "ast",
       "id": "server_agents_base_agent_baseagent_call_llm",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".call_llm()"
     },
     {
@@ -1908,8 +2067,63 @@
       "_origin": "ast",
       "id": "server_agents_base_agent_baseagent_process",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".process()"
+    },
+    {
+      "label": "debate_agent.py",
+      "file_type": "code",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_agents_debate_agent",
+      "community": 48,
+      "community_name": "orchestrator.py",
+      "norm_label": "debate_agent.py"
+    },
+    {
+      "label": "DebateAgent",
+      "file_type": "code",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "server_agents_debate_agent_debateagent",
+      "community": 48,
+      "community_name": "orchestrator.py",
+      "norm_label": "debateagent"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "server_agents_debate_agent_debateagent_init",
+      "community": 48,
+      "community_name": "orchestrator.py",
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".generate_questions()",
+      "file_type": "code",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "server_agents_debate_agent_debateagent_generate_questions",
+      "community": 48,
+      "community_name": "orchestrator.py",
+      "norm_label": ".generate_questions()"
+    },
+    {
+      "label": ".evaluate_answer()",
+      "file_type": "code",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "server_agents_debate_agent_debateagent_evaluate_answer",
+      "community": 48,
+      "community_name": "orchestrator.py",
+      "norm_label": ".evaluate_answer()"
     },
     {
       "label": "exam_agent.py",
@@ -1919,7 +2133,7 @@
       "_origin": "ast",
       "id": "server_agents_exam_agent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "exam_agent.py"
     },
     {
@@ -1930,7 +2144,7 @@
       "_origin": "ast",
       "id": "server_agents_exam_agent_examagent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "examagent"
     },
     {
@@ -1941,7 +2155,7 @@
       "_origin": "ast",
       "id": "server_agents_exam_agent_examagent_init",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".__init__()"
     },
     {
@@ -1952,7 +2166,7 @@
       "_origin": "ast",
       "id": "server_agents_exam_agent_examagent_process",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".process()"
     },
     {
@@ -1963,7 +2177,7 @@
       "_origin": "ast",
       "id": "server_agents_history_agent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "history_agent.py"
     },
     {
@@ -1974,7 +2188,7 @@
       "_origin": "ast",
       "id": "server_agents_history_agent_historyagent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "historyagent"
     },
     {
@@ -1985,7 +2199,7 @@
       "_origin": "ast",
       "id": "server_agents_history_agent_historyagent_init",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".__init__()"
     },
     {
@@ -1996,7 +2210,7 @@
       "_origin": "ast",
       "id": "server_agents_history_agent_historyagent_process",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".process()"
     },
     {
@@ -2007,7 +2221,7 @@
       "_origin": "ast",
       "id": "server_agents_identify_agent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "identify_agent.py"
     },
     {
@@ -2018,7 +2232,7 @@
       "_origin": "ast",
       "id": "server_agents_identify_agent_identifyagent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "identifyagent"
     },
     {
@@ -2029,7 +2243,7 @@
       "_origin": "ast",
       "id": "server_agents_identify_agent_identifyagent_init",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".__init__()"
     },
     {
@@ -2040,7 +2254,7 @@
       "_origin": "ast",
       "id": "server_agents_identify_agent_identifyagent_process",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".process()"
     },
     {
@@ -2051,7 +2265,7 @@
       "_origin": "ast",
       "id": "server_agents_identify_agent_identifyagent_generate_synthetic_text",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".generate_synthetic_text()"
     },
     {
@@ -2062,7 +2276,7 @@
       "_origin": "ast",
       "id": "server_agents_metadata_agent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "metadata_agent.py"
     },
     {
@@ -2073,7 +2287,7 @@
       "_origin": "ast",
       "id": "server_agents_metadata_agent_metadataagent",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "metadataagent"
     },
     {
@@ -2084,7 +2298,7 @@
       "_origin": "ast",
       "id": "server_agents_metadata_agent_metadataagent_init",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".__init__()"
     },
     {
@@ -2095,7 +2309,7 @@
       "_origin": "ast",
       "id": "server_agents_metadata_agent_metadataagent_process",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".process()"
     },
     {
@@ -2106,7 +2320,7 @@
       "_origin": "ast",
       "id": "server_api",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "api.py"
     },
     {
@@ -2117,18 +2331,18 @@
       "_origin": "ast",
       "id": "post",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "post"
     },
     {
       "label": "analyze_pdf()",
       "file_type": "code",
       "source_file": "server/api.py",
-      "source_location": "L25",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "server_api_analyze_pdf",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "analyze_pdf()"
     },
     {
@@ -2139,30 +2353,52 @@
       "_origin": "ast",
       "id": "uploadfile",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "uploadfile"
     },
     {
       "label": "identify_paper()",
       "file_type": "code",
       "source_file": "server/api.py",
-      "source_location": "L51",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "server_api_identify_paper",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "identify_paper()"
     },
     {
       "label": "analyze_identified()",
       "file_type": "code",
       "source_file": "server/api.py",
-      "source_location": "L68",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "server_api_analyze_identified",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "analyze_identified()"
+    },
+    {
+      "label": "debate_questions()",
+      "file_type": "code",
+      "source_file": "server/api.py",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "server_api_debate_questions",
+      "community": 1,
+      "community_name": "models.py",
+      "norm_label": "debate_questions()"
+    },
+    {
+      "label": "debate_evaluate()",
+      "file_type": "code",
+      "source_file": "server/api.py",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "server_api_debate_evaluate",
+      "community": 1,
+      "community_name": "models.py",
+      "norm_label": "debate_evaluate()"
     },
     {
       "label": "get",
@@ -2172,18 +2408,18 @@
       "_origin": "ast",
       "id": "get",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "get"
     },
     {
       "label": "health()",
       "file_type": "code",
       "source_file": "server/api.py",
-      "source_location": "L80",
+      "source_location": "L112",
       "_origin": "ast",
       "id": "server_api_health",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "health()"
     },
     {
@@ -2194,7 +2430,7 @@
       "_origin": "ast",
       "id": "server_config",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": "config.py"
     },
     {
@@ -2215,7 +2451,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_extractors_image_extractor",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "image_extractor.py"
     },
@@ -2226,7 +2462,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "server_extractors_image_extractor_imageparser",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "imageparser"
     },
@@ -2237,7 +2473,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "server_extractors_image_extractor_imageparser_init",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": ".__init__()"
     },
@@ -2248,7 +2484,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "server_extractors_image_extractor_imageparser_extract_text",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": ".extract_text()"
     },
@@ -2259,7 +2495,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "server_extractors_image_extractor_imageparser_extract_specific_section",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": ".extract_specific_section()"
     },
@@ -2270,7 +2506,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_extractors_pdf_extractor",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "pdf_extractor.py"
     },
@@ -2281,7 +2517,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "server_extractors_pdf_extractor_philoparser",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "philoparser"
     },
@@ -2292,7 +2528,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "server_extractors_pdf_extractor_philoparser_init",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": ".__init__()"
     },
@@ -2303,7 +2539,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "server_extractors_pdf_extractor_philoparser_extract_text",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": ".extract_text()"
     },
@@ -2314,7 +2550,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "server_extractors_pdf_extractor_philoparser_extract_specific_section",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": ".extract_specific_section()"
     },
@@ -2325,7 +2561,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_main",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "main.py"
     },
@@ -2336,7 +2572,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "server_main_run",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "run()"
     },
@@ -2347,7 +2583,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_main_rationale_1",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "cli for testing the analysis pipeline without the api server.  usage: python mai"
     },
@@ -2359,7 +2595,7 @@
       "_origin": "ast",
       "id": "server_models",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "models.py"
     },
     {
@@ -2370,7 +2606,7 @@
       "_origin": "ast",
       "id": "server_models_philosophymetadata",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "philosophymetadata"
     },
     {
@@ -2381,7 +2617,7 @@
       "_origin": "ast",
       "id": "basemodel",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "basemodel"
     },
     {
@@ -2392,7 +2628,7 @@
       "_origin": "ast",
       "id": "server_models_argumentthesis",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "argumentthesis"
     },
     {
@@ -2403,7 +2639,7 @@
       "_origin": "ast",
       "id": "server_models_premise",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "premise"
     },
     {
@@ -2414,7 +2650,7 @@
       "_origin": "ast",
       "id": "server_models_conclusion",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "conclusion"
     },
     {
@@ -2425,7 +2661,7 @@
       "_origin": "ast",
       "id": "server_models_argumentreconstruction",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "argumentreconstruction"
     },
     {
@@ -2436,7 +2672,7 @@
       "_origin": "ast",
       "id": "server_models_fallacy",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "fallacy"
     },
     {
@@ -2447,7 +2683,7 @@
       "_origin": "ast",
       "id": "server_models_objection",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "objection"
     },
     {
@@ -2458,7 +2694,7 @@
       "_origin": "ast",
       "id": "server_models_argumentanalysis",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "argumentanalysis"
     },
     {
@@ -2468,7 +2704,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "server_models_historicalsection",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "historicalsection"
     },
@@ -2479,7 +2715,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "server_models_historicalcontext",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "historicalcontext"
     },
@@ -2490,7 +2726,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "server_models_conceptguide",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "conceptguide"
     },
@@ -2501,7 +2737,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "server_models_studyguide",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "studyguide"
     },
@@ -2513,7 +2749,7 @@
       "_origin": "ast",
       "id": "server_models_analysisresult",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "analysisresult"
     },
     {
@@ -2524,7 +2760,7 @@
       "_origin": "ast",
       "id": "server_models_analysisrequest",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "analysisrequest"
     },
     {
@@ -2534,7 +2770,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "server_models_researchpacket",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "researchpacket"
     },
@@ -2542,44 +2778,88 @@
       "label": "IdentifyPaperRequest",
       "file_type": "code",
       "source_file": "server/models.py",
-      "source_location": "L100",
+      "source_location": "L101",
       "_origin": "ast",
       "id": "server_models_identifypaperrequest",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "identifypaperrequest"
     },
     {
       "label": "PaperCandidate",
       "file_type": "code",
       "source_file": "server/models.py",
-      "source_location": "L104",
+      "source_location": "L105",
       "_origin": "ast",
       "id": "server_models_papercandidate",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "papercandidate"
     },
     {
       "label": "IdentifyCandidatesResponse",
       "file_type": "code",
       "source_file": "server/models.py",
-      "source_location": "L112",
+      "source_location": "L113",
       "_origin": "ast",
       "id": "server_models_identifycandidatesresponse",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "identifycandidatesresponse"
+    },
+    {
+      "label": "DebateQuestion",
+      "file_type": "code",
+      "source_file": "server/models.py",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "server_models_debatequestion",
+      "community": 1,
+      "community_name": "models.py",
+      "norm_label": "debatequestion"
+    },
+    {
+      "label": "DebateQuestionsRequest",
+      "file_type": "code",
+      "source_file": "server/models.py",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "server_models_debatequestionsrequest",
+      "community": 1,
+      "community_name": "models.py",
+      "norm_label": "debatequestionsrequest"
+    },
+    {
+      "label": "EvaluateAnswerRequest",
+      "file_type": "code",
+      "source_file": "server/models.py",
+      "source_location": "L131",
+      "_origin": "ast",
+      "id": "server_models_evaluateanswerrequest",
+      "community": 1,
+      "community_name": "models.py",
+      "norm_label": "evaluateanswerrequest"
+    },
+    {
+      "label": "AnswerEvaluation",
+      "file_type": "code",
+      "source_file": "server/models.py",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "server_models_answerevaluation",
+      "community": 1,
+      "community_name": "models.py",
+      "norm_label": "answerevaluation"
     },
     {
       "label": "AnalyzeCandidateRequest",
       "file_type": "code",
       "source_file": "server/models.py",
-      "source_location": "L116",
+      "source_location": "L145",
       "_origin": "ast",
       "id": "server_models_analyzecandidaterequest",
       "community": 1,
-      "community_name": "orchestrator.py",
+      "community_name": "models.py",
       "norm_label": "analyzecandidaterequest"
     },
     {
@@ -2589,7 +2869,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_orchestrator",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "orchestrator.py"
     },
@@ -2600,7 +2880,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "server_orchestrator_philosophyanalyzer",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": "philosophyanalyzer"
     },
@@ -2612,7 +2892,7 @@
       "_origin": "ast",
       "id": "server_orchestrator_philosophyanalyzer_init",
       "community": 48,
-      "community_name": "BaseAgent",
+      "community_name": "orchestrator.py",
       "norm_label": ".__init__()"
     },
     {
@@ -2622,7 +2902,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "server_orchestrator_philosophyanalyzer_identify_paper",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": ".identify_paper()"
     },
@@ -2633,7 +2913,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "server_orchestrator_philosophyanalyzer_analyze_identified_paper",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": ".analyze_identified_paper()"
     },
@@ -2641,10 +2921,10 @@
       "label": ".analyze_paper()",
       "file_type": "code",
       "source_file": "server/orchestrator.py",
-      "source_location": "L94",
+      "source_location": "L95",
       "_origin": "ast",
       "id": "server_orchestrator_philosophyanalyzer_analyze_paper",
-      "community": 1,
+      "community": 48,
       "community_name": "orchestrator.py",
       "norm_label": ".analyze_paper()"
     },
@@ -2666,8 +2946,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_philo_frontend_package",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "philo-frontend/package.json"
     },
     {
@@ -2677,8 +2957,8 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "server_philo_frontend_package_name",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "name"
     },
     {
@@ -2688,8 +2968,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "server_philo_frontend_package_private",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "private"
     },
     {
@@ -2699,8 +2979,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "server_philo_frontend_package_version",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "version"
     },
     {
@@ -2710,8 +2990,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "server_philo_frontend_package_type",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "type"
     },
     {
@@ -2721,8 +3001,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "server_philo_frontend_package_scripts",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "scripts"
     },
     {
@@ -2732,8 +3012,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "server_philo_frontend_package_scripts_dev",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "dev"
     },
     {
@@ -2743,8 +3023,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "server_philo_frontend_package_scripts_build",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "build"
     },
     {
@@ -2754,8 +3034,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "server_philo_frontend_package_scripts_lint",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "lint"
     },
     {
@@ -2765,8 +3045,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "server_philo_frontend_package_scripts_preview",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "preview"
     },
     {
@@ -2776,8 +3056,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "server_philo_frontend_package_dependencies",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "dependencies"
     },
     {
@@ -2787,8 +3067,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "server_philo_frontend_package_dependencies_tailwindcss_postcss",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "@tailwindcss/postcss"
     },
     {
@@ -2798,8 +3078,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tailwindcss_postcss",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "@tailwindcss/postcss"
     },
     {
@@ -2809,8 +3089,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "server_philo_frontend_package_dependencies_react",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "react"
     },
     {
@@ -2820,8 +3100,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "server_philo_frontend_package_json_react",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "react"
     },
     {
@@ -2831,8 +3111,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "server_philo_frontend_package_dependencies_react_dom",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "react-dom"
     },
     {
@@ -2842,8 +3122,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "server_philo_frontend_package_json_react_dom",
-      "community": 9,
-      "community_name": "philo-frontend/package.json",
+      "community": 3,
+      "community_name": "devDependencies",
       "norm_label": "react-dom"
     },
     {
@@ -3153,61 +3433,6 @@
       "community": 22,
       "community_name": "App.jsx",
       "norm_label": "app()"
-    },
-    {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": ".claude/CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "claude_claude",
-      "community": 56,
-      "community_name": "CLAUDE.md",
-      "norm_label": "claude.md"
-    },
-    {
-      "label": "graphify",
-      "file_type": "document",
-      "source_file": ".claude/CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "claude_claude_graphify",
-      "community": 56,
-      "community_name": "CLAUDE.md",
-      "norm_label": "graphify"
-    },
-    {
-      "label": ".claude/skills/graphify/references/transcribe.md",
-      "file_type": "document",
-      "source_file": ".claude/skills/graphify/references/transcribe.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "claude_skills_graphify_references_transcribe",
-      "community": 53,
-      "community_name": "graphify reference: transcribe video and audio",
-      "norm_label": ".claude/skills/graphify/references/transcribe.md"
-    },
-    {
-      "label": "graphify reference: transcribe video and audio",
-      "file_type": "document",
-      "source_file": ".claude/skills/graphify/references/transcribe.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "claude_skills_graphify_references_transcribe_graphify_reference_transcribe_video_and_audio",
-      "community": 53,
-      "community_name": "graphify reference: transcribe video and audio",
-      "norm_label": "graphify reference: transcribe video and audio"
-    },
-    {
-      "label": "Step 2.5 - Transcribe video / audio files (only if video files detected)",
-      "file_type": "document",
-      "source_file": ".claude/skills/graphify/references/transcribe.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "claude_skills_graphify_references_transcribe_step_2_5_transcribe_video_audio_files_only_if_video_files_detected",
-      "community": 53,
-      "community_name": "graphify reference: transcribe video and audio",
-      "norm_label": "step 2.5 - transcribe video / audio files (only if video files detected)"
     },
     {
       "label": "SKILL.md",
@@ -3793,7 +4018,7 @@
       "norm_label": "for /graphify explain"
     },
     {
-      "label": ".opencode/skills/graphify/references/transcribe.md",
+      "label": "transcribe.md",
       "file_type": "document",
       "source_file": ".opencode/skills/graphify/references/transcribe.md",
       "source_location": "L1",
@@ -3801,7 +4026,7 @@
       "id": "opencode_skills_graphify_references_transcribe",
       "community": 55,
       "community_name": "graphify reference: transcribe video and audio",
-      "norm_label": ".opencode/skills/graphify/references/transcribe.md"
+      "norm_label": "transcribe.md"
     },
     {
       "label": "graphify reference: transcribe video and audio",
@@ -3881,7 +4106,7 @@
       "rationale": "Upload philosophy PDF \u2192 get rich context (metadata, historical background, study guide)",
       "community": 6,
       "norm_label": "philocontext",
-      "community_name": "Graphify",
+      "community_name": "Improve Historical Context & Study Guide Plan",
       "id": "readme_philocontext"
     },
     {
@@ -3896,7 +4121,7 @@
       "rationale": "client/ (React+Vite port 5173), server/ (FastAPI port 8000)",
       "community": 6,
       "norm_label": "client/server architecture",
-      "community_name": "Graphify",
+      "community_name": "Improve Historical Context & Study Guide Plan",
       "id": "readme_architecture"
     },
     {
@@ -3910,38 +4135,8 @@
       "contributor": null,
       "community": 6,
       "norm_label": "quick start setup",
-      "community_name": "Graphify",
+      "community_name": "Improve Historical Context & Study Guide Plan",
       "id": "readme_quick_start"
-    },
-    {
-      "label": "Agent Skills System",
-      "file_type": "concept",
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "CLAUDE.md defines issue tracker, triage labels, domain docs, and graphify integration for agent sessions",
-      "community": 6,
-      "norm_label": "agent skills system",
-      "community_name": "Graphify",
-      "id": "claude_agent_skills"
-    },
-    {
-      "label": "Graphify CLI Integration",
-      "file_type": "concept",
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Project has knowledge graph at graphify-out/; use graphify query before raw browsing",
-      "community": 6,
-      "norm_label": "graphify cli integration",
-      "community_name": "Graphify",
-      "id": "claude_graphify"
     },
     {
       "label": "Graphify Usage Rules",
@@ -3955,323 +4150,8 @@
       "rationale": "Prefer graphify query/path/explain over raw grep; dirty graph files expected; use wiki/index.md for broad navigation; run graphify update after code changes",
       "community": 6,
       "norm_label": "graphify usage rules",
-      "community_name": "Graphify",
+      "community_name": "Improve Historical Context & Study Guide Plan",
       "id": "agents_graphify_rules"
-    },
-    {
-      "label": "Graphify",
-      "file_type": "concept",
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Turns any folder into a navigable knowledge graph with community detection, audit trail, and HTML/JSON/report outputs",
-      "community": 6,
-      "norm_label": "graphify",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_skill_graphify"
-    },
-    {
-      "label": "Knowledge Graph",
-      "file_type": "concept",
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Persistent across sessions, queryable via graphify query, built from code/docs/papers/images/video",
-      "community": 6,
-      "norm_label": "knowledge graph",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_skill_knowledge_graph"
-    },
-    {
-      "label": "Community Detection",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Surfaces cross-document connections; uses clustering algorithm on constructed graph",
-      "community": 6,
-      "norm_label": "community detection",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_skill_community_detection"
-    },
-    {
-      "label": "Audit Trail",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Three-level confidence: EXTRACTED (explicit), INFERRED (reasonable), AMBIGUOUS (uncertain). Never invent an edge.",
-      "community": 6,
-      "norm_label": "audit trail",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_skill_audit_trail"
-    },
-    {
-      "label": "Semantic Extraction",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "LLM-based extraction for docs/papers/images. Uses Gemini if key set, otherwise host agent. Parallel subagents per chunk.",
-      "community": 6,
-      "norm_label": "semantic extraction",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_skill_semantic_extraction"
-    },
-    {
-      "label": "AST Extraction",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Deterministic structural extraction for code files. No LLM, no API key needed. Runs in parallel with semantic extraction.",
-      "community": 6,
-      "norm_label": "ast extraction",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_skill_ast_extraction"
-    },
-    {
-      "label": "Honesty Rules",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Never invent an edge; never skip corpus check warning; always show token cost; show raw cohesion scores; warn before >5000 node viz",
-      "community": 6,
-      "norm_label": "honesty rules",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_skill_honesty_rules"
-    },
-    {
-      "label": "Fast Path Query",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "If graphify-out/graph.json exists and user asks a codebase question, skip rebuild and run graphify query immediately",
-      "community": 6,
-      "norm_label": "fast path query",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_skill_fast_path"
-    },
-    {
-      "label": "Graphify Pipeline",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Step 0-9: install check \u2192 detect files \u2192 transcribe video \u2192 extract (AST + semantic) \u2192 merge \u2192 build/cluster \u2192 health check \u2192 label \u2192 export \u2192 manifest/cleanup",
-      "community": 6,
-      "norm_label": "graphify pipeline",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_skill_pipeline"
-    },
-    {
-      "label": "No API Key Required",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "graphify never asks for API keys. Code-only corpora use AST only; semantic uses host agent or Gemini if key is set. Never blocks on missing key.",
-      "community": 6,
-      "norm_label": "no api key required",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_skill_no_api_key"
-    },
-    {
-      "label": "Node ID Format Rules",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/references/extraction-spec.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "{stem}_{entity} where stem is full repo-relative path with extension dropped, segments joined by _. Lowercase, a-z0-9_ only. Deterministic from label alone.",
-      "community": 6,
-      "norm_label": "node id format rules",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_references_extraction_spec_node_id_rules"
-    },
-    {
-      "label": "Confidence Rubric",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/references/extraction-spec.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Discrete values: EXTRACTED=1.0; INFERRED from set {0.95,0.85,0.75,0.65,0.55}; AMBIGUOUS=0.1-0.3. Never use 0.5 default.",
-      "community": 6,
-      "norm_label": "confidence rubric",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_references_extraction_spec_confidence_rubric"
-    },
-    {
-      "label": "Hyperedges",
-      "file_type": "concept",
-      "source_file": ".claude/skills/graphify/references/extraction-spec.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Group 3+ nodes in shared concept/flow/pattern not captured by pairwise edges. Max 3 per chunk.",
-      "community": 6,
-      "norm_label": "hyperedges",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_references_extraction_spec_hyperedges"
-    },
-    {
-      "label": "Incremental Update",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/references/update.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Re-extracts only new/changed files. Code-only changes skip semantic. Uses build_merge with replace-on-re-extract. Prunes deleted files.",
-      "community": 6,
-      "norm_label": "incremental update",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_references_update_incremental"
-    },
-    {
-      "label": "BFS/DFS Traversal",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/references/query.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "BFS for broad context (nearest neighbors), DFS for specific path tracing. Depth-limited. Token-budget aware output.",
-      "community": 6,
-      "norm_label": "bfs/dfs traversal",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_references_query_traversal"
-    },
-    {
-      "label": "Query Vocabulary Expansion",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/references/query.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Extract vocab from graph node labels, pick up to 12 matching tokens, use expanded string for traversal. No invented tokens.",
-      "community": 6,
-      "norm_label": "query vocabulary expansion",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_references_query_expansion"
-    },
-    {
-      "label": "Work Memory System",
-      "file_type": "rationale",
-      "source_file": ".claude/skills/graphify/references/query.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "save-result with outcome (useful/dead_end/corrected) persists lessons. reflect refreshes LESSONS.md. Self-improving loop across sessions.",
-      "community": 6,
-      "norm_label": "work memory system",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_references_query_work_memory"
-    },
-    {
-      "label": "Post-Commit Hook",
-      "file_type": "concept",
-      "source_file": ".claude/skills/graphify/references/hooks.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Auto-rebuilds graph after git commit. Only AST for code changes; doc/image changes need manual --update. Appends to existing hooks.",
-      "community": 6,
-      "norm_label": "post-commit hook",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_references_hooks_commit_hook"
-    },
-    {
-      "label": "MCP Server",
-      "file_type": "concept",
-      "source_file": ".claude/skills/graphify/references/exports.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Stdio MCP server exposing query_graph, get_node, get_neighbors, get_community, god_nodes, graph_stats, shortest_path tools",
-      "community": 6,
-      "norm_label": "mcp server",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_references_exports_mcp_server"
-    },
-    {
-      "label": "Watch Mode",
-      "file_type": "concept",
-      "source_file": ".claude/skills/graphify/references/add-watch.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Background folder watcher with 3s debounce. Code-only changes trigger auto-rebuild; doc/image changes set needs_update flag.",
-      "community": 6,
-      "norm_label": "watch mode",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_references_add_watch_watch_mode"
-    },
-    {
-      "label": "GitHub Clone Flow",
-      "file_type": "concept",
-      "source_file": ".claude/skills/graphify/references/github-and-merge.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Clones repos into ~/.graphify/repos/, supports single repo, cross-repo merge, and monorepo multi-subfolder merge",
-      "community": 6,
-      "norm_label": "github clone flow",
-      "community_name": "Graphify",
-      "id": "_claude_skills_graphify_references_github_clone"
     },
     {
       "label": "Improve Historical Context & Study Guide Plan",
@@ -4285,7 +4165,7 @@
       "rationale": "10-step plan to ground historical context and study guide in source text, return structured JSON, and build rich UI components",
       "community": 6,
       "norm_label": "improve historical context & study guide plan",
-      "community_name": "Graphify",
+      "community_name": "Improve Historical Context & Study Guide Plan",
       "id": "_opencode_plans_improve_history_study_guide_plan"
     },
     {
@@ -4300,7 +4180,7 @@
       "rationale": "Pydantic model with sections (title/content/source_quotes) and optional timeline. Replaces plain str field in AnalysisResult.",
       "community": 6,
       "norm_label": "historicalcontext model",
-      "community_name": "Graphify",
+      "community_name": "Improve Historical Context & Study Guide Plan",
       "id": "_opencode_plans_improve_history_study_guide_historical_context"
     },
     {
@@ -4315,7 +4195,7 @@
       "rationale": "Pydantic model with concepts (ConceptGuide: concept/definition/stakes/exam_trap/source_quotes). Replaces plain str in AnalysisResult.",
       "community": 6,
       "norm_label": "studyguide model",
-      "community_name": "Graphify",
+      "community_name": "Improve Historical Context & Study Guide Plan",
       "id": "_opencode_plans_improve_history_study_guide_study_guide"
     },
     {
@@ -4330,7 +4210,7 @@
       "rationale": "LLM agent that generates HistoricalContext from metadata and raw_text using json_mode=True. Falls back to flat analysis on parse failure.",
       "community": 6,
       "norm_label": "historyagent",
-      "community_name": "Graphify",
+      "community_name": "Improve Historical Context & Study Guide Plan",
       "id": "_opencode_plans_improve_history_study_guide_history_agent"
     },
     {
@@ -4345,7 +4225,7 @@
       "rationale": "LLM agent that generates StudyGuide from metadata, concepts, and raw_text using json_mode=True. Falls back to single concept on parse failure.",
       "community": 6,
       "norm_label": "examagent",
-      "community_name": "Graphify",
+      "community_name": "Improve Historical Context & Study Guide Plan",
       "id": "_opencode_plans_improve_history_study_guide_exam_agent"
     },
     {
@@ -4403,286 +4283,6 @@
       "norm_label": "philocontext html entry",
       "community_name": "Philocontext HTML Entry",
       "id": "client_indexhtml_philocontext_entry"
-    },
-    {
-      "label": "Domain Documentation Conventions",
-      "file_type": "concept",
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "domain documentation conventions",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_domain_domain_documentation"
-    },
-    {
-      "label": "CONTEXT.md",
-      "file_type": "concept",
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "context.md",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_domain_context_md"
-    },
-    {
-      "label": "CONTEXT-MAP.md",
-      "file_type": "concept",
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "context-map.md",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_domain_context_map_md"
-    },
-    {
-      "label": "Architecture Decision Record (ADR)",
-      "file_type": "rationale",
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "architecture decision record (adr)",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_domain_adr"
-    },
-    {
-      "label": "Domain Modeling (/domain-modeling)",
-      "file_type": "concept",
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "domain modeling (/domain-modeling)",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_domain_domain_modeling"
-    },
-    {
-      "label": "Glossary Vocabulary",
-      "file_type": "rationale",
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "glossary vocabulary",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_domain_glossary"
-    },
-    {
-      "label": "ADR Conflict Flagging",
-      "file_type": "rationale",
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "adr conflict flagging",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_domain_adr_conflict_flagging"
-    },
-    {
-      "label": "GitHub Issues",
-      "file_type": "concept",
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "github issues",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_issue_tracker_github_issues"
-    },
-    {
-      "label": "gh CLI",
-      "file_type": "concept",
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "gh cli",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_issue_tracker_gh_cli"
-    },
-    {
-      "label": "Wayfinder (/wayfinder)",
-      "file_type": "concept",
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "wayfinder (/wayfinder)",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_issue_tracker_wayfinder"
-    },
-    {
-      "label": "Frontier Query",
-      "file_type": "rationale",
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "frontier query",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_issue_tracker_frontier_query"
-    },
-    {
-      "label": "Native Issue Dependencies (Blocking)",
-      "file_type": "rationale",
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "native issue dependencies (blocking)",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_issue_tracker_native_dependencies"
-    },
-    {
-      "label": "Triage (/triage)",
-      "file_type": "concept",
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "triage (/triage)",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_issue_tracker_triage"
-    },
-    {
-      "label": "PR as Request Surface",
-      "file_type": "rationale",
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "pr as request surface",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_issue_tracker_pr_as_request_surface"
-    },
-    {
-      "label": "Five Canonical Triage Roles",
-      "file_type": "concept",
-      "source_file": "docs/agents/triage-labels.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "five canonical triage roles",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_triage_labels_five_roles"
-    },
-    {
-      "label": "needs-triage",
-      "file_type": "concept",
-      "source_file": "docs/agents/triage-labels.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "needs-triage",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_triage_labels_needs_triage"
-    },
-    {
-      "label": "needs-info",
-      "file_type": "concept",
-      "source_file": "docs/agents/triage-labels.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "needs-info",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_triage_labels_needs_info"
-    },
-    {
-      "label": "ready-for-agent",
-      "file_type": "concept",
-      "source_file": "docs/agents/triage-labels.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "ready-for-agent",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_triage_labels_ready_for_agent"
-    },
-    {
-      "label": "ready-for-human",
-      "file_type": "concept",
-      "source_file": "docs/agents/triage-labels.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "ready-for-human",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_triage_labels_ready_for_human"
-    },
-    {
-      "label": "wontfix",
-      "file_type": "concept",
-      "source_file": "docs/agents/triage-labels.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 7,
-      "norm_label": "wontfix",
-      "community_name": "Domain Documentation Conventions",
-      "id": "docs_agents_triage_labels_wontfix"
     },
     {
       "label": "Philocontext Backend",
@@ -6357,7 +5957,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L237",
+      "source_location": "L243",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -6368,7 +5968,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L291",
+      "source_location": "L297",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -6379,7 +5979,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L172",
+      "source_location": "L178",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -6390,7 +5990,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -6401,7 +6001,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -6412,7 +6012,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L242",
+      "source_location": "L248",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -6452,6 +6052,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
+      "target": "client_src_components_understandingcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/Results.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_results",
       "target": "client_src_lib_studies",
       "confidence_score": 1.0
     },
@@ -6460,7 +6072,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results",
@@ -6496,7 +6108,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results_resultsprops",
@@ -6509,7 +6121,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results_results",
@@ -6520,7 +6132,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L194",
+      "source_location": "L200",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results_metadatatab",
@@ -6532,7 +6144,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "client/src/components/Results.tsx",
-      "source_location": "L173",
+      "source_location": "L179",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_components_results_metadatatab",
@@ -6963,6 +6575,267 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_components_understandingcheck_getspeechrecognition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_components_understandingcheck_speechrecognitionalternative",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_components_understandingcheck_speechrecognitionevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_components_understandingcheck_speechrecognitioninstance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_components_understandingcheck_speechrecognitionresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_components_understandingcheck_speechrecognitionresultlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_components_understandingcheck_stage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_components_understandingcheck_understandingcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_components_understandingcheck_understandingcheckprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_components_understandingcheck_window",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_types_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_types_api_analysisresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_types_api_answerevaluation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck",
+      "target": "client_src_types_api_debatequestion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck_understandingcheckprops",
+      "target": "client_src_types_api_analysisresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck_speechrecognitionresultlist",
+      "target": "client_src_components_understandingcheck_speechrecognitionresultlist_item",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck_speechrecognitionresult",
+      "target": "client_src_components_understandingcheck_speechrecognitionresult_item",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck_speechrecognitioninstance",
+      "target": "client_src_components_understandingcheck_speechrecognitioninstance_abort",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck_speechrecognitioninstance",
+      "target": "client_src_components_understandingcheck_speechrecognitioninstance_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck_speechrecognitioninstance",
+      "target": "client_src_components_understandingcheck_speechrecognitioninstance_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L138",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck_understandingcheck",
+      "target": "client_src_components_understandingcheck_speechrecognitioninstance_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L143",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck_understandingcheck",
+      "target": "client_src_components_understandingcheck_speechrecognitioninstance_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/UnderstandingCheck.tsx",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_components_understandingcheck_understandingcheck",
+      "target": "client_src_components_understandingcheck_getspeechrecognition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "client/src/components/Upload.tsx",
       "source_location": "L11",
       "weight": 1.0,
@@ -7333,6 +7206,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/types/api.ts",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_types_api",
+      "target": "client_src_types_api_answerevaluation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/types/api.ts",
       "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
@@ -7388,6 +7272,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/types/api.ts",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "client_src_types_api",
+      "target": "client_src_types_api_debatequestion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/types/api.ts",
       "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
@@ -7421,7 +7316,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/types/api.ts",
-      "source_location": "L92",
+      "source_location": "L108",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_types_api",
@@ -7443,7 +7338,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/types/api.ts",
-      "source_location": "L84",
+      "source_location": "L100",
       "weight": 1.0,
       "_origin": "ast",
       "source": "client_src_types_api",
@@ -7907,6 +7802,18 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_debate_agent",
+      "target": "server_agents_base_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "server/agents/exam_agent.py",
       "source_location": "L2",
       "weight": 1.0,
@@ -7999,6 +7906,29 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_debate_agent",
+      "target": "server_agents_base_agent_baseagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L2",
+      "weight": 0.8,
+      "_origin": "ast",
+      "source": "server_agents_debate_agent_debateagent",
+      "target": "server_agents_base_agent_baseagent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "server/agents/exam_agent.py",
       "source_location": "L2",
       "weight": 1.0,
@@ -8086,6 +8016,86 @@
       "source": "server_agents_metadata_agent_metadataagent",
       "target": "server_agents_base_agent_baseagent",
       "confidence_score": 0.5
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_debate_agent",
+      "target": "server_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_debate_agent",
+      "target": "server_agents_debate_agent_debateagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_agents_debate_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_debate_agent_debateagent",
+      "target": "server_agents_debate_agent_debateagent_evaluate_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_debate_agent_debateagent",
+      "target": "server_agents_debate_agent_debateagent_generate_questions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/debate_agent.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_agents_debate_agent_debateagent",
+      "target": "server_agents_debate_agent_debateagent_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_agents_debate_agent_debateagent",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -8471,7 +8481,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api",
@@ -8483,7 +8493,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api",
@@ -8494,7 +8504,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L68",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api",
@@ -8505,7 +8515,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L25",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api",
@@ -8516,7 +8526,29 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L80",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_api_debate_evaluate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_api_debate_questions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L112",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api",
@@ -8527,7 +8559,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L51",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api",
@@ -8539,7 +8571,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api",
@@ -8551,7 +8583,43 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L6",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_models_debatequestion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_models_debatequestionsrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api",
+      "target": "server_models_evaluateanswerrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api",
@@ -8563,7 +8631,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api",
@@ -8574,7 +8642,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L67",
+      "source_location": "L70",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -8586,7 +8654,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L24",
+      "source_location": "L27",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -8598,7 +8666,31 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L50",
+      "source_location": "L97",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "source": "server_api_debate_evaluate",
+      "target": "post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "source": "server_api_debate_questions",
+      "target": "post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L53",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -8611,7 +8703,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L25",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api_analyze_pdf",
@@ -8623,7 +8715,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L51",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api_identify_paper",
@@ -8635,7 +8727,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L68",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_api_analyze_identified",
@@ -8644,9 +8736,33 @@
     },
     {
       "relation": "references",
+      "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "server/api.py",
-      "source_location": "L79",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api_debate_questions",
+      "target": "server_models_debatequestionsrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_api_debate_evaluate",
+      "target": "server_models_evaluateanswerrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "server/api.py",
+      "source_location": "L111",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -8751,7 +8867,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L97",
+      "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -8854,7 +8970,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L99",
+      "source_location": "L100",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -8956,11 +9072,22 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
-      "source_location": "L116",
+      "source_location": "L145",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_models",
       "target": "server_models_analyzecandidaterequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models",
+      "target": "server_models_answerevaluation",
       "confidence_score": 1.0
     },
     {
@@ -9022,6 +9149,39 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models",
+      "target": "server_models_debatequestion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models",
+      "target": "server_models_debatequestionsrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models",
+      "target": "server_models_evaluateanswerrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
       "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
@@ -9055,7 +9215,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
-      "source_location": "L112",
+      "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_models",
@@ -9066,7 +9226,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
-      "source_location": "L100",
+      "source_location": "L101",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_models",
@@ -9088,7 +9248,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
-      "source_location": "L104",
+      "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_models",
@@ -9188,10 +9348,21 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
-      "source_location": "L116",
+      "source_location": "L145",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_models_analyzecandidaterequest",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models_answerevaluation",
       "target": "basemodel",
       "confidence_score": 1.0
     },
@@ -9254,6 +9425,39 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models_debatequestion",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models_debatequestionsrequest",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "server_models_evaluateanswerrequest",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "server/models.py",
       "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
@@ -9287,7 +9491,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
-      "source_location": "L112",
+      "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_models_identifycandidatesresponse",
@@ -9298,7 +9502,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
-      "source_location": "L100",
+      "source_location": "L101",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_models_identifypaperrequest",
@@ -9320,7 +9524,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "server/models.py",
-      "source_location": "L104",
+      "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_models_papercandidate",
@@ -9401,7 +9605,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L141",
+      "source_location": "L142",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -9448,7 +9652,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L140",
+      "source_location": "L141",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -9495,7 +9699,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L152",
+      "source_location": "L153",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -9542,7 +9746,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/orchestrator.py",
-      "source_location": "L151",
+      "source_location": "L152",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -9588,7 +9792,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L94",
+      "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer_analyze_paper",
@@ -9621,7 +9825,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "server/orchestrator.py",
-      "source_location": "L94",
+      "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast",
       "source": "server_orchestrator_philosophyanalyzer",
@@ -10125,39 +10329,6 @@
       "_origin": "ast",
       "source": "server_philo_frontend_src_app",
       "target": "server_philo_frontend_src_app_app",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/CLAUDE.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "claude_claude",
-      "target": "claude_claude_graphify",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/graphify/references/transcribe.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "claude_skills_graphify_references_transcribe",
-      "target": "claude_skills_graphify_references_transcribe_graphify_reference_transcribe_video_and_audio",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/graphify/references/transcribe.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "claude_skills_graphify_references_transcribe_graphify_reference_transcribe_video_and_audio",
-      "target": "claude_skills_graphify_references_transcribe_step_2_5_transcribe_video_audio_files_only_if_video_files_detected",
       "confidence_score": 1.0
     },
     {
@@ -10743,26 +10914,6 @@
     },
     {
       "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_philocontext",
-      "target": "claude_agent_skills"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_philocontext",
-      "target": "claude_graphify"
-    },
-    {
-      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
@@ -10780,226 +10931,6 @@
       "weight": 1.0,
       "source": "readme_philocontext",
       "target": "readme_quick_start"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "claude_graphify",
-      "target": "agents_graphify_rules"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "agents_graphify_rules",
-      "target": "_claude_skills_graphify_skill_graphify"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/references/add-watch.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_references_add_watch_watch_mode"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/references/exports.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_references_exports_mcp_server"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/references/github-and-merge.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_references_github_clone"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/references/hooks.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_references_hooks_commit_hook"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/references/query.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_references_query_traversal"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/references/update.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_references_update_incremental"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_skill_ast_extraction"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_skill_audit_trail"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_skill_community_detection"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_skill_fast_path"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_skill_honesty_rules"
-    },
-    {
-      "relation": "produces",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_skill_knowledge_graph"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_skill_no_api_key"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_skill_pipeline"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/SKILL.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_graphify",
-      "target": "_claude_skills_graphify_skill_semantic_extraction"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/references/extraction-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_semantic_extraction",
-      "target": "_claude_skills_graphify_references_extraction_spec_confidence_rubric"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/references/extraction-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_semantic_extraction",
-      "target": "_claude_skills_graphify_references_extraction_spec_hyperedges"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/references/extraction-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_skill_semantic_extraction",
-      "target": "_claude_skills_graphify_references_extraction_spec_node_id_rules"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/references/query.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_references_query_traversal",
-      "target": "_claude_skills_graphify_references_query_expansion"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/references/query.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "_claude_skills_graphify_references_query_traversal",
-      "target": "_claude_skills_graphify_references_query_work_memory"
     },
     {
       "relation": "references",
@@ -11090,216 +11021,6 @@
       "weight": 1.0,
       "source": "client_readme_philocontext_client",
       "target": "server_readme_philocontext_backend"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_domain_domain_documentation",
-      "target": "docs_agents_domain_adr"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_domain_domain_documentation",
-      "target": "docs_agents_domain_adr_conflict_flagging"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_domain_domain_documentation",
-      "target": "docs_agents_domain_context_map_md"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_domain_domain_documentation",
-      "target": "docs_agents_domain_context_md"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_domain_domain_documentation",
-      "target": "docs_agents_domain_domain_modeling"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_domain_domain_documentation",
-      "target": "docs_agents_domain_glossary"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_domain_domain_modeling",
-      "target": "docs_agents_domain_adr"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_domain_domain_modeling",
-      "target": "docs_agents_issue_tracker_triage"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "docs/agents/domain.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_domain_domain_modeling",
-      "target": "docs_agents_issue_tracker_wayfinder"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_issue_tracker_github_issues",
-      "target": "docs_agents_issue_tracker_gh_cli"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_issue_tracker_github_issues",
-      "target": "docs_agents_issue_tracker_pr_as_request_surface"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_issue_tracker_wayfinder",
-      "target": "docs_agents_issue_tracker_github_issues"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_issue_tracker_wayfinder",
-      "target": "docs_agents_issue_tracker_frontier_query"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_issue_tracker_wayfinder",
-      "target": "docs_agents_issue_tracker_native_dependencies"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_issue_tracker_triage",
-      "target": "docs_agents_issue_tracker_pr_as_request_surface"
-    },
-    {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "docs/agents/issue-tracker.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_issue_tracker_triage",
-      "target": "docs_agents_triage_labels_five_roles"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/triage-labels.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_triage_labels_five_roles",
-      "target": "docs_agents_triage_labels_needs_info"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/triage-labels.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_triage_labels_five_roles",
-      "target": "docs_agents_triage_labels_needs_triage"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/triage-labels.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_triage_labels_five_roles",
-      "target": "docs_agents_triage_labels_ready_for_agent"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/triage-labels.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_triage_labels_five_roles",
-      "target": "docs_agents_triage_labels_ready_for_human"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/triage-labels.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_agents_triage_labels_five_roles",
-      "target": "docs_agents_triage_labels_wontfix"
     },
     {
       "relation": "references",
@@ -11714,30 +11435,6 @@
   ],
   "hyperedges": [
     {
-      "id": "graphify_pipeline_steps",
-      "label": "Graphify Pipeline Steps",
-      "nodes": [
-        "_claude_skills_graphify_skill_ast_extraction",
-        "_claude_skills_graphify_skill_semantic_extraction",
-        "_claude_skills_graphify_skill_community_detection",
-        "_claude_skills_graphify_skill_knowledge_graph",
-        "_claude_skills_graphify_skill_audit_trail",
-        "_claude_skills_graphify_skill_pipeline",
-        "_claude_skills_graphify_skill_no_api_key",
-        "_claude_skills_graphify_skill_honesty_rules",
-        "_claude_skills_graphify_references_update_incremental",
-        "_claude_skills_graphify_references_query_traversal",
-        "_claude_skills_graphify_references_hooks_commit_hook",
-        "_claude_skills_graphify_references_exports_mcp_server",
-        "_claude_skills_graphify_references_add_watch_watch_mode",
-        "_claude_skills_graphify_references_github_clone"
-      ],
-      "relation": "participate_in",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".claude/skills/graphify/SKILL.md"
-    },
-    {
       "id": "improve_history_study_guide_workstream",
       "label": "Improve History Study Guide Workstream",
       "nodes": [
@@ -11766,21 +11463,6 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/README.md"
-    },
-    {
-      "id": "triage_workflow",
-      "label": "Triage Workflow State Machine",
-      "nodes": [
-        "docs_agents_triage_labels_needs_triage",
-        "docs_agents_triage_labels_needs_info",
-        "docs_agents_triage_labels_ready_for_agent",
-        "docs_agents_triage_labels_ready_for_human",
-        "docs_agents_triage_labels_wontfix"
-      ],
-      "relation": "participate_in",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/agents/triage-labels.md"
     },
     {
       "id": "social_platform_link_icons",
@@ -11840,5 +11522,5 @@
       "source_file": "uwlax-pallete/p.png"
     }
   ],
-  "built_at_commit": "4778306a3a0020dbe31cde7204262f92e390a0b6"
+  "built_at_commit": "67f05b18589bdcbf9c696a7316f4a515d4d762e5"
 }
