@@ -83,11 +83,10 @@ class AnalysisResult(BaseModel):
     historical_context: HistoricalContext | None = None
     exam_study_guide: StudyGuide | None = None
     argument: ArgumentAnalysis | None = None
-
-
-class AnalysisRequest(BaseModel):
-    filename: str
-    section: str = "Whole Book"
+    raw_text: str | None = None
+    total_pages: int | None = None
+    pages_analyzed: str | None = None
+    truncated: bool = False
 
 
 class ResearchPacket(BaseModel):
@@ -96,6 +95,22 @@ class ResearchPacket(BaseModel):
     exam_study_guide: StudyGuide | None = None
     argument: ArgumentAnalysis | None = None
     raw_text: str | None = None
+    total_pages: int | None = None
+    pages_analyzed: str | None = None
+    truncated: bool = False
+
+
+class ChapterInfo(BaseModel):
+    title: str
+    start_page: int
+    end_page: int
+
+
+class ChapterDetectionResult(BaseModel):
+    chapters: List[ChapterInfo]
+    total_pages: int
+    source: str  # "outline" | "heuristic" | "none"
+    show_picker: bool
 
 
 class IdentifyPaperRequest(BaseModel):

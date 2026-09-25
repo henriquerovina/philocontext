@@ -8,7 +8,7 @@ from agents.exam_agent import ExamAgent
 from agents.argument_agent import ArgumentAgent
 from agents.identify_agent import IdentifyAgent
 from agents.topic_agent import TopicAgent
-from models import ResearchPacket, HistoricalContext, HistoricalSection, StudyGuide, ConceptGuide, TopicView, Objection, PhilosopherQuote
+from models import ResearchPacket, HistoricalContext, HistoricalSection, StudyGuide, ConceptGuide, TopicView, Objection, PhilosopherQuote, ChapterInfo, ChapterDetectionResult
 from config import MAX_PDF_PAGES
 
 
@@ -24,6 +24,24 @@ class PhilosophyAnalyzer:
     async def identify_paper(self, description: str) -> dict:
         identification = await asyncio.to_thread(self.identify_agent.process, description)
         return identification
+
+    async def detect_chapters(self, file_path: str) -> ChapterDetectionResult:
+        parser = PhiloParser(file_path)
+        total_pages = await asyncio.to_thread(parser.get_page_count)
+
+        if total_pages <= MAX_PDF_PAGES:
+            return ChapterDetectionResult(chapters=[], total_pages=total_pages, source="none", show_picker=False)
+
+        chapters_raw = await asyncio.to_thread(parser.detect_chapters_from_outline)
+        source = "outline"
+        if not chapters_raw:
+            chapters_raw = await asyncio.to_thread(parser.detect_chapters_heuristic)
+            source = "heuristic"
+        if not chapters_raw:
+            return ChapterDetectionResult(chapters=[], total_pages=total_pages, source="none", show_picker=False)
+
+        chapters = [ChapterInfo(**c) for c in chapters_raw]
+        return ChapterDetectionResult(chapters=chapters, total_pages=total_pages, source=source, show_picker=True)
 
     async def get_topic_view(self, philosopher: str, topic: str) -> TopicView:
         fallback = {
@@ -135,14 +153,33 @@ class PhilosophyAnalyzer:
             raw_text=synthetic_text
         )
 
-    async def analyze_paper(self, file_path: str, extension: str | None = None) -> ResearchPacket:
+    async def analyze_paper(
+        self,
+        file_path: str,
+        extension: str | None = None,
+        start_page: int | None = None,
+        end_page: int | None = None,
+    ) -> ResearchPacket:
         ext = extension or os.path.splitext(file_path)[1].lower()
-        if ext in (".png", ".jpg", ".jpeg", ".webp"):
-            parser = ImageParser(file_path)
-        else:
-            parser = PhiloParser(file_path)
+        is_pdf = ext not in (".png", ".jpg", ".jpeg", ".webp")
+        parser = PhiloParser(file_path) if is_pdf else ImageParser(file_path)
 
-        raw_text = await asyncio.to_thread(parser.extract_text, MAX_PDF_PAGES)
+        total_pages = None
+        pages_analyzed = None
+        truncated = False
+
+        if is_pdf:
+            total_pages = await asyncio.to_thread(parser.get_page_count)
+            if start_page is not None and end_page is not None:
+                raw_text = await asyncio.to_thread(parser.extract_page_range, start_page, end_page)
+                pages_analyzed = f"{start_page}-{end_page}"
+            else:
+                raw_text = await asyncio.to_thread(parser.extract_text, MAX_PDF_PAGES)
+                analyzed_end = min(MAX_PDF_PAGES, total_pages) if total_pages else MAX_PDF_PAGES
+                pages_analyzed = f"1-{analyzed_end}"
+                truncated = bool(total_pages and total_pages > MAX_PDF_PAGES)
+        else:
+            raw_text = await asyncio.to_thread(parser.extract_text, MAX_PDF_PAGES)
 
         if raw_text.startswith("Error reading"):
             raise Exception(raw_text)
@@ -203,5 +240,8 @@ class PhilosophyAnalyzer:
             historical_context=history_ctx,
             exam_study_guide=study_guide,
             argument=argument,
-            raw_text=raw_text
+            raw_text=raw_text,
+            total_pages=total_pages,
+            pages_analyzed=pages_analyzed,
+            truncated=truncated,
         )

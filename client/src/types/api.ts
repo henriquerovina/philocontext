@@ -80,6 +80,22 @@ export interface AnalysisResult {
   exam_study_guide: StudyGuide | null;
   argument: ArgumentAnalysis;
   raw_text?: string;
+  total_pages?: number | null;
+  pages_analyzed?: string | null;
+  truncated?: boolean;
+}
+
+export interface ChapterInfo {
+  title: string;
+  start_page: number;
+  end_page: number;
+}
+
+export interface ChapterDetectionResult {
+  chapters: ChapterInfo[];
+  total_pages: number;
+  source: 'outline' | 'heuristic' | 'none';
+  show_picker: boolean;
 }
 
 export interface DebateQuestion {

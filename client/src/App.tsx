@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { AnalysisResult, PaperCandidate, TopicView as TopicViewType } from './types/api';
+import { AnalysisResult, PaperCandidate, TopicView as TopicViewType, ChapterInfo } from './types/api';
 import Upload from './components/Upload';
 import CandidatePicker from './components/CandidatePicker';
+import ChapterPicker from './components/ChapterPicker';
 import Results from './components/Results';
 import StudyManager from './components/StudyManager';
 import ThemeToggle from './components/ThemeToggle';
@@ -14,17 +15,19 @@ function App() {
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [candidates, setCandidates] = useState<PaperCandidate[] | null>(null);
   const [topicView, setTopicView] = useState<TopicViewType | null>(null);
+  const [chapterInfo, setChapterInfo] = useState<{ file: File; chapters: ChapterInfo[]; totalPages: number } | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showStudies, setShowStudies] = useState(false);
 
-  const handleAnalyze = async (file: File) => {
+  const runAnalyze = async (file: File, startPage?: number, endPage?: number) => {
     setLoading(true);
     setError(null);
-    setCandidates(null);
 
     const formData = new FormData();
     formData.append('file', file);
+    if (startPage !== undefined) formData.append('start_page', String(startPage));
+    if (endPage !== undefined) formData.append('end_page', String(endPage));
 
     try {
       const response = await fetch(`${API_URL}/api/analyze`, {
@@ -40,6 +43,41 @@ function App() {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleAnalyze = async (file: File) => {
+    setError(null);
+    setCandidates(null);
+    setChapterInfo(null);
+
+    if (file.name.toLowerCase().endsWith('.pdf')) {
+      setLoading(true);
+      try {
+        const formData = new FormData();
+        formData.append('file', file);
+        const response = await fetch(`${API_URL}/api/detect-chapters`, {
+          method: 'POST',
+          body: formData,
+        });
+        const data = await response.json();
+        if (response.ok && data.show_picker) {
+          setChapterInfo({ file, chapters: data.chapters, totalPages: data.total_pages });
+          setLoading(false);
+          return;
+        }
+      } catch {
+        // detection is best-effort — fall through to a direct analysis either way
+      }
+    }
+
+    await runAnalyze(file);
+  };
+
+  const handleSelectChapter = async (range: { start_page: number; end_page: number } | null) => {
+    if (!chapterInfo) return;
+    const file = chapterInfo.file;
+    setChapterInfo(null);
+    await runAnalyze(file, range?.start_page, range?.end_page);
   };
 
   const handleIdentifyPaper = async (description: string) => {
@@ -122,6 +160,7 @@ function App() {
     setResult(null);
     setCandidates(null);
     setTopicView(null);
+    setChapterInfo(null);
     setError(null);
     setShowStudies(false);
   };
@@ -153,6 +192,10 @@ function App() {
         ) : candidates ? (
           <motion.div key="candidates" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>
             <CandidatePicker candidates={candidates} onSelect={handleAnalyzeCandidate} onBack={() => setCandidates(null)} loading={loading} />
+          </motion.div>
+        ) : chapterInfo ? (
+          <motion.div key="chapters" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>
+            <ChapterPicker chapters={chapterInfo.chapters} totalPages={chapterInfo.totalPages} onSelect={handleSelectChapter} onBack={() => setChapterInfo(null)} loading={loading} />
           </motion.div>
         ) : (
           <motion.div key="upload" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}>

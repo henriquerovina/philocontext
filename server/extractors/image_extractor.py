@@ -16,10 +16,3 @@ class ImageParser:
             return text
         except Exception as e:
             return f"Error reading image: {str(e)}"
-
-    def extract_specific_section(self, section_title: str) -> str:
-        full_text = self.extract_text(max_pages=50)
-        start_index = full_text.lower().find(section_title.lower())
-        if start_index == -1:
-            return full_text[:5000]
-        return full_text[start_index : start_index + 10000]

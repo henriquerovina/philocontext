@@ -169,6 +169,12 @@ ${(() => {
         <motion.h1 initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-3xl font-bold font-serif text-maroon-700 dark:text-gray-50 mb-2">{result.metadata.work}</motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="text-lg text-gray-600 dark:text-gray-300 mb-8">by {result.metadata.author}</motion.p>
 
+        {result.truncated && (
+          <div className="rounded-lg border border-yellow-300 dark:border-yellow-700 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 text-sm px-4 py-3 mb-6">
+            This book has {result.total_pages} pages — only pages {result.pages_analyzed} were analyzed.
+          </div>
+        )}
+
         <Tabs tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
       </div>
     </motion.div>

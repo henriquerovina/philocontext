@@ -1,12 +1,12 @@
 import asyncio
 import os
 import traceback
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from orchestrator import PhilosophyAnalyzer
 from agents.debate_agent import DebateAgent
-from models import IdentifyPaperRequest, AnalyzeCandidateRequest, TopicViewRequest, DebateQuestionsRequest, EvaluateAnswerRequest, DebateQuestion
+from models import IdentifyPaperRequest, AnalyzeCandidateRequest, TopicViewRequest, DebateQuestionsRequest, EvaluateAnswerRequest, DebateQuestion, ChapterDetectionResult
 
 app = FastAPI()
 
@@ -26,7 +26,11 @@ ALLOWED_EXTENSIONS = (".pdf", ".png", ".jpg", ".jpeg", ".webp")
 
 
 @app.post("/api/analyze")
-async def analyze_pdf(file: UploadFile = File(...)):
+async def analyze_pdf(
+    file: UploadFile = File(...),
+    start_page: int | None = Form(None),
+    end_page: int | None = Form(None),
+):
     filename_lower = file.filename.lower() if file.filename else ""
     if not filename_lower.endswith(ALLOWED_EXTENSIONS):
         raise HTTPException(status_code=400, detail="Only PDF and image files (.pdf, .png, .jpg, .jpeg, .webp) allowed")
@@ -38,7 +42,34 @@ async def analyze_pdf(file: UploadFile = File(...)):
         with open(temp_path, "wb") as buffer:
             buffer.write(content)
 
-        result = await analyzer.analyze_paper(temp_path)
+        result = await analyzer.analyze_paper(temp_path, start_page=start_page, end_page=end_page)
+        return result.model_dump()
+
+    except Exception as e:
+        traceback.print_exc()
+        return JSONResponse(
+            status_code=500,
+            content={"error": str(e)}
+        )
+    finally:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+
+
+@app.post("/api/detect-chapters")
+async def detect_chapters(file: UploadFile = File(...)):
+    filename_lower = file.filename.lower() if file.filename else ""
+    if not filename_lower.endswith(".pdf"):
+        return ChapterDetectionResult(chapters=[], total_pages=0, source="none", show_picker=False).model_dump()
+
+    temp_path = f"temp_{file.filename.replace(' ', '_')}"
+
+    try:
+        content = await file.read()
+        with open(temp_path, "wb") as buffer:
+            buffer.write(content)
+
+        result = await analyzer.detect_chapters(temp_path)
         return result.model_dump()
 
     except Exception as e:
