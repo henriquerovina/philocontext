@@ -235,9 +235,7 @@ Philosopher: {philosopher}
 Topic: {topic}
 
 Task:
-1. Explain this philosopher's view or argument on this topic. Write the explanation as a single cohesive passage that begins literally with the words:
-   "What they meant when they said {topic} was..."
-   (adapt grammar naturally if needed, but preserve this framing). State their actual position and the key reasoning behind it, in plain language a student can understand, in 3-6 sentences.
+1. Explain this philosopher's view or argument on this topic directly and plainly, as a single cohesive passage. State their actual position and the key reasoning behind it, in plain language a student can understand, in 3-6 sentences. Do not use a scripted or formulaic opening phrase — start straight with the substance (e.g. "{philosopher} believed that...", or whatever phrasing reads most naturally for this view).
    If "{philosopher}" is not a real, identifiable philosopher, or did not write about this topic in any documented way, say so honestly in the explanation instead of inventing a position.
 
 2. List well-documented objections to this view. For each objection:
@@ -254,7 +252,7 @@ Task:
 
 Return ONLY a valid JSON object with this exact structure:
 {{
-  "explanation": "What they meant when they said {topic} was...",
+  "explanation": "Direct explanation of {philosopher}'s view on {topic}, no scripted opening phrase",
   "objections": [
     {{
       "critic": "Name or general attribution",
